@@ -60,6 +60,10 @@ JUMP = 1
 GRAVITY = 1
 FRICTION = 0.8
 
+#Projectiles
+GRENADE_SPEEDX = 2
+GRENADE_SPEEDY = 1
+
 
 # Dimension tile base for icon
 TILEDIMX = 32

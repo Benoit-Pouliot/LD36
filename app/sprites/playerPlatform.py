@@ -1,9 +1,11 @@
 import pygame
 import os
+import math
 
 from app.settings import *
 from app.sprites.bullet import Bullet
-
+from app.sprites.grenade import Grenade
+from app.sprites.target import Target
 
 class PlayerPlatform(pygame.sprite.Sprite):
     def __init__(self, x, y, mapData):
@@ -48,6 +50,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.rightPressed = False
         self.leftPressed = False
 
+        self.target = Target(x,y)
 
         self.mapData = mapData
 
@@ -73,6 +76,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
             self.facingSide = LEFT
 
         self.invincibleUpdate()
+        self.updateTarget()
 
     def capSpeed(self):
         if self.speedx > 0 and self.speedx > self.maxSpeedx:
@@ -100,6 +104,23 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
     def updateSpeedDown(self):
         self.speedy += self.accy
+
+    def updateTarget(self):
+        mousePos = pygame.mouse.get_pos()
+        diffx = mousePos[0]-self.rect.centerx
+        diffy = mousePos[1]-self.rect.centery
+
+        posx = (diffx/self.vectorNorm(diffx,diffy))
+        posy = (diffy/self.vectorNorm(diffx,diffy))
+
+        self.target.rect.x = posx
+        self.target.rect.y = posy
+
+        print(mousePos)
+        #print(posx, posy)
+
+    def vectorNorm(self,x,y):
+        return math.sqrt(x**2+y**2)
 
     def gainLife(self):
         if self.life < self.lifeMax:
@@ -135,8 +156,9 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.visualFlash()
 
     def dead(self):
-        self.isAlive = False
-        self.soundGetHit.play()
+        pass
+        #self.isAlive = False
+        #self.soundGetHit.play()
 
     def pickedPowerUpMaxHealth(self):
         self.gainLifeMax()
@@ -170,7 +192,6 @@ class PlayerPlatform(pygame.sprite.Sprite):
         elif self.invincibleFrameCounter == 50:
             self.setShapeImage()
 
-
     def shootBullet(self):
         if self.facingSide == RIGHT:
             bullet = Bullet(self.rect.x + self.rect.width +1, self.rect.centery, self.facingSide)
@@ -181,8 +202,30 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.mapData.friendlyBullet.add(bullet)
         self.soundBullet.play()
 
+    def shootGrenade(self, rawPowerValue):
+        speedx, speedy = self.power2speed(rawPowerValue)
+        if self.facingSide == RIGHT:
+            grenade = Grenade(self.rect.right + 1, self.rect.centery, speedx, speedy)
+        else:
+            grenade = Grenade(self.rect.left - 1, self.rect.centery, -speedx, speedy)
+        self.mapData.camera.add(grenade)
+        self.mapData.allSprites.add(grenade)
+        self.mapData.friendlyBullet.add(grenade)
+        self.soundBullet.play()
+
+
+
+    def power2speed(self, rawPowerValue):
+        ratio = 5
+        powerCap = 12
+        powerValue = rawPowerValue/ratio
+        if powerValue > powerCap:
+            powerValue = powerCap
+        speedx = powerValue * GRENADE_SPEEDX
+        speedy = powerValue * -GRENADE_SPEEDY
+        return speedx, speedy
+
     def spring(self):
         self.jumpState = JUMP
         self.speedy = -self.maxSpeedyUp
         self.soundSpring.play()
-
