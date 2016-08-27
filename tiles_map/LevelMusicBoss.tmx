@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="19" tilewidth="32" tileheight="32" nextobjectid="3">
+ <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
+  <image source="img/collision_set.png" width="160" height="320"/>
+ </tileset>
+ <tileset firstgid="51" name="set_music" tilewidth="32" tileheight="32" tilecount="100" columns="10">
+  <image source="img/set_music.png" width="320" height="320"/>
+ </tileset>
+ <layer name="Collision_Layer" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBwGmNZg1A7S7KB1vIzaMWrHqB2Dxw5mOtgx1DEA+FMAjQ==
+  </data>
+ </layer>
+ <layer name="Background" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAS0BAAdsAAE=
+  </data>
+ </layer>
+ <layer name="Terrain" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAS0BAAdsAAE=
+  </data>
+ </layer>
+ <layer name="Sprite_Layer" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAS0BAAdsAAE=
+  </data>
+ </layer>
+ <objectgroup name="outZoneLayer"/>
+ <objectgroup name="inZoneLayer"/>
+ <objectgroup name="enemyLayer"/>
+ <objectgroup name="itemLayer"/>
+</map>
