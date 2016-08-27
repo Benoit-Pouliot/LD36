@@ -14,4 +14,12 @@ class Drawer:
 
         spritesHUD.draw(screen)
         pygame.display.flip()
+
+        if TAG_BP:
+            msec = self.clock.get_time()
+            if msec > 18:
+                print(msec)
+
         self.clock.tick(self.FPS)
+
+

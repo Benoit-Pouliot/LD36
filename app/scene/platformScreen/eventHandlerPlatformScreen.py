@@ -23,15 +23,15 @@ class EventHandlerPlatformScreen():
                     #self.menuPause.mainLoop()
                 # elif event.key == pygame.K_ESCAPE:
                 #     self.menuPause.mainLoop()
-                elif event.key == pygame.K_RIGHT:
+                elif event.key == pygame.K_RIGHT | event.key == pygame.K_d:
                     self.player.updateSpeedRight()
                     self.player.rightPressed = True
-                elif event.key == pygame.K_LEFT:
+                elif event.key == pygame.K_LEFT | event.key == pygame.K_a:
                     self.player.updateSpeedLeft()
                     self.player.leftPressed = True
-                elif event.key == pygame.K_UP:
+                elif event.key == pygame.K_UP | event.key == pygame.K_w:
                     self.player.updateSpeedUp()
-                elif event.key == pygame.K_DOWN:
+                elif event.key == pygame.K_DOWN | event.key == pygame.K_s:
                     self.player.updateSpeedDown()
                 elif event.key == pygame.K_SPACE:
                     self.player.jump()
@@ -39,9 +39,9 @@ class EventHandlerPlatformScreen():
                     self.ctrlPressedDown = True
 
             if event.type == pygame.KEYUP:
-                if event.key == pygame.K_RIGHT:
+                if event.key == pygame.K_RIGHT | event.key == pygame.K_d:
                     self.player.rightPressed = False
-                elif event.key == pygame.K_LEFT:
+                elif event.key == pygame.K_LEFT | event.key == pygame.K_a:
                     self.player.leftPressed = False
                 elif event.key == pygame.K_LCTRL:
                     self.player.shootGrenade(self.grenadePowerCounter.value)
