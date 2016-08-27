@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" nextobjectid="28">
+ <tileset firstgid="1" name="Set_1" tilewidth="32" tileheight="32" tilecount="25" columns="5">
+  <image source="img/Set_01.png" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="26" name="Set_2" tilewidth="32" tileheight="32" tilecount="25" columns="5">
+  <image source="img/Set_02.png" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="51" name="vert" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="img/vert.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="52" name="sable" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="img/sable.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="53" name="sheriff" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="img/sheriff.png" width="96" height="96"/>
+  <tile id="1">
+   <animation>
+    <frame tileid="1" duration="100"/>
+    <frame tileid="5" duration="100"/>
+    <frame tileid="8" duration="100"/>
+    <frame tileid="6" duration="100"/>
+    <frame tileid="3" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="5">
+   <animation>
+    <frame tileid="5" duration="100"/>
+    <frame tileid="7" duration="100"/>
+    <frame tileid="3" duration="100"/>
+    <frame tileid="1" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="62" name="saloon" tilewidth="96" tileheight="96" tilecount="1" columns="1">
+  <image source="img/saloon.png" width="96" height="96"/>
+ </tileset>
+ <tileset firstgid="63" name="indien" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="img/indien.png" width="96" height="96"/>
+ </tileset>
+ <tileset firstgid="72" name="cactus" tilewidth="96" tileheight="96" tilecount="1" columns="1">
+  <image source="img/cactus.png" width="96" height="96"/>
+ </tileset>
+ <tileset firstgid="73" name="tilesetBacground2" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="img/tilesetBacground2.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="89" name="eauGauche" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="img/eauGauche.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="90" name="eauDroite" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="img/eauDroite.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="91" name="eauTourne" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="img/eauTourne.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="92" name="buisson" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="img/buisson.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="93" name="roche" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="img/roche.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="94" name="pont" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="img/pont.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="110" name="sableFrontiere" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="img/sableFrontiere.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="126" name="gazonFrontiere" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="img/gazonFrontiere.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="142" name="icone_maison" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="img/icone_maison.png" width="102" height="96"/>
+ </tileset>
+ <layer name="Collision_Layer" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztllEKACAIQ/X+l44OUGlsLMkHfgl7wy/dzFw8K3Y7BCc/m9f97H6RfGaHaLbaz6KKX31/1p0yuYwO2czf/Wiq+dF9b/Lar/UjqehHdlb/3XMGDlkAgQ==
+  </data>
+ </layer>
+ <layer name="Background" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJyrY2BgaMCBjfHIUQM3AnER1J6BwJ1A3DQE7Tehklp6+H+g7R+s8W8yiP1PSvqitv0mRNpPDTdSEv7E2l+MhKlpPy3jnx4YFs9NVIpLUu1Ftp/acU6p/cTmAVLciG4vOf6npr8p8SO17CbHfs8Btt8Xi7nk2k1OORtIQ/uJcU8oFcOeHPujgTiKSnaTm/6JCQNi7AZhAEqXrOo=
+  </data>
+ </layer>
+ <layer name="Terrain" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJy9lUkKAjEQRftO4jzPuugLqO3CW4i4daHgrOf1BxRCSBeVVNkfHoSkK7/oVCVJkq85saatMqiAqjWXWuMVEUutcVUDddCw5tYK++bJzbkJWqBtzW0UfDJB7BIsFHKQqKgcqBrK64POPxLxSFKHZ3ABV8Eekjq8gTt4BMS4NRt7D5kzfYIXeEfuYSStQV8Pht5ZRfVBycKV9nuwDfRPPXOSuz/UX/s98PlT4vQhdd9nzjjUX7sGjf/hO+aeI1WD1B6+/2L7G3VBD/SZuUjl+g/AEIyY8ZK33ec/BhMwJWKkPTAj/DmKfYs451+kfv13BKdAEsY3OwZ78AEQvjPL
+  </data>
+ </layer>
+ <layer name="Sprite_Layer" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAC8GDAAAAQ==
+  </data>
+ </layer>
+ <objectgroup name="outZoneLayer">
+  <object id="4" name="OutZone" x="58" y="37" width="98" height="88">
+   <properties>
+    <property name="InZone" value="StartPointSheriff"/>
+    <property name="LevelZone" value="LevelSheriff"/>
+   </properties>
+  </object>
+  <object id="11" name="OutZone" x="480" y="118" width="95" height="140">
+   <properties>
+    <property name="InZone" value="StartPointSaloon"/>
+    <property name="LevelZone" value="LevelSaloon"/>
+   </properties>
+  </object>
+  <object id="12" name="OutZone" x="789" y="255" width="59" height="63">
+   <properties>
+    <property name="InZone" value="StartPointHome"/>
+    <property name="LevelZone" value="LevelHome"/>
+   </properties>
+  </object>
+  <object id="21" name="OutZone" x="99" y="593" width="81" height="81">
+   <properties>
+    <property name="InZone" value="StartPoint"/>
+    <property name="LevelZone" value="LevelIndian"/>
+   </properties>
+  </object>
+  <object id="24" name="OutZone" x="895" y="575" width="91" height="131.334">
+   <properties>
+    <property name="InZone" value="StartPointDesert"/>
+    <property name="LevelZone" value="LevelDesert"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="inZoneLayer">
+  <object id="14" name="InZone" x="135" y="193" width="32" height="32">
+   <properties>
+    <property name="StartPoint" value="StartPointWorld"/>
+   </properties>
+  </object>
+  <object id="19" name="InZone" x="832" y="651" width="50" height="50">
+   <properties>
+    <property name="StartPoint" value="OutLevelDesert"/>
+   </properties>
+  </object>
+  <object id="26" name="InZone" x="185.667" y="621.667" width="50" height="50">
+   <properties>
+    <property name="StartPoint" value="OutLevelIndian"/>
+   </properties>
+  </object>
+  <object id="27" name="InZone" x="96" y="192" width="32" height="32">
+   <properties>
+    <property name="StartPoint" value="OutLevelSheriff"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="enemyLayer"/>
+ <objectgroup name="itemLayer"/>
+</map>
