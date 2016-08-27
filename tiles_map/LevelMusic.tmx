@@ -124,7 +124,12 @@
   </object>
  </objectgroup>
  <objectgroup name="outZone">
-  <object id="18" name="outZone" x="2524" y="60" width="68" height="134"/>
+  <object id="18" name="outZone" x="2524" y="60" width="68" height="134">
+   <properties>
+    <property name="InZone" value="OutLevelMusic"/>
+    <property name="LevelZone" value="TitleScreen"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="itemLayer">
   <object id="20" name="itemLife" x="976" y="345" width="30" height="35"/>
