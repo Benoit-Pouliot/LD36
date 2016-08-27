@@ -2,7 +2,6 @@ import pygame
 from app.tools.functionTools import *
 from app.tools.counter import Counter
 
-
 class EventHandlerPlatformScreen():
     def __init__(self, player):
         self.menuPause = None
