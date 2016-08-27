@@ -21,8 +21,8 @@ FPS = 60
 
 #DIMENSION
 # http://gamedevelopment.tutsplus.com/articles/quick-tip-what-is-the-best-screen-resolution-for-your-game--gamedev-14723
-SCREEN_WIDTH = 1024
-SCREEN_HEIGHT = 768
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
 TILE_WIDTH = 32
 TILE_HEIGHT = 32
 
@@ -34,9 +34,7 @@ MODE = DEV_MODE
 #Scenes self.nextScene commands, used to tell SceneHandler what next scene to run after this one ends
 TITLE_SCREEN = 0
 WORLD_MAP = 1
-PET_SCREEN = 2
 WIN_SCREEN = 3
-FOUND_ALL_PET_SCREEN = 4
 PLATFORM_SCREEN = 42
 
 # Sprite Layer
@@ -51,8 +49,8 @@ DOWN = 3
 #Collisions
 COLLISION_LAYER = 0
 SOLID = 1 #Booléen de GID pour collision
-SPIKE = 3
-SPRING = 2
+SPIKE = 2
+SPRING = 3
 
 #Player jump states
 GROUNDED = 0

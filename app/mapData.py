@@ -53,12 +53,16 @@ class MapData:
         for obj in self.tmxData.objects:
             if obj.name == "InZone":
                 if obj.StartPoint == nameInZone:
+
                     self.spawmPointPlayerx = obj.x
                     self.spawmPointPlayery = obj.y
                     valBool = True
+                else:
+                    print('No starting point')
 
         # The game is not complete?
         if valBool == False:
+
             quitGame()
 
     def reqImageName(self, nameMap):

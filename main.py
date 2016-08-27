@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     # Screen
     screenSize = (SCREEN_WIDTH, SCREEN_HEIGHT)
-    screen = pygame.display.set_mode(screenSize, pygame.FULLSCREEN)
+    screen = pygame.display.set_mode(screenSize)
 
     #icon = pygame.transform.scale(pygame.image.load(os.path.join('img', 'dragon.png')), (TILEDIMX, TILEDIMY))
     #pygame.display.set_icon(icon)
