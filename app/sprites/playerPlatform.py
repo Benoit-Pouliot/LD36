@@ -50,9 +50,12 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.rightPressed = False
         self.leftPressed = False
 
-        self.target = Target(x,y)
-
         self.mapData = mapData
+
+        self.target = Target(x,y)
+        self.mapData.camera.add(self.target)
+        self.mapData.allSprites.add(self.target)
+        self.mapData.friendlyBullet.add(self.target)
 
         self.isAlive = True
 
@@ -107,17 +110,15 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
     def updateTarget(self):
         mousePos = pygame.mouse.get_pos()
-        diffx = mousePos[0]-self.rect.centerx
-        diffy = mousePos[1]-self.rect.centery
 
-        posx = (diffx/self.vectorNorm(diffx,diffy))
-        posy = (diffy/self.vectorNorm(diffx,diffy))
+        diffx = mousePos[0]+self.mapData.cameraPlayer.view_rect.x-self.rect.centerx
+        diffy = mousePos[1]+self.mapData.cameraPlayer.view_rect.y-self.rect.centery
 
-        self.target.rect.x = posx
-        self.target.rect.y = posy
+        self.target.rect.centerx = TARGET_DISTANCE*(diffx)/self.vectorNorm(diffx,diffy) + self.rect.centerx
+        self.target.rect.centery = TARGET_DISTANCE*(diffy)/self.vectorNorm(diffx,diffy) + self.rect.centery
 
-        print(mousePos)
-        #print(posx, posy)
+        self.target.powerx = (diffx)/self.vectorNorm(diffx,diffy)
+        self.target.powery = (diffy)/self.vectorNorm(diffx,diffy)
 
     def vectorNorm(self,x,y):
         return math.sqrt(x**2+y**2)
@@ -204,16 +205,13 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
     def shootGrenade(self, rawPowerValue):
         speedx, speedy = self.power2speed(rawPowerValue)
-        if self.facingSide == RIGHT:
-            grenade = Grenade(self.rect.right + 1, self.rect.centery, speedx, speedy)
-        else:
-            grenade = Grenade(self.rect.left - 1, self.rect.centery, -speedx, speedy)
+
+        grenade = Grenade(self.rect.centerx, self.rect.centery, speedx, speedy)
+
         self.mapData.camera.add(grenade)
         self.mapData.allSprites.add(grenade)
         self.mapData.friendlyBullet.add(grenade)
         self.soundBullet.play()
-
-
 
     def power2speed(self, rawPowerValue):
         ratio = 5
@@ -221,8 +219,8 @@ class PlayerPlatform(pygame.sprite.Sprite):
         powerValue = rawPowerValue/ratio
         if powerValue > powerCap:
             powerValue = powerCap
-        speedx = powerValue * GRENADE_SPEEDX
-        speedy = powerValue * -GRENADE_SPEEDY
+        speedx = powerValue * GRENADE_SPEEDX * self.target.powerx
+        speedy = powerValue * -GRENADE_SPEEDY * -self.target.powery
         return speedx, speedy
 
     def spring(self):

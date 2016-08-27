@@ -59,4 +59,3 @@ class PlatformScreen:
     def backToWorldMap(self):
         newMapData = MapData('WorldMap', 'StartPointWorld')
         self.checkNewMap(newMapData)
-

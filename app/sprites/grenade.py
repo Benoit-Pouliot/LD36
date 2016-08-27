@@ -25,15 +25,15 @@ class Grenade(pygame.sprite.Sprite):
         self.image = self.frames[0]
 
         self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
+        self.rect.centerx = x
+        self.rect.centery = y
 
         self.animation = None
 
         self.friendly = friendly
         self.isPhysicsApplied = False
         self.isGravityApplied = True
-        self.isFrictionApplied = True
+        self.isFrictionApplied = False
         self.isCollisionApplied = True
 
         self.jumpState = JUMP
@@ -46,3 +46,6 @@ class Grenade(pygame.sprite.Sprite):
 
     def dead(self):
         self.kill()
+
+    def spring(self):
+        pass
