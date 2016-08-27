@@ -62,8 +62,8 @@ FRICTION = 0.8
 
 #Projectiles
 GRENADE_SPEEDX = 2
-GRENADE_SPEEDY = 1
-
+GRENADE_SPEEDY = 2
+TARGET_DISTANCE = 50
 
 # Dimension tile base for icon
 TILEDIMX = 32

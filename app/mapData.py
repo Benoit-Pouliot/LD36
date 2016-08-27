@@ -20,6 +20,8 @@ class MapData:
         self.tmxData = pytmx.util_pygame.load_pygame(self.reqImageName(self.nameMap))
         self.tiledMapData = pyscroll.data.TiledMapData(self.tmxData)
         self.cameraPlayer = pyscroll.BufferedRenderer(self.tiledMapData, screenSize, clamp_camera=True)
+
+        self.cameraPlayer
         # self.soundController = soundPlayerController()
 
         self.allSprites = pygame.sprite.Group()
