@@ -24,3 +24,13 @@ IDE : PyCharm
 Maps : Tiled
 
 Graphics : PhotoShop, Paint.net
+
+## Credit 
+
+MusicLevel
+
+Artist : Visager
+Song : Factory Time [Loop] 
+Album : Songs From An Unmade World 2
+
+[Link](http://freemusicarchive.org/music/Visager/Songs_From_An_Unmade_World_2/)
