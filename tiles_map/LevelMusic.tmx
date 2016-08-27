@@ -233,14 +233,14 @@
 </data>
  </layer>
  <objectgroup name="enemyLayer">
-  <object id="3" name="enemyGram" x="717" y="491" width="71" height="74"/>
+  <object id="3" name="enemyRadio" x="717" y="491" width="71" height="74" visible="0"/>
   <object id="6" name="enemyWalkman" x="845" y="324" width="46" height="55"/>
-  <object id="12" name="enemyRadio" x="2434" y="148" width="50" height="40"/>
-  <object id="13" name="enenyGram" x="1985" y="131" width="88" height="61"/>
-  <object id="14" name="enemyRadio" x="1887" y="331" width="97" height="44"/>
-  <object id="15" name="enemyRadio" x="2099" y="559" width="69" height="43"/>
+  <object id="12" name="enemyMp3" x="2434" y="148" width="50" height="40"/>
+  <object id="13" name="enenyRadio" x="1985" y="131" width="88" height="61"/>
+  <object id="14" name="enemyMp3" x="1887" y="331" width="97" height="44"/>
+  <object id="15" name="enemyMp3" x="2099" y="559" width="69" height="43"/>
   <object id="16" name="enemyWalkman" x="1421" y="387.5" width="46" height="55"/>
-  <object id="17" name="enenyGram" x="1849" y="544.5" width="64" height="61"/>
+  <object id="17" name="enenyRadio" x="1849" y="544.5" width="64" height="61"/>
  </objectgroup>
  <objectgroup name="inZoneLayer">
   <object id="19" name="InZone" x="60" y="442" width="13" height="21">
