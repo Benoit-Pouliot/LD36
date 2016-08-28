@@ -4,6 +4,9 @@ WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 
+COLOR_POWER_BAR = (100,50,138)
+COLOR_POWER_BAR_EMPTY = (0,0,0,1)
+
 BACKGROUND_COLOR = (255,255,255)
 
 COLOR_MENU_1 = (242,214,136)
@@ -71,11 +74,6 @@ TARGET_DISTANCE = 50
 TILEDIMX = 32
 TILEDIMY = 32
 
-# Animal type
-NORMAL = 0
-KEY_ANIMAL = 1
-DEAD_END = 2
-WINNER = 3
 
 # If you add a Tag for debugging, you MUST set it here at 0 for everyone
 # You can turn your tag on in your own settings_local.py for personal use

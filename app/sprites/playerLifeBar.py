@@ -25,7 +25,6 @@ class PlayerLifeBar(pygame.sprite.Sprite):
         self.healthCurrent += amount
         if self.healthCurrent > self.healthMax:
             self.healthCurrent = self.healthMax
-        self.update()
 
     def update(self):
         dmg = self.healthMax-self.healthCurrent

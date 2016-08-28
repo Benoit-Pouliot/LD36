@@ -21,6 +21,7 @@ class PlatformScreen:
 
         self.mapData.allSprites.add(self.player)
         self.mapData.spritesHUD.add(self.player.lifeBar)
+        self.mapData.spritesHUD.add(self.player.powerBar)
         self.mapData.camera.add(self.player)
         self.camera = self.mapData.camera
 

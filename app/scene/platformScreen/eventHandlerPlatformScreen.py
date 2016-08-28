@@ -62,15 +62,16 @@ class EventHandlerPlatformScreen():
                     self.player.shootGrenade(self.grenadePowerCounter.value)
                     self.ctrlPressedDown = False
                     self.grenadePowerCounter.reset()
+                    self.player.powerBar.set(0)
 
             if event.type == pygame.MOUSEBUTTONDOWN:
-                self.grenadePowerCounter.reset()
                 self.mousePressedDown = True
 
             if event.type == pygame.MOUSEBUTTONUP:
                 self.player.shootGrenade(self.grenadePowerCounter.value)
                 self.grenadePowerCounter.reset()
-                self.ctrlPressedDown = False
+                self.player.powerBar.set(0)
+                self.mousePressedDown = False
 
 
         self.updatePressedKeys()
@@ -86,6 +87,8 @@ class EventHandlerPlatformScreen():
             self.player.updateSpeedDown()
         if self.ctrlPressedDown:
             self.grenadePowerCounter.count()
+            self.player.powerBar.set(self.grenadePowerCounter.value)
         if self.mousePressedDown:
             self.grenadePowerCounter.count()
+            self.player.powerBar.set(self.grenadePowerCounter.value)
 

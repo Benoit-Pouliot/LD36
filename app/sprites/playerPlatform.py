@@ -8,6 +8,7 @@ from app.sprites.grenade import Grenade
 from app.sprites.target import Target
 from app.sprites.collisionMask import CollisionMask
 from app.sprites.playerLifeBar import PlayerLifeBar
+from app.sprites.powerBar import PowerBar
 
 class PlayerPlatform(pygame.sprite.Sprite):
     def __init__(self, x, y, mapData):
@@ -62,6 +63,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.facingSide = RIGHT
 
         self.lifeBar = PlayerLifeBar(5)
+        self.powerBar = PowerBar(100)
 
         self.isInvincible = False
         self.invincibleFrameCounter = 0
