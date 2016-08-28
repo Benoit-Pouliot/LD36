@@ -17,14 +17,17 @@ class MusicFactory:
         elif typeScene == WORLD_MAP:
             self.nameMusic = 'MainTheme'
         elif typeScene == PLATFORM_SCREEN:
-            if levelName == "LevelMusic" and self.previousMusic != levelName:
+            if levelName == "LevelMusic":
                 self.nameMusic = 'LevelMusic'
+            elif levelName == "LevelComm":
+                self.nameMusic = "LevelComm"
+
 
 
         if self.nameMusic is not None and self.previousMusic != levelName:
             pygame.mixer.music.load(os.path.join('music_pcm', self.nameMusic + '.wav'))
             pygame.mixer.music.set_volume(0.5)
             pygame.mixer.music.play(-1)
-        elif levelName != "LevelMusicBoss":
+        elif levelName != "LevelMusicBoss" or levelName != "LevelCommBoss":
             pygame.mixer.music.stop()
 
