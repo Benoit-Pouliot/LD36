@@ -102,4 +102,3 @@ class LogicHandlerPlatformScreen:
     def gameOverCondition(self,player):
         if player.isAlive == False:
             self.endState = GAME_OVER_SCREEN
-            print(self.endState)

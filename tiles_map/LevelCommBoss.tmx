@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="49" tilewidth="32" tileheight="32" nextobjectid="11">
+ <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
+  <image source="img/collision_set.png" width="160" height="320"/>
+ </tileset>
+ <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100" columns="10">
+  <image source="img/set_comm.png" width="320" height="320"/>
+  <terraintypes>
+   <terrain name="Wood" tile="-1"/>
+  </terraintypes>
+  <tile id="12" terrain=",,,0"/>
+  <tile id="13" terrain=",,0,0"/>
+  <tile id="14" terrain=",,0,"/>
+  <tile id="22" terrain=",0,,0"/>
+  <tile id="23" terrain="0,0,0,0"/>
+  <tile id="24" terrain="0,,0,"/>
+  <tile id="30" terrain="0,0,0,"/>
+  <tile id="31" terrain="0,0,,0"/>
+  <tile id="32" terrain=",0,,"/>
+  <tile id="33" terrain="0,0,,"/>
+  <tile id="34" terrain="0,,,"/>
+  <tile id="40" terrain="0,,0,0"/>
+  <tile id="41" terrain=",0,0,0"/>
+ </tileset>
+ <layer name="Collision_Layer" width="26" height="49">
+  <data encoding="base64" compression="zlib">
+   eJzt19EKgCAMhWE1e/9XbjeBhLo5bTU5g/+u/Ag0MIYQEnVQmYqbJJnMdFaCs5/DuR6c3jMaJzVa7WjO8p+d2vvcwNE5z4HznlN2O6PnSetYfY9npxw4Ph3O9+qkCUdS+T+SDpw1jmTgwLFwanvcymndl0buT731Z/rKWb2+tbNTFxhSBuo=
+  </data>
+ </layer>
+ <layer name="Background" width="26" height="49" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMBKEr/72XY6Dgqqmqqqqqrx+PcpYB
+  </data>
+ </layer>
+ <layer name="Terrain" width="26" height="49">
+  <data encoding="base64" compression="zlib">
+   eJztmEEKgzAQRedShdoW1KV21aIre/9zdAYyNAjWJMwo6P/wiJvw8rMY1J6I+o14MYMT78jzJL908MBzAs9lAWuPV+CBBx5fz5WpmBtzD2sVnh+GHovAAw88+3hy3hvmHpkxOltklfmSOltyPF7ZyyP3pvNY7w73Bs/RPTXTBNoCj/xLGAvOtfS9NEf3pUS6fCLPRL9ua+i+lMRdSlnrEZ/Jy2PRQ2n+YNFja764OW0L
+  </data>
+ </layer>
+ <layer name="Front_Layer" width="26" height="49" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztl0sKg0AQRL1TcoJ8dJPfMslSs4wukxw/tWlopMXBnlqoXfAYBsRnoxRjUaw31QjhWYdnzDsHzx08wJPsqUEDXpk8O7AHB3BU+zdoQZfJcwJncAFXtf+AL/hl8uhswDbhuvBM83gTnvTofmF6dL8wPbpfmB7dL0v4DsLD8+T2L82jY/VR6bifnD/6q9VHN4dHzh/91eojzzxDsfrIM09KmPNYnphnmmfu87CfX8J+H9I97Ej3sCL/cuzIv1xkOH92RTzK
+  </data>
+ </layer>
+ <layer name="Sprite_Layer" width="26" height="49" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAgHcDE+gAAQ==
+  </data>
+ </layer>
+ <objectgroup name="outZoneLayer"/>
+ <objectgroup name="inZoneLayer">
+  <object id="3" name="InZone" x="48" y="1429" width="9" height="30">
+   <properties>
+    <property name="StartPoint" value="StartPointCommBoss"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="enemyLayer">
+  <object id="4" name="enemyCommBoss" type="enemy" x="630" y="849" width="95" height="127"/>
+ </objectgroup>
+ <objectgroup name="itemLayer"/>
+</map>
