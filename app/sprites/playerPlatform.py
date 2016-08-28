@@ -63,7 +63,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.facingSide = RIGHT
 
         self.lifeBar = PlayerLifeBar(5)
-        self.powerBar = PowerBar(100)
+        self.powerBar = PowerBar(RATIO * POWER_CAP)
 
         self.isInvincible = False
         self.invincibleFrameCounter = 0
@@ -293,8 +293,8 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.soundBullet.play()
 
     def power2speed(self, rawPowerValue):
-        ratio = 5
-        powerCap = 9
+        ratio = RATIO
+        powerCap = POWER_CAP
         powerValue = rawPowerValue/ratio
         if powerValue > powerCap:
             powerValue = powerCap
