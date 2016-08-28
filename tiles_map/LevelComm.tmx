@@ -61,7 +61,7 @@
   </object>
  </objectgroup>
  <objectgroup name="inZoneLayer">
-  <object id="46" name="InZone" x="81.4218" y="1885.12" width="32" height="27">
+  <object id="46" name="InZone" x="402.634" y="324.514" width="32" height="27">
    <properties>
     <property name="StartPoint" value="StartPointComm"/>
    </properties>
@@ -124,32 +124,32 @@
   </object>
   <object id="16" name="enemyPhone" type="enemy" x="846.334" y="61.1666" width="54" height="71">
    <properties>
-    <property name="firstShoot" value="120"/>
-    <property name="interval" value="240"/>
+    <property name="firstShoot" value="90"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="17" name="enemyPhone" type="enemy" x="919.667" y="61.5" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
-    <property name="interval" value="240"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="18" name="enemyPhone" type="enemy" x="1064.67" y="62.5" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
-    <property name="interval" value="240"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="19" name="enemyPhone" type="enemy" x="989" y="61.8333" width="54" height="71">
    <properties>
-    <property name="firstShoot" value="120"/>
-    <property name="interval" value="240"/>
+    <property name="firstShoot" value="90"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="20" name="enemyPhone" type="enemy" x="1146.33" y="61.5" width="54" height="71">
    <properties>
-    <property name="firstShoot" value="120"/>
-    <property name="interval" value="240"/>
+    <property name="firstShoot" value="90"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="22" name="enemyPhone" type="enemy" x="1508.67" y="73.8333" width="54" height="71">
@@ -161,8 +161,8 @@
   <object id="23" name="enemyTelegraph" type="enemy" x="1610" y="1835.5" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="firstShoot" value="60"/>
-    <property name="interval" value="180"/>
+    <property name="firstShoot" value="40"/>
+    <property name="interval" value="60"/>
    </properties>
   </object>
   <object id="24" name="enemyTelegraph" type="enemy" x="40" y="402" width="46" height="28">
@@ -176,14 +176,14 @@
    <properties>
     <property name="direction" value="Right"/>
     <property name="firstShoot" value="0"/>
-    <property name="interval" value="180"/>
+    <property name="interval" value="60"/>
    </properties>
   </object>
   <object id="26" name="enemyTelegraph" type="enemy" x="1624" y="1385" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="firstShoot" value="120"/>
-    <property name="interval" value="180"/>
+    <property name="firstShoot" value="20"/>
+    <property name="interval" value="60"/>
    </properties>
   </object>
   <object id="27" name="enemyTelegraph" type="enemy" x="40" y="502" width="46" height="28">
@@ -246,7 +246,7 @@
     <property name="speed" value="2"/>
    </properties>
   </object>
-  <object id="36" name="enemyTypewriter" type="enemy" x="983.667" y="347.667" width="46" height="28">
+  <object id="36" name="enemyTypewriter" type="enemy" x="1066.67" y="345.667" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
     <property name="distanceMax" value="60"/>
@@ -263,13 +263,15 @@
   <object id="49" name="enemyTypewriter" type="enemy" x="1866.33" y="962" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="distanceMax" value="60"/>
+    <property name="distanceMax" value="90"/>
+    <property name="speed" value="5"/>
    </properties>
   </object>
   <object id="50" name="enemyTypewriter" type="enemy" x="1724.33" y="1091.33" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
     <property name="distanceMax" value="70"/>
+    <property name="speed" value="6"/>
    </properties>
   </object>
   <object id="51" name="enemyPhone" type="enemy" x="536.667" y="698.5" width="42" height="71">
