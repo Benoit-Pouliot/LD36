@@ -52,8 +52,8 @@ class EnemyMusicBoss(Enemy):
 
             bullet = list()
             bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 0, False))
-            bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 40, False))
-            bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 60, False))
+            bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 30, False))
+            bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 55, False))
             bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 85, False))
             bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 0, False))
             bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 40, False))

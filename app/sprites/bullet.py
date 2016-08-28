@@ -165,7 +165,7 @@ class NoteBulletDiag(Bullet):
         super().__init__(x, y, os.path.join('img', 'note_v1.png'), direction, friendly)
 
         # The angle is -90 to 90, its determine the angle of the bullet
-        self.angle = angle
+        self.angle = float(angle)
 
         self.name = "NoteBullet"
 
