@@ -8,7 +8,10 @@ class Target(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
 
-        self.image = pygame.image.load(os.path.join('img', 'biere32x32-4.png'))
+        self.imageOrig = pygame.image.load(os.path.join('img', 'target_v4.png'))
+        self.imageOrig = pygame.transform.scale(self.imageOrig, (16, 16))
+        self.imageOrig = pygame.transform.rotate(self.imageOrig, -45)
+        self.image = self.imageOrig
         self.name = "target"
 
         self.rect = self.image.get_rect()

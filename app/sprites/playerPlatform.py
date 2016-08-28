@@ -200,6 +200,9 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.target.powerx = (diffx)/self.vectorNorm(diffx,diffy)
         self.target.powery = (diffy)/self.vectorNorm(diffx,diffy)
 
+        angleRad = math.atan2(diffy, diffx)
+        self.target.image = pygame.transform.rotate(self.target.imageOrig, -angleRad/math.pi*180)
+
     def updateCollisionMask(self):
         self.collisionMask.rect.x = self.rect.x
         self.collisionMask.rect.y = self.rect.y

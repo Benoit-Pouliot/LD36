@@ -18,11 +18,10 @@ class Grenade(pygame.sprite.Sprite):
         self.speedx = speedX
         self.speedy = speedY
 
-        image1 = pygame.image.load(os.path.join('img', 'biere32x32.png'))
-        image2 = pygame.image.load(os.path.join('img', 'biere32x32-2.png'))
-        image3 = pygame.image.load(os.path.join('img', 'biere32x32-3.png'))
-        image4 = pygame.image.load(os.path.join('img', 'biere32x32-4.png'))
-        self.frames = [image1,image2,image3,image4]
+        self.frames = list()
+        self.frames.append(pygame.image.load(os.path.join('img', 'cursor_v3.png')))
+        for k in range(1, 36):
+            self.frames.append(pygame.transform.rotate(self.frames[0], -k*10))
         self.image = self.frames[0]
 
         self.rect = self.image.get_rect()
@@ -44,10 +43,15 @@ class Grenade(pygame.sprite.Sprite):
 
         self.mapData = mapData
 
+        self.imageIter = 0
+
     def update(self):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
         self.collisionMask.rect = self.rect
+
+        self.imageIter = (self.imageIter+1) % len(self.frames)
+        self.image = self.frames[self.imageIter]
 
     def dead(self):
         self.kill()
