@@ -24,7 +24,7 @@
  </tileset>
  <layer name="Collision_Layer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmckOwzAIRJ3U///NzaGHqPICxJglM9JIldxa5gUwSo9Synn5c7lePmA1c8XZ0zq20fmk8UdjQIlDoiwMvEoaX/05g6wY1IktBAbrGFBjAgOfyt4TKTmnzcD6/uQy4OwZRZoMrJ/vE0nmy7t2M9CYVUcMKMqeBxRlZyCthTOYNfIgqsGgzUBaC1HdYkCRRU+UxibZn6LsDKS1oC2vebDT3Fh68a3iF40B53fcWsjKgCKPDP57FFcZGXBzO0MtIA/A4H6mXfeCR40YcOeDjAwoAoMYDGbnAQP+fPB0nrDQ7Fw7GHh5B2rJwLtbcwQYgIEGg6L8eRWDFd8fSYMBVbPnfI+Jsx+XgaXAgMdAsxYsRWXQWwcDMHgbA/QD3AtggFpATwQDMEA/wL0ABq31t9XCbH0UW28/z0zAwJbBTo8keQ8c0U/+b4LX+QuEqg4j
+   eJztmYsKgzAMRavz/795FiYTSWsS+0jiPXBhoNPmrKnFLSmldc9nz7ZnQbpFiuSas2urjU9bvzcHnDo0RHFgFW192y9W2YiUiOKAqpnr4KClA+0YuHDqhQPdfSM50OJ9PWgBHMif8XDwd+B5f6TZX5556sDC3rPmgEP0ecAhugNtL6zO0mMeeA0c0A60veA1lAMOM9ZEbW2a63OI7kDbC72xOg9GRlpLqb5W/rw5kHxP2gtRHXCAAx8OpHMbvRBzHkiBgz57jlm02B9EdEBxnV9w4MPB3XiOmuCA39vS8y06uI5rhAMr70BnOrAeah8BB3DwZge9zp+RK3e/87kmDnAQ3wEnkR2UjrdwkDp/tuSgRg8HXKw4mMnI9cAqI58LVoED9EIGayIcZOAA60EGzwU4yFAOqONv64W747XaStez7AQO5joYmRoe3vu0yJP/m5B2+QJdjQ7G
   </data>
  </layer>
  <layer name="Background" width="65" height="66">
@@ -34,12 +34,12 @@
  </layer>
  <layer name="Terrain" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmttOwzAMhvNSSMAmwS7ZrmDsCt7/OajVWTNR0tpu0pz8S5aG1Jbkix0nTs7OuXNm+5zsW2hfgm+uPVvC/D7fnFwfK//jIni2xPhq+twqA9qO1Lq65Vi5CZ5NEW+cdrQoia/1KmNgDEDGwBiAjMGDQa51zvNkr5MdN34np5DBCOMdkzH4zwD89sXNvnu4/y7tw6E2hX5vaeeIfvA22Yn8PSID6HNov4mxQH1sKRaA5bubeT41ZksMJML3fu4sWrJfl4YB3avXWMOS1Dz8WKBzLne+1dYuUtU4pPUOf+3XwpwoqZFp+oFjODIDlDQv7ClurEHMbGXQuvycBwqtMw/uMcZ0ndkDA/AXzT4X1zo0L1BWNcRCbrWQF3KrJwY09v24p3O979uhvTO+u3VPurf8/SBXLawPuArlBYmMQXz/p/GtUoqtD/x1nz9P4BzRQ21d6we4PhiZQU9nLMZg7staXetIDGMA6kq1M8C2gi3N0Zw9tubuDrxTQw2UMyac+p6GQQ01U+qr0B5Ovo71r5Y7XFuNE58pGWjuVeaole7BIOcdw5i09ehYm3DPd1z4dqieXNP8v7eMQZ8MMBb8OmqsHtIjAyrNnGgMjEEvDOgdOMuNPBmDPhmEaoeYEy03jjMnUhmDcRlYbpTLGPTJIHbvJna324+XHhhslTEwBqCS5wjc83163iT9HuddTY07lXHPsqTnQifHP1MsbVwflPbjIuAGZwt/ANh/nQ==
+   eJztmktuAyEMhrlUpbaJ1GbZZNWmWbX3P0fHSqy4CBjbMOHlX7KUSPPiA9tgODrnjhvb52LfQvsSPHPt2hrmt/ni5PpYecdJcG2N/tW0uVcG9DtK6+zSvnIRXFvC3zjf0aMkY21UGQNjADIGxgBkDO4MtpzntC5kMEN/x2QM/jN4XuxlsdfFdrff+8LvC70j9Lv0e1OacRy8LXYg/2dkAG0OrTfRF+iYTPkCsHx3V55PnVmKgUR438+NRU/268owoGv1FmtYkpqH7ws0RnPjs7Z2UarGIa13+HO/HmKipEamaQf24cwMUNK88EhxfQ18JpdB7/JzHig0L925ex/TeekIDGC8aNa5ONeheYGyasEXtlYPeWFrjcSA+r7v9zTW+2M7tHbGex+9hs2Vvx7kqof5AVehvCCRMYiv/zRjq5Zi8wN/3ufHCYwRI9TWteMA5wczMxhpj8UYXNuyVtfaE0MfgLpS6wzwW8FSMZqzxtac3YF7WqiBcvqEU9/TMGihZkrHKnwPJ1/H2tfKGa5c4/inMeibQc45OFzzQcyP1d9C9eTW7JF5yBiMyQB9wa+jxuohXAaas+Y5+0elxoEmJtY4jxSKW6Xep2HQwpy4pGZlgHsD2tw4AgOpjMGYDEK1Q8yJnNw4AgOqWWMilTGYl4HlRrmMwZgMYuduYmfBfX8ZgUGujIExANXcR+Du79P9JunzOPfWrp9J95tShv15cPw9xdrGHYPSdpwE3KCO9gdgmbAa
   </data>
  </layer>
  <layer name="FirstLayer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmstuAyEMRfNP7babPrLqa9l22XTZdtn282sWSFZkGMBgPMZHulKkMITcIdcD5HBwnLFcg24E+h31OT24Bz0I9DvqcyzTOm8uQJedxzILat68gF5Bb5nruB5cbWg276AT6CPTxroHn6Av0DfomGiT8qD0O2n34Af0C/oDPSfacD2wwN4yccSccw/cg0D0oKSOauUWdMe4PnpQUke18gh6YlwfPcB1dDWiB7iOrsbeMnEE7oF7ELBQG7lYqI1cLNbG2v0ki7Wxdh9ya/0/QtpwD3R7IHW+oNGDmFFS5wuaPZDCPbDpQW2OWPTAwjmlr+P6erDXtWBPD7SuBeM+cGo/uKcHeC3I3X/uSdwHTu0H13qQa4/Xgtz955Gc35+eHuyF8/uzogcBnN+reoDze1UPcH5LeYCfqXu95oDzW8oD/Ezd63Up1JipPEj9f6ikP+1QY6byIPX/oZL+tEONeUYezIQa84w8mElpHnD6005pHnD6047nQXkerFYbqTxYrTZ6HngeBPz5wJ8PAp4HdB6sVhupPFitNta8z22vgRYPcucyuf62znNm0eJB7lwm19/Wec4sJOeBVlrGrPV+SqL1dy1Jyzz4B865uxk=
+   eJztmstOAzEMRftP8AW8uuG1BJaUJbAEPh/PIpJVOa4TezJu7CNdqRKZTHpnuFac7nZJsi5XoOsB8651HwvuQQ8D5l3rPjPT+95cgC6N12LJnlAN6r15Ab2C3pjrvHlAfWepBxTvoAPogxnDeWCxBg7J99Xe/xP0BfoG3VXGnJMHPfyAfkF/oOfKGM8ejMJbHmxBepAeLBQPJHXUKzegW8X1xQNJHfXKI+hJcX3xANfRaBQPcB2NRmZierCQHsxRG7XMUBu1zFgbW/tJM9bG1j5kbx9DI2+kB749GHW+4NmDUecLnj0YRXowpwetOTKjB3lOGRNu7xtlL8h54HUvWPrAtX5wa0+DG4/3gtr+syWlD1zrB1t6gPeC2v7zmhw/H0sPzoXj5xPRgwWc31E9wPkd1QOc31E9wPkdwQNqzVQe1H4/JJnPO9SaqTyo/X5IMp93qDVHywNqzVvkAe4zWH2WIs0DzXwScJ/B6rMUaR5o5vNO5oE8D6LVRioPotXGzIPMg4XcL8TrH2QeyPMgWm2k8iBabWz5u3a8B3o84M5luPlOnedsRY8H3LkMN9+p85ytGPkeeKVnzV6f50i8/l+PpOc9+AcrTMbf
   </data>
  </layer>
  <layer name="Sprite_Layer" width="65" height="66">
@@ -56,43 +56,43 @@
   </object>
  </objectgroup>
  <objectgroup name="enemyLayer">
-  <object id="3" name="enemyPhone" type="enemy" x="258" y="1406" width="62" height="71">
+  <object id="3" name="enemyPhone" type="enemy" x="259.333" y="1572.67" width="62" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="6" name="enemyPhone" type="enemy" x="353" y="1408.5" width="62" height="71">
+  <object id="6" name="enemyPhone" type="enemy" x="354.333" y="1575.17" width="62" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="7" name="enemyPhone" type="enemy" x="451" y="1407.5" width="62" height="71">
+  <object id="7" name="enemyPhone" type="enemy" x="452.333" y="1574.17" width="62" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="8" name="enemyPhone" type="enemy" x="544" y="1405.5" width="62" height="71">
+  <object id="8" name="enemyPhone" type="enemy" x="545.333" y="1572.17" width="62" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="9" name="enemyPhone" type="enemy" x="641" y="1404.5" width="62" height="71">
+  <object id="9" name="enemyPhone" type="enemy" x="642.333" y="1571.17" width="62" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="10" name="enemyPhone" type="enemy" x="738" y="1405.5" width="62" height="71">
+  <object id="10" name="enemyPhone" type="enemy" x="739.333" y="1572.17" width="62" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="11" name="enemyPhone" type="enemy" x="833" y="1404.5" width="62" height="71">
+  <object id="11" name="enemyPhone" type="enemy" x="834.333" y="1571.17" width="62" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
@@ -249,7 +249,7 @@
     <property name="direction" value="Right"/>
    </properties>
   </object>
-  <object id="36" name="enemyTypewriter" type="enemy" x="1503" y="371" width="46" height="28">
+  <object id="36" name="enemyTypewriter" type="enemy" x="1121" y="413" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
    </properties>
