@@ -2,15 +2,15 @@ import pygame
 import os
 
 from app.sprites.enemy.enemy import Enemy
-from app.sprites.bullet import NoteBullet
+from app.sprites.bullet import WordBulletDiag
 from app.settings import *
 from app.sprites.collisionMask import CollisionMask
 
-class EnemyRadio(Enemy):
+class EnemyTelegraph(Enemy):
     def __init__(self, x, y, theMap, direction="Left"):
-        super().__init__(x, y, os.path.join('img', 'enemyRadio.png'))
+        super().__init__(x, y, os.path.join('img', 'enemyTelegraph.png'))
 
-        self.name = "enemyRadio"
+        self.name = "enemyTelegraph"
 
         self.collisionMask = CollisionMask(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
@@ -51,9 +51,9 @@ class EnemyRadio(Enemy):
         if self.imageIterShoot > self.imageWaitNextShoot:
 
             if self.direction == "Right":
-                bullet = NoteBullet(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, False)
+                bullet = WordBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, False)
             elif self.direction == "Left":
-                bullet = NoteBullet(self.rect.x -1, self.rect.centery, LEFT, False)
+                bullet = WordBulletDiag(self.rect.x -1, self.rect.centery, LEFT, False)
 
             self.theMap.camera.add(bullet)
             self.theMap.allSprites.add(bullet)

@@ -200,3 +200,42 @@ class NoteBulletDiag(Bullet):
             self.image = self.imageLeft
 
         self.friendly = friendly
+
+
+class WordBulletDiag(Bullet):
+    def __init__(self, x, y, direction=RIGHT, angle=0, friendly=True):
+        super().__init__(x, y, os.path.join('img', 'word_v1.png'), direction, friendly)
+
+        # The angle is -90 to 90, its determine the angle of the bullet
+        self.angle = float(angle)
+
+        self.name = "WordBullet"
+
+        random.seed()
+        randd = random.randint(1, 3)
+        if randd == 1:
+            self.imageLeft = self.image
+        elif randd == 2:
+            self.imageLeft = pygame.image.load(os.path.join('img', 'word_v2.png'))
+        else:
+            self.imageLeft = pygame.image.load(os.path.join('img', 'word_v3.png'))
+
+        self.image = pygame.transform.scale(self.imageLeft, (32, 32))
+
+        self.direction = direction
+
+        self.rect = self.image.get_rect()
+        self.rect.y = y - self.rect.height / 2
+
+        self.speedNorm = 2
+        self.speedx = self.speedNorm*math.cos(self.angle/180.0*math.pi)
+        self.speedy = -self.speedNorm*math.sin(self.angle/180.0*math.pi)
+
+        if direction == RIGHT:
+            self.rect.x = x
+        elif direction == LEFT:
+            self.speedx = -self.speedx
+            self.rect.x = x - self.rect.width
+            self.image = self.imageLeft
+
+        self.friendly = friendly

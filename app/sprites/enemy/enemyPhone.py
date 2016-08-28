@@ -3,7 +3,7 @@ import os
 import random
 
 from app.sprites.enemy.enemy import Enemy
-from app.sprites.bullet import NoteBulletDiag
+from app.sprites.bullet import WordBulletDiag
 from app.settings import *
 from app.sprites.collisionMask import CollisionMask
 
@@ -37,9 +37,9 @@ class EnemyPhone(Enemy):
 
             random.seed()
             if random.randint(1, 2) == 1:
-                bullet = NoteBulletDiag(self.rect.x+32, self.rect.y+1, RIGHT, -90, False)
+                bullet = WordBulletDiag(self.rect.x+32, self.rect.y+1, RIGHT, -90, False)
             else:
-                bullet = NoteBulletDiag(self.rect.x+32+32, self.rect.y+1, LEFT, -90, False)
+                bullet = WordBulletDiag(self.rect.x+32+32, self.rect.y+1, LEFT, -90, False)
 
             self.theMap.camera.add(bullet)
             self.theMap.allSprites.add(bullet)
