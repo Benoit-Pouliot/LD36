@@ -25,6 +25,8 @@ class TitleScreen:
         # Define MainMenu
         self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, SCREEN_WIDTH / 3, SCREEN_HEIGHT * 0.25))
         self.menu.addOption('Start', self.startGame)
+        self.menu.addOption('Level 2', self.startLvlComm)
+
         self.menu.addOption('Exit', sys.exit)
         # self.menu.addOption('TitleScreen', self.startWorldMap)
         # self.menu.addOption('Level 1', self.startFirstLevel)
@@ -34,6 +36,8 @@ class TitleScreen:
 
 
         self.type = TITLE_SCREEN
+        self.sceneRunning = True
+
         self.nextScene = None
 
         MusicFactory(TITLE_SCREEN)
@@ -58,3 +62,10 @@ class TitleScreen:
         if TAG_BP == 1 or TAG_MARIE == 1: #Real thing: #To try any level rapidly.
             self.gameData.mapData = MapData("LevelMusicBoss", "StartPointMusicBoss")
 
+
+    def startLvlComm(self):
+        self.nextScene = PLATFORM_SCREEN
+        self.sceneRunning = False
+        self.gameData.typeScene = PLATFORM_SCREEN
+
+        self.gameData.mapData = MapData("LevelComm", "StartPointComm")
