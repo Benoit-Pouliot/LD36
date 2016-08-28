@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="49" tilewidth="32" tileheight="32" nextobjectid="11">
- <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50">
+ <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
- <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100">
+ <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100" columns="10">
   <image source="img/set_comm.png" width="320" height="320"/>
   <terraintypes>
    <terrain name="Wood" tile="-1"/>
@@ -24,22 +24,22 @@
  </tileset>
  <layer name="Collision_Layer" width="26" height="49">
   <data encoding="base64" compression="zlib">
-   eJzt19EKgCAMhWE1e/9XbjeBhLo5bTU5g/+u/Ag0MIYQEnVQmYqbJJnMdFaCs5/DuR6c3jMaJzVa7WjO8p+d2vvcwNE5z4HznlN2O6PnSetYfY9npxw4Ph3O9+qkCUdS+T+SDpw1jmTgwLFwanvcymndl0buT731Z/rKWb2+tbNTFxhSBuo=
+   eJzt10kKwCAMQFGn3v/KzUaQ4hBjGo0k8Hetj4IW9M65AEUoQf6SOOapRHHSIHP2OiNXg9N7huKERtwO5Syf7FBGi5PfO8X5jjn/OWXZmT1PVEfqezQ75Zij0xn5Wp2w4GAq/0fYMYfHwYw55kg4tT0u5bTuSzP3p976K+1yuNeXdm7qBdb2Bro=
   </data>
  </layer>
- <layer name="Background" width="26" height="49">
+ <layer name="Background" width="26" height="49" visible="0">
   <data encoding="base64" compression="zlib">
    eJztwwEJAAAMBKEr/72XY6Dgqqmqqqqqrx+PcpYB
   </data>
  </layer>
- <layer name="Terrain" width="26" height="49">
+ <layer name="Terrain" width="26" height="49" visible="0">
   <data encoding="base64" compression="zlib">
    eJztmEEKgzAQRedShdoW1KV21aIre/9zdAYyNAjWJMwo6P/wiJvw8rMY1J6I+o14MYMT78jzJL908MBzAs9lAWuPV+CBBx5fz5WpmBtzD2sVnh+GHovAAw88+3hy3hvmHpkxOltklfmSOltyPF7ZyyP3pvNY7w73Bs/RPTXTBNoCj/xLGAvOtfS9NEf3pUS6fCLPRL9ua+i+lMRdSlnrEZ/Jy2PRQ2n+YNFja764OW0L
   </data>
  </layer>
  <layer name="Front_Layer" width="26" height="49">
   <data encoding="base64" compression="zlib">
-   eJztl0sKg0AQRL1TcoJ8dJPfMslSs4wukxw/tWlopMXBnlqoXfAYBsRnoxRjUaw31QjhWYdnzDsHzx08wJPsqUEDXpk8O7AHB3BU+zdoQZfJcwJncAFXtf+AL/hl8uhswDbhuvBM83gTnvTofmF6dL8wPbpfmB7dL0v4DsLD8+T2L82jY/VR6bifnD/6q9VHN4dHzh/91eojzzxDsfrIM09KmPNYnphnmmfu87CfX8J+H9I97Ej3sCL/cuzIv1xkOH92RTzK
+   eJztl0sKg0AQRL2TOUF+bvJbJlnGLJMsTY5vbRoaaVHsKeJIFzyG2fhslGKmKCLsVAOE57+eIW8Oniu4gTvZ8wA1eCbyrMEGbMFO7V/gDT6JPAdwBCdwVvsGfMEvkWdKcvGUYDUjjzfhGR/dL0yP7hemR/cL06P7ZQn/QXh4ntT+pXl0rD7aO54n54/uavXRxeGR80d3tfrIM09frD7yzDMmzHksT8wzzZP7POz3l7C/h3QPO9I9rMhdjh25y0X60wINajnE
   </data>
  </layer>
  <layer name="Sprite_Layer" width="26" height="49">
