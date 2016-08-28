@@ -61,7 +61,7 @@
   </object>
  </objectgroup>
  <objectgroup name="inZoneLayer">
-  <object id="46" name="InZone" x="402.634" y="324.514" width="32" height="27">
+  <object id="46" name="InZone" x="50.634" y="1848.51" width="32" height="27">
    <properties>
     <property name="StartPoint" value="StartPointComm"/>
    </properties>
