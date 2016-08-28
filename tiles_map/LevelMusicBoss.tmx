@@ -34,11 +34,11 @@
   </tile>
   <tile id="4">
    <animation>
-    <frame tileid="24" duration="100"/>
-    <frame tileid="44" duration="100"/>
-    <frame tileid="64" duration="100"/>
-    <frame tileid="84" duration="100"/>
-    <frame tileid="9" duration="100"/>
+    <frame tileid="24" duration="500"/>
+    <frame tileid="44" duration="500"/>
+    <frame tileid="64" duration="500"/>
+    <frame tileid="84" duration="500"/>
+    <frame tileid="9" duration="500"/>
    </animation>
   </tile>
   <tile id="10">
@@ -47,16 +47,16 @@
     <frame tileid="50" duration="500"/>
     <frame tileid="70" duration="500"/>
     <frame tileid="90" duration="500"/>
-    <frame tileid="15" duration="100"/>
+    <frame tileid="15" duration="500"/>
    </animation>
   </tile>
   <tile id="11">
    <animation>
-    <frame tileid="31" duration="100"/>
-    <frame tileid="51" duration="100"/>
-    <frame tileid="71" duration="100"/>
-    <frame tileid="91" duration="100"/>
-    <frame tileid="16" duration="100"/>
+    <frame tileid="31" duration="500"/>
+    <frame tileid="51" duration="500"/>
+    <frame tileid="71" duration="500"/>
+    <frame tileid="91" duration="500"/>
+    <frame tileid="16" duration="500"/>
    </animation>
   </tile>
   <tile id="12">
@@ -70,37 +70,49 @@
   </tile>
   <tile id="14">
    <animation>
-    <frame tileid="34" duration="100"/>
-    <frame tileid="54" duration="100"/>
-    <frame tileid="74" duration="100"/>
-    <frame tileid="94" duration="100"/>
-    <frame tileid="19" duration="100"/>
+    <frame tileid="34" duration="500"/>
+    <frame tileid="54" duration="500"/>
+    <frame tileid="74" duration="500"/>
+    <frame tileid="94" duration="500"/>
+    <frame tileid="19" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="35">
+   <animation>
+    <frame tileid="35" duration="200"/>
+    <frame tileid="36" duration="100"/>
+    <frame tileid="37" duration="100"/>
    </animation>
   </tile>
  </tileset>
  <layer name="Collision_Layer" width="25" height="19">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYAJiZiBmHOIYGyBGLSlqBosd+MBgsYNU+wnZNZjsoBYYtYM6djBBMSkAm56BTlfDwQ7kuoQZTT26fmL0DBcMAJLFAPI=
+   eJxjZGBgYAJiZiBmHOIYGVBbLTZ9uPTjA8S4Y6DtIAUQE570toNaYNSOoWMHrAwjBTBD9RFrx3DJH7S2A7kuYUZTj66fGD3DBQMAcmUA7A==
   </data>
  </layer>
- <layer name="Background" width="25" height="19" visible="0">
+ <layer name="Background" width="25" height="19">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApGAS0BAAdsAAE=
+   eJybwsDAMGUUj+JRPIpH8SgexTTDAHdfEqw=
   </data>
  </layer>
  <layer name="Terrain" width="25" height="19">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMAoGJ/ABYmMgNgFiUyA2A2JzIPbFIU6OepCcLRDbAbE9EDsAsSNUDps4OeoBrFQMDg==
+   eJztlTkOgCAQRbmTW+XWA6W13saaeGC/yZCQCaCYjJXFa3D+LJ+JaKVUBWrQgBZ0wCTOdWG8IXowgBFMYKZcsfPSeE2aQ5ArvxWusX8wh/tgDn8fVnCendWR8ircaYkafNd/r/J7lfJqBVthvpgm55Whb6X3yzU5r978AzTpnu6VezmHS/RqmVdL4OHC+uR932l8r5JvlK8r+UZd8Scky93K
   </data>
  </layer>
- <layer name="Sprite_Layer" width="25" height="19" visible="0">
+ <layer name="Front_Layer" width="25" height="19">
+  <data encoding="base64" compression="zlib">
+   eJztj7EKgEAMQ+97ddVV0VVX/V6zBM7QngUdHPogFEpS0lLuLNAKdVBvzBrPwxseG7QbuQEaxcudennD44BOIzdBs3i5Uy9vPNHqr+g/UVr9Ff0nSqT/20yk/xeZJEmSP3EB05og6Q==
+  </data>
+ </layer>
+ <layer name="Sprite_Layer" width="25" height="19">
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2AUjIJRMApGAS0BAAdsAAE=
   </data>
  </layer>
  <objectgroup name="outZoneLayer"/>
  <objectgroup name="inZoneLayer">
-  <object id="3" name="InZone" x="68" y="118" width="9" height="42">
+  <object id="3" name="InZone" x="51" y="121" width="9" height="30">
    <properties>
     <property name="StartPoint" value="StartPointMusicBoss"/>
    </properties>
