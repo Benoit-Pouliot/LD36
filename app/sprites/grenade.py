@@ -60,10 +60,11 @@ class Grenade(pygame.sprite.Sprite):
         pass
 
     def detonate(self):
-        self.kill()
 
         explosion = Explosion(self.rect.midbottom[0], self.rect.midbottom[1])
 
         self.mapData.camera.add(explosion)
         self.mapData.allSprites.add(explosion)
         self.mapData.friendlyExplosion.add(explosion)
+
+        self.kill()

@@ -34,7 +34,7 @@ class Explosion(pygame.sprite.Sprite):
         self.isPhysicsApplied = False
         self.isGravityApplied = False
         self.isFrictionApplied = False
-        self.isCollisionApplied = True
+        self.isCollisionApplied = False
 
         self.jumpState = JUMP
 

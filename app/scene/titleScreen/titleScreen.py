@@ -26,6 +26,7 @@ class TitleScreen:
         self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, SCREEN_WIDTH / 3, SCREEN_HEIGHT * 0.25))
         self.menu.addOption('Level 1', self.startLvlMusic)
         self.menu.addOption('Level 2', self.startLvlComm)
+        self.menu.addOption('Credit', self.startCredit)
 
         self.menu.addOption('Exit', sys.exit)
         # self.menu.addOption('TitleScreen', self.startWorldMap)
@@ -67,3 +68,10 @@ class TitleScreen:
         self.gameData.typeScene = PLATFORM_SCREEN
 
         self.gameData.mapData = MapData("LevelComm", "StartPointComm")
+
+    def startCredit(self):
+        self.nextScene = CREDIT_SCREEN
+        self.sceneRunning = False
+        self.gameData.typeScene = CREDIT_SCREEN
+
+        # self.gameData.mapData = MapData("LevelComm", "StartPointComm")

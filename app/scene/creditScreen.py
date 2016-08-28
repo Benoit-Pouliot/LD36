@@ -4,21 +4,20 @@ import os
 import pygame
 
 from app.settings import *
-from app.scene.musicFactory import MusicFactory
 from app.tools.functionTools import *
 
 
-class GameOverScreen:
+class CreditScreen:
     def __init__(self, screen, gameData=None):
         self.screen = screen
 
         self.gameData = gameData
 
         self.screen.fill((0,0,0))
-        titleImage = pygame.image.load(os.path.join('img', 'GameOverScreen_v2.png'))
+        titleImage = pygame.image.load(os.path.join('img', 'Credit.png'))
         self.screen.blit(titleImage, (0, 0))
 
-        self.type = GAME_OVER_SCREEN
+        self.type = CREDIT_SCREEN
         self.nextScene = None
 
     def mainLoop(self):

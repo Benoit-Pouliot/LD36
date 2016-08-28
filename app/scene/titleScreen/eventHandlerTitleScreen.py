@@ -1,5 +1,6 @@
 import pygame
-from sys import exit
+
+from app.tools.functionTools import *
 
 class EventHandlerTitleScreen():
     def __init__(self):
@@ -10,7 +11,7 @@ class EventHandlerTitleScreen():
         self.selector = selector
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                exit()
+                quitGame()
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT or event.key == pygame.K_d: #Does nothing for now...
                     self.optionList[self.selector.vPos].deselect()
