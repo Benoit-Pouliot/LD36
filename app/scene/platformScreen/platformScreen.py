@@ -74,6 +74,19 @@ class PlatformScreen:
             elif self.levelComplete == True:
                 self.levelCompleteCounter += 1
                 if self.levelCompleteCounter == 240:
+                    self.gameData.mapComplete["map2"] = True
+                    self.backToMain()
+
+        if self.mapData.nameMap == "LevelCommBoss":
+            stillAlive = False
+            for enemy in self.mapData.enemyGroup:
+                if enemy.name == "enemyCommBoss":
+                    stillAlive = True
+            if stillAlive == False and self.levelComplete == False:
+                self.win()
+            elif self.levelComplete == True:
+                self.levelCompleteCounter += 1
+                if self.levelCompleteCounter == 240:
                     self.gameData.mapComplete["map1"] = True
                     self.backToMain()
 

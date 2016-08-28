@@ -32,6 +32,8 @@ class EnemyCommBoss(Enemy):
         self.isGravityApplied = False
         self.isCollisionApplied = True
 
+        self.soundVictory = pygame.mixer.Sound(os.path.join('music_pcm', 'levelWin.wav'))
+
         self.life = 10
 
         self.imageIterShoot = 0
@@ -85,3 +87,9 @@ class EnemyCommBoss(Enemy):
 
     def spring(self):
         self.speedy = -15
+
+    def dead(self):
+        self.soundDead.play()
+        pygame.mixer.music.stop()
+        self.soundVictory.play()
+        self.kill()
