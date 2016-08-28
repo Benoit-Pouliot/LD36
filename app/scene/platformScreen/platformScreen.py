@@ -1,3 +1,5 @@
+import pygame, os
+
 
 from app.scene.platformScreen.eventHandlerPlatformScreen import EventHandlerPlatformScreen
 from app.scene.platformScreen.logicHandlerPlatformScreen import LogicHandlerPlatformScreen
@@ -5,6 +7,7 @@ from app.scene.drawer import Drawer
 from app.settings import *
 from app.sprites.playerPlatform import PlayerPlatform
 from app.scene.musicFactory import MusicFactory
+from app.sprites.levelComplete import LevelComplete
 
 from app.mapData import MapData
 
@@ -29,6 +32,10 @@ class PlatformScreen:
         self.logicHandler = LogicHandlerPlatformScreen(self.screen, self.player, self.mapData)
         self.drawer = Drawer()
 
+        self.levelCompleteSprite = LevelComplete()
+        self.levelComplete = False
+        self.levelCompleteCounter = 0
+
         #MusicFactory(PLATFORM_SCREEN, self.mapData.nameMap)
 
 
@@ -40,6 +47,7 @@ class PlatformScreen:
             self.logicHandler.handle(self.player, self.gameData)
             self.checkNewMap(self.logicHandler.newMapData)
             self.drawer.draw(self.screen, self.mapData.camera, self.mapData.spritesHUD, self.player)
+            self.checkWinCondition()
 
             if self.logicHandler.endState is not None:
                 print('in endState Loop')
@@ -54,6 +62,24 @@ class PlatformScreen:
             self.nextScene = PLATFORM_SCREEN
             self.gameData.typeScene = PLATFORM_SCREEN
             self.gameData.mapData = newMapData
+
+    def checkWinCondition(self):
+        if self.mapData.nameMap == "LevelMusicBoss":
+            stillAlive = False
+            for enemy in self.mapData.enemyGroup:
+                if enemy.name == "enemyMusicBoss":
+                    stillAlive = True
+            if stillAlive == False and self.levelComplete == False:
+                self.win()
+            elif self.levelComplete == True:
+                self.levelCompleteCounter += 1
+                if self.levelCompleteCounter == 240:
+                    self.gameData.mapComplete["map1"] = True
+                    self.backToMain()
+
+    def win(self):
+        self.mapData.spritesHUD.add(self.levelCompleteSprite)
+        self.levelComplete = True
 
     def close(self):
         self.sceneRunning = False

@@ -23,12 +23,13 @@ class SceneHandler:
         while self.handlerRunning:
             self.runningScene.mainLoop()
 
+            #When we exit the scene, this code executes
+
             if self.runningScene.gameData.mapData != None:
                 self.musicHandler.playMusic(self.runningScene.nextScene, self.runningScene.gameData.mapData.nameMap)
             else:
                 self.musicHandler.playMusic(self.runningScene.nextScene, None)
 
-            #When we exit the scene, this code executes
             if self.runningScene.nextScene == TITLE_SCREEN:
                 self.runningScene = TitleScreen(self.screen, self.gameData)
             elif self.runningScene.nextScene == PLATFORM_SCREEN:

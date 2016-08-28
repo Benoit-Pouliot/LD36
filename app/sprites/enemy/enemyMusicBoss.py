@@ -25,7 +25,9 @@ class EnemyMusicBoss(Enemy):
         self.isGravityApplied = True
         self.isCollisionApplied = True
 
-        self.life = 10
+        self.life = 2
+
+        self.soundVictory = pygame.mixer.Sound(os.path.join('music_pcm', 'levelWin.wav'))
 
         self.imageIterShoot = 280
         self.imageWaitNextShoot = list()
@@ -73,5 +75,12 @@ class EnemyMusicBoss(Enemy):
                 self.theMap.camera.add(bullet[k])
                 self.theMap.allSprites.add(bullet[k])
                 self.theMap.enemyBullet.add(bullet[k])
+
+    def dead(self):
+        self.soundDead.play()
+        pygame.mixer.music.stop()
+        self.soundVictory.play()
+        self.kill()
+
 
 

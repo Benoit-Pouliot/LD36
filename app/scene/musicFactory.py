@@ -28,6 +28,6 @@ class MusicFactory:
             pygame.mixer.music.load(os.path.join('music_pcm', self.nameMusic + '.wav'))
             pygame.mixer.music.set_volume(0.5)
             pygame.mixer.music.play(-1)
-        elif levelName != "LevelMusicBoss" or levelName != "LevelCommBoss":
+        elif levelName != "LevelMusicBoss" and levelName != "LevelCommBoss":
             pygame.mixer.music.stop()
 
