@@ -18,8 +18,8 @@ class CollisionPlayerPlatform:
 
                 self.rightCollision(sprite, mapData)
                 self.leftCollision(sprite, mapData)
-                self.upCollision(sprite, mapData)
                 self.downCollision(sprite, mapData)
+                self.upCollision(sprite, mapData)
 
                 self.collisionWithEnemy(player, mapData.enemyGroup)
                 self.pickUpItem(player, mapData.itemGroup, gameData)
@@ -144,7 +144,8 @@ class CollisionPlayerPlatform:
             # while map.tmxDaata.get_tile_gid((player.collisionMask.rect.left+1)/tileWidth, (player.collisionMask.rect.bottom)/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.collisionMask.rect.right)/tileWidth, (player.collisionMask.rect.bottom)/tileHeight, COLLISION_LAYER) != SOLID:
             #     player.collisionMask.rect.bottom += 1
             player.speedy = 0
-            player.jumpState = GROUNDED
+            if player.jumpState != CLIMBING:
+                player.jumpState = GROUNDED
             player.detonate()
         elif downLeftTileGid == SPIKE or downRightTileGid == SPIKE  or downMidTileGID == SPIKE:
             player.dead()
@@ -164,7 +165,7 @@ class CollisionPlayerPlatform:
         upRightTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.right/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
         upMidTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.centerx/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
 
-
+        #printJumpState(player.jumpState)
 
         if upLeftTileGid == SOLID or upRightTileGid == SOLID or upMidTileGid == SOLID:
             #Coller le player sur le plafond
@@ -184,6 +185,7 @@ class CollisionPlayerPlatform:
         else:
             if player.jumpState == CLIMBING:
                 player.jumpState = JUMP
+                player.upPressed = False
 
        # printJumpState(player.jumpState)
        # printTopTile(upRightTileGid)
