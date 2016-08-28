@@ -46,11 +46,17 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.maxSpeedx = 6
         self.maxSpeedyUp = 20
         self.maxSpeedyDown = 16
+        self.maxSpeedyUpClimbing = 6
+        self.maxSpeedyDownClimbing = 6
         self.accx = 2
         self.accy = 2
         self.jumpSpeed = -17
 
-        self.isPhysicsApplied = True
+        self.isPhysicsApplied = False
+        self.isGravityApplied = True
+        self.isFrictionApplied = True
+        self.isCollisionApplied = True
+
         self.jumpState = JUMP
         self.facingSide = RIGHT
 
@@ -63,6 +69,8 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
         self.rightPressed = False
         self.leftPressed = False
+        self.upPressed = False
+        self.downPressed = False
 
         self.mapData = mapData
 
@@ -90,8 +98,13 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
 
+        self.updateAnimation()
         self.updateCollisionMask()
+        self.invincibleUpdate()
+        self.updateTarget()
+        self.updateJumpState()
 
+    def updateAnimation(self):
         # Animation movement
         self.imageIterWait = min(self.imageIterWait+1, 2*self.imageWaitNextImage)
         if self.speedx == 0:
@@ -126,11 +139,20 @@ class PlayerPlatform(pygame.sprite.Sprite):
                 self.image = self.imageShapeWalkLeft[self.imageIterStateLeft]
                 self.imageIterWait = 0
 
-        self.invincibleUpdate()
-        self.updateTarget()
+    def updateJumpState(self):
+        if self.jumpState == CLIMBING:
+            self.isGravityApplied = False
+        else:
+            self.isGravityApplied = True
 
 
     def capSpeed(self):
+        if self.jumpState == CLIMBING:
+            if self.speedy > 0 and self.speedy > self.maxSpeedyDownClimbing:
+                self.speedy = self.maxSpeedyDownClimbing
+            if self.speedy < 0 and self.speedy < -self.maxSpeedyUpClimbing:
+                self.speedy = -self.maxSpeedyUpClimbing
+
         if self.speedx > 0 and self.speedx > self.maxSpeedx:
             self.speedx = self.maxSpeedx
         if self.speedx < 0 and self.speedx < -self.maxSpeedx:
@@ -152,10 +174,12 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.speedx -= self.accx
 
     def updateSpeedUp(self):
-        self.speedy -= self.accy
+        if self.jumpState == CLIMBING:
+            self.speedy -= self.accy
 
     def updateSpeedDown(self):
-        self.speedy += self.accy
+        if self.jumpState == CLIMBING:
+            self.speedy += self.accy
 
     def updateTarget(self):
         mousePos = pygame.mouse.get_pos()

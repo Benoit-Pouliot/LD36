@@ -28,6 +28,8 @@ class EnemyMp3(Enemy):
         self.imageIterShoot = 40
         self.imageWaitNextShoot = 80
 
+        self.life = 2
+
     def update(self):
 
         self.rect.x += self.speedx
@@ -52,3 +54,9 @@ class EnemyMp3(Enemy):
 
         if self.speedy == 0 and self.imageIterShoot > self.imageWaitNextShoot*.9:
             self.rect.y += self.jumpSpeed
+
+
+    def hurt(self):
+        self.life -= 1
+        if self.life <= 0:
+            self.dead()

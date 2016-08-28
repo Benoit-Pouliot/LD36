@@ -30,6 +30,8 @@ class EnemyRadio(Enemy):
         self.imageIterShoot = 40
         self.imageWaitNextShoot = 80
 
+        self.life = 1
+
     def setDirection(self, direction):
         self.direction = direction
         if self.direction == "Right":
@@ -57,5 +59,10 @@ class EnemyRadio(Enemy):
             self.theMap.enemyBullet.add(bullet)
 
             self.imageIterShoot = 0
+
+    def hurt(self):
+        self.life -= 1
+        if self.life <= 0:
+            self.dead()
 
 
