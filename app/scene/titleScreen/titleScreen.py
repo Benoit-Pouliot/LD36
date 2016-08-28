@@ -23,14 +23,36 @@ class TitleScreen:
         self.screen.blit(titleImage, (0, 0))
 
         # Define MainMenu
-        self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, SCREEN_WIDTH / 3, SCREEN_HEIGHT * 0.25))
-        self.menu.addOption('Level 1', self.startLvlMusic)
-        self.menu.addOption('Level 2', self.startLvlComm)
-        self.menu.addOption('Credit', self.startCredit)
+        menuWidth = SCREEN_WIDTH / 3
+        menuHeight = SCREEN_HEIGHT * 0.33
 
+        if not gameData.mapComplete['map1']:
+            if not gameData.mapComplete['map2']:
+                self.menu = Menu(
+                    pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight))
+
+                self.menu.addOption('Level 1', self.startLvlMusic)
+                self.menu.addOption('Level 2', self.startLvlComm)
+            else:
+                self.menu = Menu(
+                        pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight*3/4))
+
+                self.menu.addOption('Level 1', self.startLvlMusic)
+
+        else:
+            if not gameData.mapComplete['map2']:
+                self.menu = Menu(
+                    pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight * 3 / 4))
+
+                self.menu.addOption('Level 2', self.startLvlComm)
+            else:
+                self.menu = Menu(
+                        pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight*1/2))
+
+
+        self.menu.addOption('Credit', self.startCredit)
         self.menu.addOption('Exit', sys.exit)
-        # self.menu.addOption('TitleScreen', self.startWorldMap)
-        # self.menu.addOption('Level 1', self.startFirstLevel)
+
 
         self.eventHandler = EventHandlerTitleScreen()
         self.drawer = Drawer()

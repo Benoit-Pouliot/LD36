@@ -14,6 +14,9 @@ class GameData:
         self.mapComplete["map1"] = False
         self.mapComplete["map2"] = False
 
+        if TAG_MARIE == 1:
+            self.mapComplete["map1"] = True
+            self.mapComplete["map2"] = True
 
         self.maxItemOfAType = 99
 
