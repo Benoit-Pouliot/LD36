@@ -268,7 +268,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
     def power2speed(self, rawPowerValue):
         ratio = 5
-        powerCap = 12
+        powerCap = 9
         powerValue = rawPowerValue/ratio
         if powerValue > powerCap:
             powerValue = powerCap
