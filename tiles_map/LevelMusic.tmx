@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="127" height="21" tilewidth="32" tileheight="32" nextobjectid="49">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="127" height="21" tilewidth="32" tileheight="32" nextobjectid="50">
  <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
@@ -201,7 +201,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,79,80,79,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,89,90,0,0,0,0,0,0,0,0,0,0,89,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,89,90,89,90,0,0,0,0,0,0,0,0,0,0,0,0,0,79,80,0,0,0,0,0,0,0,0,0,0,99,100,79,80,0,0,0,0,0,0,79,80,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,89,90,0,0,0,0,0,0,0,0,0,0,99,100,89,90,0,0,0,0,0,0,89,90,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-108,108,108,109,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,86,0,0,0,99,100,99,100,79,80,0,0,79,80,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,79,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+108,108,108,109,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,99,100,99,100,79,80,0,0,79,80,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,79,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 118,118,118,119,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,99,100,99,100,89,90,0,0,89,90,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,89,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,79,80,99,100,99,100,99,100,0,0,0,96,97,96,97,96,97,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,89,90,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -233,45 +233,49 @@
 </data>
  </layer>
  <objectgroup name="enemyLayer">
-  <object id="3" name="enemyRadio" type="enemy" x="726.333" y="497.667" width="48.3333" height="40.6667">
+  <object id="3" name="enemyRadio" type="enemy" x="685.333" y="477.667" width="48.3333" height="40.6667">
    <properties>
     <property name="direction" value="Left"/>
    </properties>
   </object>
-  <object id="12" name="enemyWalkman" type="enemy" x="3792" y="135.333" width="30" height="30.6667">
+  <object id="12" name="enemyWalkman" type="enemy" x="3616" y="92.333" width="30" height="30.6667">
    <properties>
     <property name="direction" value="Right"/>
+    <property name="distanceMax" value="300"/>
    </properties>
   </object>
   <object id="16" name="enemyMp3" type="enemy" x="1423.67" y="370.167" width="30" height="39"/>
-  <object id="35" name="enemyRadio" type="enemy" x="1879.17" y="533.667" width="49.6667" height="35.3333">
+  <object id="35" name="enemyRadio" type="enemy" x="1833.17" y="505.667" width="49.6667" height="35.3333">
    <properties>
     <property name="direction" value="Left"/>
    </properties>
   </object>
-  <object id="36" name="enemyRadio" type="enemy" x="3272.5" y="545" width="49.6667" height="35.3333">
+  <object id="36" name="enemyRadio" type="enemy" x="3220.5" y="505" width="49.6667" height="35.3333">
    <properties>
     <property name="direction" value="Left"/>
    </properties>
   </object>
-  <object id="37" name="enemyRadio" type="enemy" x="3444.5" y="129" width="49.6667" height="35.3333">
+  <object id="37" name="enemyRadio" type="enemy" x="3381.5" y="93" width="49.6667" height="35.3333">
    <properties>
     <property name="direction" value="Left"/>
    </properties>
   </object>
-  <object id="38" name="enemyWalkman" type="enemy" x="3254.33" y="315.333" width="30" height="30.6667">
+  <object id="38" name="enemyWalkman" type="enemy" x="3232.33" y="284.333" width="30" height="30.6667">
    <properties>
     <property name="direction" value="Right"/>
+    <property name="distanceMax" value="380"/>
    </properties>
   </object>
-  <object id="39" name="enemyWalkman" type="enemy" x="3470.33" y="534" width="30" height="30.6667">
+  <object id="39" name="enemyWalkman" type="enemy" x="3558.33" y="507" width="30" height="30.6667">
    <properties>
     <property name="direction" value="Right"/>
+    <property name="distanceMax" value="400"/>
    </properties>
   </object>
-  <object id="40" name="enemyWalkman" type="enemy" x="1909.33" y="139.667" width="30" height="30.6667">
+  <object id="40" name="enemyWalkman" type="enemy" x="1912.33" y="155.667" width="30" height="30.6667">
    <properties>
     <property name="direction" value="Right"/>
+    <property name="distanceMax" value="80"/>
    </properties>
   </object>
   <object id="43" name="enemyMp3" type="enemy" x="846.333" y="308.5" width="30" height="39"/>
@@ -285,14 +289,13 @@
     <property name="distanceMax" value="20"/>
    </properties>
   </object>
- </objectgroup>
- <objectgroup name="inZoneLayer">
-  <object id="19" name="InZone" x="81.5455" y="448.879" width="13" height="21">
+  <object id="49" name="InZone" x="70.5" y="425.5" width="13" height="21">
    <properties>
     <property name="StartPoint" value="StartPointMusic"/>
    </properties>
   </object>
  </objectgroup>
+ <objectgroup name="inZoneLayer"/>
  <objectgroup name="outZone">
   <object id="18" name="OutZone" x="3995" y="61" width="68" height="134">
    <properties>
