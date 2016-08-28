@@ -73,9 +73,9 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
         self.isAlive = True
 
-        self.soundSpring = pygame.mixer.Sound(os.path.join('music_pcm', 'LvlUpFail.wav'))
-        self.soundBullet = pygame.mixer.Sound(os.path.join('music_pcm', 'Gun.wav'))
-        self.soundGetHit = pygame.mixer.Sound(os.path.join('music_pcm', 'brokenGlass.wav'))
+        self.soundSpring = pygame.mixer.Sound(os.path.join('music_pcm', 'LvlUpFail2.wav'))
+        self.soundBullet = pygame.mixer.Sound(os.path.join('music_pcm', 'Gun2.wav'))
+        self.soundGetHit = pygame.mixer.Sound(os.path.join('music_pcm', 'brokenGlass2.wav'))
         self.soundSpring.set_volume(1)
         self.soundBullet.set_volume(.3)
         self.soundGetHit.set_volume(.3)
