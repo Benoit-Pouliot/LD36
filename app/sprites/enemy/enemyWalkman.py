@@ -24,7 +24,7 @@ class EnemyWalkman(Enemy):
         self.initx = self.rect.x
         self.inity = self.rect.y
 
-        self.speedBase = 1
+        self.speedBase = 2
         self.distanceMax = 200
 
         self.speedx = self.speedBase
