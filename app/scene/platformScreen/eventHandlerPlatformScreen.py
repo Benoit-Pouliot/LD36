@@ -29,9 +29,11 @@ class EventHandlerPlatformScreen():
                     self.player.updateSpeedLeft()
                     self.player.leftPressed = True
                 elif event.key == pygame.K_UP or event.key == pygame.K_w:
-                    self.player.updateSpeedUp()
+                    self.player.jump()
+                    # self.player.updateSpeedUp()
                 elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                    self.player.updateSpeedDown()
+                    # self.player.updateSpeedDown()
+                    pass
                 elif event.key == pygame.K_SPACE:
                     self.player.jump()
                 elif event.key == pygame.K_LCTRL:
