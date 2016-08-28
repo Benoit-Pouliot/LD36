@@ -10,7 +10,7 @@ from app.sprites.bullet import WordBulletDiag
 
 class EnemyCommBoss(Enemy):
     def __init__(self, x, y, theMap):
-        super().__init__(x, y, os.path.join('img', 'Cochon.png'))
+        super().__init__(x, y, os.path.join('img', 'enemyCommBoss.png'))
 
         self.name = "enemyCommBoss"
 
@@ -21,7 +21,7 @@ class EnemyCommBoss(Enemy):
 
         self.theMap = theMap
 
-        self.speedBase = 6
+        self.speedBase = 5
         self.distanceMax = 600
 
         self.speedx = 0
