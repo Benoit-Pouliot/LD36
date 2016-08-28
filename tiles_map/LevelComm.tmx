@@ -5,10 +5,26 @@
  </tileset>
  <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100" columns="10">
   <image source="img/set_comm.png" width="320" height="320"/>
+  <terraintypes>
+   <terrain name="Wood" tile="-1"/>
+  </terraintypes>
+  <tile id="12" terrain=",,,0"/>
+  <tile id="13" terrain=",,0,0"/>
+  <tile id="14" terrain=",,0,"/>
+  <tile id="22" terrain=",0,,0"/>
+  <tile id="23" terrain="0,0,0,0"/>
+  <tile id="24" terrain="0,,0,"/>
+  <tile id="30" terrain="0,0,0,"/>
+  <tile id="31" terrain="0,0,,0"/>
+  <tile id="32" terrain=",0,,"/>
+  <tile id="33" terrain="0,0,,"/>
+  <tile id="34" terrain="0,,,"/>
+  <tile id="40" terrain="0,,0,0"/>
+  <tile id="41" terrain=",0,0,0"/>
  </tileset>
  <layer name="Collision_Layer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmeEKwzAIhNut7//M64/Bwkgbz8ZozB0cDNKF+FWNbPu2ba/T79PH6Z02MSp0X+/4yEAWx6oMIksb3/F1BnkxOBoeKTL4qRcDaUxkEFPZe6Ik56wZeN+fKANkz1lkycD7/T6RZr4sNZqBxax6x0Ci7HkgUXYG2lp4TWaLPJjVZFBnoK2FWV1jIJFHT9TGptlfouwMtLVgrah5MNJoLFfx9eI3GwPke2gtZGUgUUQG/z0KVUYGaG5nqAXmARmUZxp1L0TUHQN0PsjIQCIymINB6zxkgM8HT+cJD7XONYJBlN9APRlEd22OIAMyWJlBj+fvVD7T67NUrfdcxoTshzLwFBlgDCxrwVNSBlfrZEAGqzFgP+C9QAasBfZEMiCDtftBbX21e6G2TgashVZPlOwXmQcZ+DHwcCtG7/ONsPb/JrqfP4XoDik=
+   eJztmckOwzAIRJ3U///NzaGHqPICxJglM9JIldxa5gUwSo9Synn5c7lePmA1c8XZ0zq20fmk8UdjQIlDoiwMvEoaX/05g6wY1IktBAbrGFBjAgOfyt4TKTmnzcD6/uQy4OwZRZoMrJ/vE0nmy7t2M9CYVUcMKMqeBxRlZyCthTOYNfIgqsGgzUBaC1HdYkCRRU+UxibZn6LsDKS1oC2vebDT3Fh68a3iF40B53fcWsjKgCKPDP57FFcZGXBzO0MtIA/A4H6mXfeCR40YcOeDjAwoAoMYDGbnAQP+fPB0nrDQ7Fw7GHh5B2rJwLtbcwQYgIEGg6L8eRWDFd8fSYMBVbPnfI+Jsx+XgaXAgMdAsxYsRWXQWwcDMHgbA/QD3AtggFpATwQDMEA/wL0ABq31t9XCbH0UW28/z0zAwJbBTo8keQ8c0U/+b4LX+QuEqg4j
   </data>
  </layer>
  <layer name="Background" width="65" height="66">
@@ -18,12 +34,12 @@
  </layer>
  <layer name="Terrain" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJzt2QEJAAAIA0FL2b+aKYYKd/AltioAAAAAkvpZAAAAAABJNlAAAAAAAAAu8zftGwkDEWU=
+   eJztmttOwzAMhvNSSMAmwS7ZrmDsCt7/OajVWTNR0tpu0pz8S5aG1Jbkix0nTs7OuXNm+5zsW2hfgm+uPVvC/D7fnFwfK//jIni2xPhq+twqA9qO1Lq65Vi5CZ5NEW+cdrQoia/1KmNgDEDGwBiAjMGDQa51zvNkr5MdN34np5DBCOMdkzH4zwD89sXNvnu4/y7tw6E2hX5vaeeIfvA22Yn8PSID6HNov4mxQH1sKRaA5bubeT41ZksMJML3fu4sWrJfl4YB3avXWMOS1Dz8WKBzLne+1dYuUtU4pPUOf+3XwpwoqZFp+oFjODIDlDQv7ClurEHMbGXQuvycBwqtMw/uMcZ0ndkDA/AXzT4X1zo0L1BWNcRCbrWQF3KrJwY09v24p3O979uhvTO+u3VPurf8/SBXLawPuArlBYmMQXz/p/GtUoqtD/x1nz9P4BzRQ21d6we4PhiZQU9nLMZg7staXetIDGMA6kq1M8C2gi3N0Zw9tubuDrxTQw2UMyac+p6GQQ01U+qr0B5Ovo71r5Y7XFuNE58pGWjuVeaole7BIOcdw5i09ehYm3DPd1z4dqieXNP8v7eMQZ8MMBb8OmqsHtIjAyrNnGgMjEEvDOgdOMuNPBmDPhmEaoeYEy03jjMnUhmDcRlYbpTLGPTJIHbvJna324+XHhhslTEwBqCS5wjc83163iT9HuddTY07lXHPsqTnQifHP1MsbVwflPbjIuAGZwt/ANh/nQ==
   </data>
  </layer>
  <layer name="FirstLayer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJzt10EKg0AQAEH/lFzz/28l/YCgIsZdUw1z0sNYLAsuiyRpb4/PPK9e4uKOGrxWZoYYfDfY+k0M7tFsd+IZZ44Bg5rN4IwYMCgGDIoBg2LAoBgwqLX//zNmtBgwqBENfn1HMWBQDBiMGgMGxYBB7TW4oxkDBsWAQTH4D4O1nRkw2PL86PsjxIBBMWBQDBgUAwbFgEExYFAMGBQDBsVgzp01b28SBW5P
+   eJztmstuAyEMRfNP7babPrLqa9l22XTZdtn282sWSFZkGMBgPMZHulKkMITcIdcD5HBwnLFcg24E+h31OT24Bz0I9DvqcyzTOm8uQJedxzILat68gF5Bb5nruB5cbWg276AT6CPTxroHn6Av0DfomGiT8qD0O2n34Af0C/oDPSfacD2wwN4yccSccw/cg0D0oKSOauUWdMe4PnpQUke18gh6YlwfPcB1dDWiB7iOrsbeMnEE7oF7ELBQG7lYqI1cLNbG2v0ki7Wxdh9ya/0/QtpwD3R7IHW+oNGDmFFS5wuaPZDCPbDpQW2OWPTAwjmlr+P6erDXtWBPD7SuBeM+cGo/uKcHeC3I3X/uSdwHTu0H13qQa4/Xgtz955Gc35+eHuyF8/uzogcBnN+reoDze1UPcH5LeYCfqXu95oDzW8oD/Ezd63Up1JipPEj9f6ikP+1QY6byIPX/oZL+tEONeUYezIQa84w8mElpHnD6005pHnD6047nQXkerFYbqTxYrTZ6HngeBPz5wJ8PAp4HdB6sVhupPFitNta8z22vgRYPcucyuf62znNm0eJB7lwm19/Wec4sJOeBVlrGrPV+SqL1dy1Jyzz4B865uxk=
   </data>
  </layer>
  <layer name="Sprite_Layer" width="65" height="66">
@@ -106,37 +122,37 @@
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="16" name="enemyPhone" type="enemy" x="809" y="50.5" width="54" height="71">
+  <object id="16" name="enemyPhone" type="enemy" x="835.667" y="43.8333" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="17" name="enemyPhone" type="enemy" x="873" y="49.5" width="54" height="71">
+  <object id="17" name="enemyPhone" type="enemy" x="905" y="49.5" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="18" name="enemyPhone" type="enemy" x="998" y="50.5" width="54" height="71">
+  <object id="18" name="enemyPhone" type="enemy" x="1032.67" y="46.5" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="19" name="enemyPhone" type="enemy" x="933" y="52.5" width="54" height="71">
+  <object id="19" name="enemyPhone" type="enemy" x="966.333" y="45.8333" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="20" name="enemyPhone" type="enemy" x="1061" y="49.5" width="54" height="71">
+  <object id="20" name="enemyPhone" type="enemy" x="1097" y="41.5" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
    </properties>
   </object>
-  <object id="21" name="enemyPhone" type="enemy" x="1122" y="51.5" width="54" height="71">
+  <object id="21" name="enemyPhone" type="enemy" x="1160.67" y="39.5" width="54" height="71">
    <properties>
     <property name="firstShoot" value="0"/>
     <property name="interval" value="10"/>
