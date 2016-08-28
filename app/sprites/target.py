@@ -18,9 +18,9 @@ class Target(pygame.sprite.Sprite):
         self.speedy = 0
 
         self.isPhysicsApplied = False
-        self.isGravityApplied = True
-        self.isFrictionApplied = True
-        self.isCollisionApplied = True
+        self.isGravityApplied = False
+        self.isFrictionApplied = False
+        self.isCollisionApplied = False
 
         self.jumpState = JUMP
 

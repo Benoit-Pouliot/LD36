@@ -4,13 +4,14 @@ __author__ = 'Bobsleigh'
 import os
 import pygame
 from app.settings import JUMP
+from app.sprites.explosion import Explosion
 
 from app.scene.platformScreen.collisionPlayerPlatform import *
 # from app.tool.animation import Animation
 
 
 class Grenade(pygame.sprite.Sprite):
-    def __init__(self, x, y, speedX, speedY, friendly=True):
+    def __init__(self, x, y, speedX, speedY, mapData, friendly=True):
         super().__init__()
 
         self.name = "grenade"
@@ -40,6 +41,8 @@ class Grenade(pygame.sprite.Sprite):
 
         self.facingSide = RIGHT
 
+        self.mapData = mapData
+
     def update(self):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
@@ -49,3 +52,12 @@ class Grenade(pygame.sprite.Sprite):
 
     def spring(self):
         pass
+
+    def detonate(self):
+        self.kill()
+
+        explosion = Explosion(self.rect.midbottom[0], self.rect.midbottom[1])
+
+        self.mapData.camera.add(explosion)
+        self.mapData.allSprites.add(explosion)
+        self.mapData.friendlyBullet.add(explosion)

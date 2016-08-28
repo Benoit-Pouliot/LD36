@@ -206,7 +206,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
     def shootGrenade(self, rawPowerValue):
         speedx, speedy = self.power2speed(rawPowerValue)
 
-        grenade = Grenade(self.rect.centerx, self.rect.centery, speedx, speedy)
+        grenade = Grenade(self.rect.centerx, self.rect.centery, speedx, speedy, self.mapData)
 
         self.mapData.camera.add(grenade)
         self.mapData.allSprites.add(grenade)
@@ -227,3 +227,6 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.jumpState = JUMP
         self.speedy = -self.maxSpeedyUp
         self.soundSpring.play()
+
+    def detonate(self): #Méthode inutile pour que player ne crash pas lorsque utilisé avec le collisionHandler, qui doit utiliser detonate sur les grenades. A corriger.
+        pass

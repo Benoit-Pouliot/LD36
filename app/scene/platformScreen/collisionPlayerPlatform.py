@@ -37,6 +37,7 @@ class CollisionPlayerPlatform:
                             j += 1
                         player.rect.right = self.mapWidth-j*self.tileWidth-1
                         player.speedx = 0
+                        player.detonate()
                         return
 
                     upRightTileGid = map.tmxData.get_tile_gid((player.rect.right + i*self.tileWidth)/self.tileWidth, player.rect.top/self.tileHeight, COLLISION_LAYER)
@@ -46,6 +47,7 @@ class CollisionPlayerPlatform:
                         while map.tmxData.get_tile_gid((player.rect.right + 1)/self.tileWidth, player.rect.top/self.tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.rect.right + 1)/self.tileWidth, (player.rect.bottom-1)/self.tileHeight, COLLISION_LAYER) != SOLID:
                             player.rect.right += 1
                         player.speedx = 0
+                        player.detonate()
                     i += 1
 
             else:
@@ -59,10 +61,13 @@ class CollisionPlayerPlatform:
                     #     player.rect.right += 1
                     player.speedx = 0
                     player.rect.right += self.tileWidth - (player.rect.right % self.tileWidth) - 1 #On colle le player sur le mur à droite
+                    player.detonate()
                 elif upRightTileGid  == SPIKE or downRightTileGid == SPIKE or lowMidRightTileGid == SPIKE or highMidRightTileGid == SPIKE:
                     player.dead()
                 elif (upRightTileGid  == SPRING or downRightTileGid == SPRING or lowMidRightTileGid == SPRING or highMidRightTileGid == SPRING) and player.speedx > 0:
                     player.speedx = 0
+                    player.rect.right += self.tileWidth - (player.rect.right % self.tileWidth) - 1 #On colle le player sur le mur à droite
+                    player.detonate()
 
     def getUpRightTileGid(self):
         return self.map.tmxData.get_tile_gid((self.player.rect.right + self.player.speedx)/self.tileWidth, self.player.rect.top/self.tileHeight, COLLISION_LAYER)
@@ -92,6 +97,7 @@ class CollisionPlayerPlatform:
                         j += 1
                     player.rect.left = j*tileWidth
                     player.speedx = 0
+                    player.detonate()
                     return
 
                 upLeftTileGid = map.tmxData.get_tile_gid((player.rect.left - i*tileWidth)/tileWidth, player.rect.top/tileHeight, COLLISION_LAYER)
@@ -101,6 +107,7 @@ class CollisionPlayerPlatform:
                     while map.tmxData.get_tile_gid((player.rect.left)/tileWidth, player.rect.top/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.rect.left)/tileWidth, (player.rect.bottom-1)/tileHeight, COLLISION_LAYER) != SOLID:
                         player.rect.left -= 1
                     player.speedx = 0
+                    player.detonate()
                 i += 1
 
         else:
@@ -114,10 +121,12 @@ class CollisionPlayerPlatform:
                      #player.rect.left -= 1
                 player.speedx = 0
                 player.rect.left -= (player.rect.left % self.tileWidth) #On colle le player sur le mur de gauche
+                player.detonate()
             elif upLeftTileGid  == SPIKE or downLeftTileGid  == SPIKE or lowMidLeftTileGid == SPIKE or highMidLeftTileGid == SPIKE:
                 player.dead()
             elif (upLeftTileGid  == SPRING or downLeftTileGid  == SPRING or lowMidLeftTileGid == SPRING or highMidLeftTileGid == SPRING) and player.speedx < 0:
                 player.speedx = 0
+                player.detonate()
 
     def downCollision(self,player, map):
         tileWidth = map.tmxData.tilewidth
@@ -134,9 +143,11 @@ class CollisionPlayerPlatform:
             #     player.rect.bottom += 1
             player.speedy = 0
             player.jumpState = GROUNDED
+            player.detonate()
         elif downLeftTileGid == SPIKE or downRightTileGid == SPIKE  or downMidTileGID == SPIKE:
             player.dead()
         elif downLeftTileGid == SPRING or downRightTileGid == SPRING  or downMidTileGID == SPRING:
+            player.detonate()
             player.spring()
         else:
             if player.jumpState == GROUNDED:
@@ -158,12 +169,14 @@ class CollisionPlayerPlatform:
 
             player.rect.bottom += 1 #Redescendre de 1 pour sortir du plafond
             player.speedy = 0
+            player.detonate()
         elif upLeftTileGid == SPIKE or upRightTileGid == SPIKE:
             player.dead()
 
     def collisionWithEnemy(self, player, enemyGroup):
         collisionList = pygame.sprite.spritecollide(player, enemyGroup, False)
         for enemy in collisionList:
+            player.detonate()
             player.dead()
             # player.loseLife()
             # self.soundControl.hurt()
