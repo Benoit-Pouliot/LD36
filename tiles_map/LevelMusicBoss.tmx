@@ -87,17 +87,17 @@
  </tileset>
  <layer name="Collision_Layer" width="25" height="19">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYAJiZiBmHOIYGVBbLTZ9uPTjA8S4Y6DtIAUQE570toNaYNSOoWMHrAwjBTBD9RFrx3DJH7S2A7kuYUZTj66fGD3DBQMAcmUA7A==
+   eJxjZGBgYAJiZiBmHOIYGVBbLTZ9uPTjA8S4Y6DtIAUQE570toNaYNSOoWMHExSTArDpGei0OxzsQK5LmNHUo+snRs9wwQBtVQDq
   </data>
  </layer>
  <layer name="Background" width="25" height="19">
   <data encoding="base64" compression="zlib">
-   eJybwsDAMGUUj+JRPIpH8SgexTTDAHdfEqw=
+   eJxLYmBgSBrFo3gUj+JRPIpHMc0wAGLYtdc=
   </data>
  </layer>
  <layer name="Terrain" width="25" height="19">
   <data encoding="base64" compression="zlib">
-   eJztlTkOgCAQRbmTW+XWA6W13saaeGC/yZCQCaCYjJXFa3D+LJ+JaKVUBWrQgBZ0wCTOdWG8IXowgBFMYKZcsfPSeE2aQ5ArvxWusX8wh/tgDn8fVnCendWR8ircaYkafNd/r/J7lfJqBVthvpgm55Whb6X3yzU5r978AzTpnu6VezmHS/RqmVdL4OHC+uR932l8r5JvlK8r+UZd8Scky93K
+   eJzdVcsOgyAQ3H+q1pO1vQNHz/ZvPPPFDsmS4gY1NJmLk8wFdvYxoDgReYAd2INPcAD9wbprjPfKEXyBE/gGP5qrtt4a71TDRMofyDVW4c8RhT9HPo8gvHlWU4eB5FV5pxmwd52Bu3hlv/8SC/htzFfTnHnlda8FNc2ZV//8A5zqbN0jr2Klpyt41ZXIvQbZezXLz8PZ9Gn7vtLkXplvVK7LfKNS/AZQkjIW
   </data>
  </layer>
  <layer name="Front_Layer" width="25" height="19">
