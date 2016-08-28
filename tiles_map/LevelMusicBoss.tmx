@@ -112,7 +112,7 @@
  </layer>
  <objectgroup name="outZoneLayer"/>
  <objectgroup name="inZoneLayer">
-  <object id="3" name="InZone" x="68" y="118" width="9" height="42">
+  <object id="3" name="InZone" x="51" y="121" width="9" height="30">
    <properties>
     <property name="StartPoint" value="StartPointMusicBoss"/>
    </properties>
