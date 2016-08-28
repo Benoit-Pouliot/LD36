@@ -23,7 +23,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v4.png')))
 
         self.imageShapeWalkLeft = list()
-        for k in range(0, 3):
+        for k in range(0, 4):
             self.imageShapeWalkLeft.append(pygame.transform.flip(self.imageShapeWalkRight[k], True, False))
 
         self.image = self.imageShapeStillRight
@@ -96,24 +96,26 @@ class PlayerPlatform(pygame.sprite.Sprite):
                 self.image = self.imageShapeStillRight
             else:
                 self.image = self.imageShapeStillLeft
-        elif self.speedx == 1:
+        elif self.speedx <= 1 and self.speedx > 0:
             self.imageIterStateRight = 0
             self.imageIterStateLeft = 0
             self.image = self.imageShapeStillRight
             self.facingSide = RIGHT
-        elif self.speedx == -1:
+        elif self.speedx >= -1 and self.speedx < 0:
             self.imageIterStateRight = 0
             self.imageIterStateLeft = 0
             self.image = self.imageShapeStillLeft
             self.facingSide = LEFT
         elif self.speedx > 1:
             self.imageIterStateLeft = 0
+            self.facingSide = RIGHT
             if self.imageIterWait >= self.imageWaitNextImage:
                 self.imageIterStateRight = (self.imageIterStateRight+1) % len(self.imageShapeWalkRight)
                 self.image = self.imageShapeWalkRight[self.imageIterStateRight]
                 self.imageIterWait = 0
         else: # self.speedx < -1:
             self.imageIterStateRight = 0
+            self.facingSide = LEFT
             if self.imageIterWait >= self.imageWaitNextImage:
                 self.imageIterStateLeft = (self.imageIterStateLeft+1) % len(self.imageShapeWalkLeft)
                 self.image = self.imageShapeWalkLeft[self.imageIterStateLeft]

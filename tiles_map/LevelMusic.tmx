@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="127" height="21" tilewidth="32" tileheight="32" nextobjectid="48">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="127" height="21" tilewidth="32" tileheight="32" nextobjectid="49">
  <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
@@ -269,7 +269,7 @@
     <property name="direction" value="Right"/>
    </properties>
   </object>
-  <object id="40" name="enemyWalkman" type="enemy" x="1874.33" y="184.667" width="30" height="30.6667">
+  <object id="40" name="enemyWalkman" type="enemy" x="1909.33" y="139.667" width="30" height="30.6667">
    <properties>
     <property name="direction" value="Right"/>
    </properties>
@@ -279,6 +279,11 @@
   <object id="45" name="enemyMp3" type="enemy" x="2610.33" y="467.167" width="30" height="39"/>
   <object id="46" name="enemyMp3" type="enemy" x="2673" y="400.5" width="30" height="39"/>
   <object id="47" name="enemyMp3" type="enemy" x="2737" y="339.167" width="30" height="39"/>
+  <object id="48" name="enemyWalkman" type="enemy" x="374" y="303.667" width="30" height="30.6667">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="inZoneLayer">
   <object id="19" name="InZone" x="82" y="438" width="13" height="21">

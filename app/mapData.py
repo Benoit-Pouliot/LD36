@@ -34,11 +34,11 @@ class MapData:
         eFactory = EnemyFactory()
         iFactory = ItemFactory()
 
-        # for obj in self.tmxData.objects:
-        #     # if obj.type == "enemy":
-        #     #     enemy = eFactory.create(obj, self)
-        #     #     self.allSprites.add(enemy)
-        #     #     self.enemyGroup.add(enemy)
+        for obj in self.tmxData.objects:
+            if obj.type == "enemy":
+                enemy = eFactory.create(obj, self)
+                self.allSprites.add(enemy)
+                self.enemyGroup.add(enemy)
 
 
             # if obj.type == "item":

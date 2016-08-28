@@ -31,3 +31,6 @@ class Enemy(pygame.sprite.Sprite):
 
     def update(self):
         pass
+
+    def detonate(self):
+        pass
