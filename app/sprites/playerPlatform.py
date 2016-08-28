@@ -13,9 +13,20 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
         self.name = "player"
 
-        self.imageShapeRight = pygame.image.load(os.path.join('img', 'joueur_droite.png'))
-        self.imageShapeLeft = pygame.image.load(os.path.join('img', 'joueur_gauche.png'))
-        self.image = self.imageShapeRight
+        self.imageShapeStillRight = pygame.image.load(os.path.join('img', 'Player_v1.png'))
+        self.imageShapeStillLeft = pygame.transform.flip(self.imageShapeStillRight, True, False)
+
+        self.imageShapeWalkRight = list()
+        self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v2.png')))
+        self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v3.png')))
+        self.imageShapeWalkRight.append(self.imageShapeWalkRight[0])
+        self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v4.png')))
+
+        self.imageShapeWalkLeft = list()
+        for k in range(0, 3):
+            self.imageShapeWalkLeft.append(pygame.transform.flip(self.imageShapeWalkRight[k], True, False))
+
+        self.image = self.imageShapeStillRight
 
         self.rect = self.image.get_rect()
         self.rect.x = x
@@ -66,17 +77,47 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.soundBullet.set_volume(.3)
         self.soundGetHit.set_volume(.3)
 
+        self.imageIterStateRight = 0
+        self.imageIterStateLeft = 0
+        self.imageWaitNextImage = 4
+        self.imageIterWait = 0
+
     def update(self):
         self.capSpeed()
         self.rect.x += self.speedx
         self.rect.y += self.speedy
 
-        if self.speedx > 0:
-            self.image = self.imageShapeRight
+        # Animation movement
+        self.imageIterWait = min(self.imageIterWait+1, 2*self.imageWaitNextImage)
+        if self.speedx == 0:
+            self.imageIterStateRight = 0
+            self.imageIterStateLeft = 0
+            if self.facingSide == RIGHT:
+                self.image = self.imageShapeStillRight
+            else:
+                self.image = self.imageShapeStillLeft
+        elif self.speedx == 1:
+            self.imageIterStateRight = 0
+            self.imageIterStateLeft = 0
+            self.image = self.imageShapeStillRight
             self.facingSide = RIGHT
-        if self.speedx < 0:
-            self.image = self.imageShapeLeft
+        elif self.speedx == -1:
+            self.imageIterStateRight = 0
+            self.imageIterStateLeft = 0
+            self.image = self.imageShapeStillLeft
             self.facingSide = LEFT
+        elif self.speedx > 1:
+            self.imageIterStateLeft = 0
+            if self.imageIterWait >= self.imageWaitNextImage:
+                self.imageIterStateRight = (self.imageIterStateRight+1) % len(self.imageShapeWalkRight)
+                self.image = self.imageShapeWalkRight[self.imageIterStateRight]
+                self.imageIterWait = 0
+        else: # self.speedx < -1:
+            self.imageIterStateRight = 0
+            if self.imageIterWait >= self.imageWaitNextImage:
+                self.imageIterStateLeft = (self.imageIterStateLeft+1) % len(self.imageShapeWalkLeft)
+                self.image = self.imageShapeWalkLeft[self.imageIterStateLeft]
+                self.imageIterWait = 0
 
         self.invincibleUpdate()
         self.updateTarget()
