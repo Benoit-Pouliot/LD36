@@ -18,7 +18,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.imageShapeStillLeft = pygame.transform.flip(self.imageShapeStillRight, True, False)
 
         self.imageShapeWalkRight = list()
-        self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v2.png')))
+        self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v5.png')))
         self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v3.png')))
         self.imageShapeWalkRight.append(self.imageShapeWalkRight[0])
         self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v4.png')))

@@ -41,3 +41,7 @@ class Enemy(pygame.sprite.Sprite):
 
     def hurt(self):
         pass
+
+    def dead(self):
+        self.soundDead.play()
+        self.kill()

@@ -11,13 +11,7 @@ class EnemyWalkman(Enemy):
     def __init__(self, x, y, direction="Right"):
         super().__init__(x, y, os.path.join('img', 'enemyWalkman.png'))
 
-        self.name = "enemyCactus"
-
-        self.imageEnemy = pygame.image.load(os.path.join('img', 'enemyWalkman.png'))
-        self.image = self.imageEnemy
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
+        self.name = "enemyWalkman"
 
         self.collisionMask = CollisionMask(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
@@ -68,10 +62,6 @@ class EnemyWalkman(Enemy):
         self.collisionMask.rect = self.rect
 
         self.distance = math.fabs(self.initx - self.rect.x)
-
-    def dead(self):
-        self.soundDead.play()
-        self.kill()
 
     def spring(self):
         self.speedy = -15
