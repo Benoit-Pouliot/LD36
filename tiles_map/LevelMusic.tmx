@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="127" height="21" tilewidth="32" tileheight="32" nextobjectid="31">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="127" height="21" tilewidth="32" tileheight="32" nextobjectid="48">
  <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
@@ -207,7 +207,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,99,100,99,100,99,100,89,90,99,100,99,100,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Sprite_Layer" width="127" height="21" visible="0">
+ <layer name="Sprite_Layer" width="127" height="21">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -233,37 +233,70 @@
 </data>
  </layer>
  <objectgroup name="enemyLayer">
-  <object id="3" name="enemyRadio" x="717" y="491" width="71" height="74"/>
-  <object id="6" name="enemyMp3" x="845" y="324" width="46" height="55"/>
-  <object id="12" name="enemyWalkman" x="3776" y="146" width="50" height="40"/>
-  <object id="13" name="enenyRadio" x="3413" y="121" width="88" height="61"/>
-  <object id="14" name="enemyWalkman" x="3229" y="327" width="97" height="44"/>
-  <object id="15" name="enemyWalkman" x="3467" y="545" width="69" height="43"/>
-  <object id="16" name="enemyMp3" x="1421" y="387.5" width="46" height="55"/>
-  <object id="17" name="enenyRadio" x="3191" y="542.5" width="64" height="61"/>
-  <object id="25" name="enemyWalkman" x="1891" y="188.5" width="46" height="55"/>
-  <object id="26" name="enenyRadio" x="1876" y="545.5" width="64" height="61"/>
-  <object id="27" name="enenyRadio" x="2608" y="483.5" width="34" height="41"/>
-  <object id="29" name="enenyRadio" x="2677" y="405.5" width="34" height="41"/>
-  <object id="30" name="enenyRadio" x="2743" y="349.5" width="34" height="41"/>
+  <object id="3" name="enemyRadio" type="enemy" x="726.333" y="497.667" width="48.3333" height="40.6667">
+   <properties>
+    <property name="direction" value="Left"/>
+   </properties>
+  </object>
+  <object id="12" name="enemyWalkman" type="enemy" x="3792" y="135.333" width="30" height="30.6667">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="16" name="enemyMp3" type="enemy" x="1423.67" y="370.167" width="30" height="39"/>
+  <object id="35" name="enemyRadio" type="enemy" x="1879.17" y="533.667" width="49.6667" height="35.3333">
+   <properties>
+    <property name="direction" value="Left"/>
+   </properties>
+  </object>
+  <object id="36" name="enemyRadio" type="enemy" x="3272.5" y="545" width="49.6667" height="35.3333">
+   <properties>
+    <property name="direction" value="Left"/>
+   </properties>
+  </object>
+  <object id="37" name="enemyRadio" type="enemy" x="3444.5" y="129" width="49.6667" height="35.3333">
+   <properties>
+    <property name="direction" value="Left"/>
+   </properties>
+  </object>
+  <object id="38" name="enemyWalkman" type="enemy" x="3254.33" y="315.333" width="30" height="30.6667">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="39" name="enemyWalkman" type="enemy" x="3470.33" y="534" width="30" height="30.6667">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="40" name="enemyWalkman" type="enemy" x="1874.33" y="184.667" width="30" height="30.6667">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="43" name="enemyMp3" type="enemy" x="846.333" y="308.5" width="30" height="39"/>
+  <object id="44" name="enemyMp3" type="enemy" x="1969" y="404.5" width="30" height="39"/>
+  <object id="45" name="enemyMp3" type="enemy" x="2610.33" y="467.167" width="30" height="39"/>
+  <object id="46" name="enemyMp3" type="enemy" x="2673" y="400.5" width="30" height="39"/>
+  <object id="47" name="enemyMp3" type="enemy" x="2737" y="339.167" width="30" height="39"/>
  </objectgroup>
  <objectgroup name="inZoneLayer">
-  <object id="19" name="InZone" x="60" y="442" width="13" height="21">
+  <object id="19" name="InZone" x="82" y="438" width="13" height="21">
    <properties>
     <property name="StartPoint" value="StartPointMusic"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="outZone">
-  <object id="18" name="outZone" x="3866" y="58" width="68" height="134">
+  <object id="18" name="OutZone" x="3995" y="61" width="68" height="134">
    <properties>
-    <property name="InZone" value="OutLevelMusic"/>
-    <property name="LevelZone" value="TitleScreen"/>
+    <property name="InZone" value="StartPointMusicBoss"/>
+    <property name="LevelZone" value="LevelMusicBoss"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="Calque de Tile 1">
   <object id="20" name="itemLife" x="976" y="345" width="30" height="35"/>
-  <object id="22" name="itemLife" x="3326" y="509" width="21" height="30"/>
+  <object id="22" name="itemLife" x="3378" y="495.667" width="21" height="30"/>
  </objectgroup>
 </map>

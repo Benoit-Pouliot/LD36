@@ -43,9 +43,9 @@ class PlatformScreen:
         if newMapData is not None:
             # we got to change
             self.sceneRunning = False
-            self.nextScene = TITLE_SCREEN
-            self.gameData.typeScene = TITLE_SCREEN
-            self.gameData.mapData = None
+            self.nextScene = PLATFORM_SCREEN
+            self.gameData.typeScene = PLATFORM_SCREEN
+            self.gameData.mapData = newMapData
 
     def close(self):
         self.sceneRunning = False
