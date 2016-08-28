@@ -24,7 +24,7 @@
  </tileset>
  <layer name="Collision_Layer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmYsOgjAMRQH5/2+WJRIJKVtbt/XhPclNTEBcj+u26Losy3bkdWQ/siLDIkXyTOvaauPT1h/NAacODVkceEVb3/6JV3YiT2RxQNXMdXDS04F2DFw49cKB7nMzOdASfT3oARzI93g4+DqIfD7SnC+v/OrAw9mz5oBD9nnAIbsDbS9swTJiHkQNHNAOtL0QNZQDDhZrorY2zfM5ZHeg7YXReJ0HMyOt5am+Xv6iOZC8T9oLWR1wgIMYDqRzG72Qcx5IgYMxZw4repwPMjqguM8vOIjhoDWesyY44Pe29H6PDu7jmuHAy2+glg68hzpHwAEc/LODUfdb5E7re77WxAEO8jvgJLODp+s9HCyDX3tyUGOEAy5eHFgycz3wysx9wStwgF4oYE2EgwIcYD0oYF+AgwLlgLr+b73Qul6rTbKGegEObB3MTgvr8c2I9v8mpF/eV10OwQ==
+   eJztmVkOgzAMRAPl/mcufKBWKIvtJHjJjDQSUiBkXm2IypZS2k9/Th+nN3iaueLMqZ2ttj5pfm8MKDkkisLAqqLmOzIuKQqDXGYqg1sjGUjX0Ds/GPTfl8ugNr82A6lGMvAqMOD3PRj8GHh5d+Yk2V/+q5eBhX1JjQFF0euAougMpL2wO/OMOvBqMMgzkPaCV+cYUKTxTJRmk8xPUXQG0l6YLat18JYlWUr5RvHzxoBzHbcXojKgCAx8MODWNnohZh1wBQZz9hxaGrE/iMiAc91KDJ595oFBaz13JjBYi8FzXU8GLXPPv2zlP1BNBtad20uAARiszGDW+RqmqJSJIjCIz4DiyAxK4yMYpMnHlhhQ7jnyuEcaDKypp7ajM6AIDOIzWL0XSuNgAAarMYj8PGj9ziu8F8Cg/e1x1V5ojdeycZ6hVgQGugzedkva63vD0u9N8Dh/AcDvDf8=
   </data>
  </layer>
  <layer name="Background" width="65" height="66">
@@ -34,12 +34,12 @@
  </layer>
  <layer name="Terrain" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmsluAyEMhnmpSm1Tqc2xyalLTu37P0fHSqy4CBjbMMPmX7KUSLPxgbExnJxzp43tY7FvoX0Knrl2bQ3z23xxcr2vvOMsuLZG/2ra3CsD+h2l9eXSvnIRXFvC3zjf0aMkY21UGQNjADIGxgBkDO4MtsxzWhcymKG/YzIG/xk8Lva02PNih9vvl8LvC70j9Lv0e1OacRy8LnYk/2dkAG0OrTfRF+iYTPkCsHxzV54PnVmKgUR438+NRU/268owoGv1FmtYkpqH7wt0jubOz9raRakah7Te4ed+PcyJkhqZph3YhzMzQEnjwp7i+hr4TC6D3uXHPFAoLz24ex/TvHQEBjBeNOtczHVoXKCsWvCFrdVDXNhaIzGgvu/7PZ3r/bEdWjvjvXuvYXPlrwe56iE/4CoUFyQyBvH1n2Zs1VIsP/DzPn+ewDlihNq6dhxgfjAzg5H2WIzBtS1rdS06v6EPQF2pdQb4rWCpOZqzxtac3YF7WqiBcvqEU9/TMGihZkrHKnwPJ17H2tfKGa5c4/inMeibQc45OFzzQc4Xq7+F6smt2Z5xyBiMyQB9wa+jxuohXAaas+Y5+0elxoFmTqxxHik0b5V6n4ZBCzlxSc3KAPcGtLFxBAZSGYMxGYRqhxgTObFxBAZUs86JVMZgXgYWG+UyBmMyiJ27iZ0F9/1lBAa5MgbGAFR7H4GzZ0D3m6TP4tzbQg1Nst+UMuzPo+PvKbZgnHEobcdZwA3qaH/i+rAG
+   eJztmt1OQyEMx3kpE3Umuku3K5270vd/Dk/jmlUCnJaPc6D0nzTZkvPFD0pL4eScOzW2j8W+hPYpeObatXuY3+ark+t95R1nwbV79G9Om0dlQL+jti4u7StXwbU1/I3zHSNKMta0yhgYA5AxMAYgY3Bn0DLP6V3IYIb+jskY/GfwuNjTYs+LHW6/Xyq/L/SO0O/a701pxnHwutiR/J+RAbQ5tN5EX6BjMuULwPLN/fF8GMxSDCTC+75vLEayH1eHAV2r91jDktQ8fF+gczR3fs6tXdSqcUjrHX7uN8KcKKmR5bQD+3BmBihpXNhSXF8DnyllMLr8mAcK5aUHd+9jmpdqYADjJWedi7kOjQuUVQ++0FojxIXW0sSA+r7v93Su98d2aO2M9269hi2Vvx7kaoT8gKtQXJDIGMTXfzljay/F8gM/7/PnCZwjNNTWc8cB5gczM9C0x2IMdDNAfwVLzdHQlrXaHr0fnwu1tTUGPdRAOX3Cqe/lnF/qoWZK+wm+hxOvY+3r5QxXqXH80xiMzaDkHByu+SDni9XfQvXk3mzLOGQMdDJAX/DrqLF6CJdBzlnzkv2jWuOA5lXUQnvua21teR4pNG/Vel9OXOghJ66pWRng3kBubNTAQCpjoJNBqHaIMZETGzUwoMqJjdoYzBoXqGZlYLFRLmOgk0Hs3E3sLLjvLxoYlMoYGAPQ3vsInD2DWO7HeRbn3h5qaJL9ppRhfx4dfz+tB+OMQ2k7zgJuUEf7BeFUrJY=
   </data>
  </layer>
  <layer name="FirstLayer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmstOAzEMRftP8AW8uuG1BJaUJbAEPh/PIpJVOa4TezJu7CNdqRKZTHpnuFac7nZJsi5XoOsB8651HwvuQQ8D5l3rPjPT+95cgC6N12LJnlAN6r15Ab2C3pjrvHlAfWepBxTvoAPogxnDeWCxBg7J99Xe/xP0BfoG3VXGnJMHPfyAfkF/oOfKGM8ejMJbHmxBepAeLBQPJHXUKzegW8X1xQNJHfXKI+hJcX3xANfRaBQPcB2NRmZierCQHsxRG7XMUBu1zFgbW/tJM9bG1j5kbx9DI2+kB749GHW+4NmDUecLnj0YRXowpwetOTKjB3lOGRNu7xtlL8h54HUvWPrAtX5wa0+DG4/3gtr+syWlD1zrB1t6gPeC2v7zmhw/H0sPzoXj5xPRgwWc31E9wPkd1QOc31E9wPkdwQNqzVQe1H4/JJnPO9SaqTyo/X5IMp93qDVHywNqzVvkAe4zWH2WIs0DzXwScJ/B6rMUaR5o5vNO5oE8D6LVRioPotXGzIPMg4XcL8TrH2QeyPMgWm2k8iBabWz5u3a8B3o84M5luPlOnedsRY8H3LkMN9+p85ytGPkezITX5zkSr//XI+l5D/4BMP3GeA==
+   eJztmstOxDAMReef4At4zYbXElgyLIEl8Pk4i0hW5aRN7TgZ20eyNNK0aXKbXjdOD4cg6MsVxLVCu72uI8E9xINCu72uY5mZ5w2HIxElqHnzAvEK8dald32gxrxVA4p3iBPEh3B/pNgyXu71PyG+IL4h7gT7KEXPsWd+IH4h/iCeC8dcQFw29lGKHmPeQ00DL4QGoUEia3COeTRzA3HLOD9rwM2jI3mEeGKcnzXAedQbWQOcR70RnhgaJEIDG7mRi4XcyMVibmytJ1nMja11yL11DI36hxahwdwaaNWJZ9ZAa39hZg20CA1satDqIxY1iH3KYImXtWBt/T/rWjDXgUv14NaaRu14vBbk1p8lyXXgUj1YUgO8FuTWn3uyvD+SGpwLy/vjUYME9m+vGmD/9qoB9m+vGmD/9qoB5Qdbvx+yogHlB6Xvh5ZY0SD8YIwf4DqD1G8OI94PcJ1B6jeHeD8IP0hQfuAtN1J+4C03hh+EHyRivRD1g4Q3P6D6TPmB5dxI9ZnyA8u5ca3PXp+Ftf9r+zK19tb2c0axR4PavkytvbX9nFFozgNLzHo/NZn1udZkzzz4B6tQvJs=
   </data>
  </layer>
  <layer name="Sprite_Layer" width="65" height="66">
@@ -61,7 +61,7 @@
   </object>
  </objectgroup>
  <objectgroup name="inZoneLayer">
-  <object id="46" name="InZone" x="50.634" y="1848.51" width="32" height="27">
+  <object id="46" name="InZone" x="71.0279" y="1806.93" width="32" height="27">
    <properties>
     <property name="StartPoint" value="StartPointComm"/>
    </properties>
