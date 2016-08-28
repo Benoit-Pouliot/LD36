@@ -32,7 +32,9 @@ class GameOverScreen:
 
     def eventHandle(self):
         for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.QUIT:
+                exit()
+            elif event.type == pygame.KEYDOWN:
                 self.goToTitleScreen()
 
     def draw(self):

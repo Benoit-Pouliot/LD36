@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="66" tilewidth="32" tileheight="32" nextobjectid="58">
- <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="66" tilewidth="32" tileheight="32" nextobjectid="59">
+ <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
- <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100">
+ <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100" columns="10">
   <image source="img/set_comm.png" width="320" height="320"/>
   <terraintypes>
    <terrain name="Wood" tile="-1"/>
@@ -34,7 +34,7 @@
  </layer>
  <layer name="Terrain" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmttuwyAMhnmpSds6aevNpLU3O/Vqe//nWKzWqoeA2AYaDv4lS6mUNOEDY2M4OOcOle1jsW+hfQr+c+3eLcxv88nJ9bbyjqPg3i36V9PmXhnQ7yitL5f2lZPg3hL+xvmOHiUZa6PKGBgDkDEwBiBjcGVQM89pXchghv6OyRj8Z3C/2MNij4vtLtdPhd8XekfouvR7U5pxHDwvtie/Z2QAbQ6tN9EX6JhM+QKwfHFnnnedWYqBRPjcz4VFT/bryjCga/UWa1iSmofvC3SO5s7P2tpFqRqHtN7h5349zImSGpmmHdiHMzNASePCLcX1NfCZXAa9y495oFBeunPXPqZ56QgMYLxo1rmY69C4QFm14Au11UNcqK2RGFDf9/2ezvX+2A6tnfHZW69hc+WvB7nqIT/gKhQXJDIG8fWfZmxtpVh+4Od9/jyBc8QItXXtOMD8YGYGI+2xGINzW9bqWnR+Qx+AulLrDPBbwVJzNGeNrTm7A8+0UAPl9Amnvqdh0ELNlI5V+B5OvI61r5UzXLnG8U9j0DeDnHNwuOaDnC9WfwvVk1uz2nHolVzPyuCdXI/IAH3Br6PG6iFcBpqz5jn7R6XGgWZO3OI8UmjeKvU+DYMWcuKSmpUB7g1oY+MIDDhKxcZZGKRi4wgMQrVDjImc2DgCA6pZ50QqYzAvA4uNPFlsnCM2hs7dxM6C+/4yAoNcGQNjANp6H4GzZ0D3m6T/xXm2hRqaZL8pZdife8ffU2zBOONQ2o6jgBvU0f4A6XCxyA==
+   eJztmsluAyEMhnmpSm1Tqc2xyalLTu37P0fHSqy4CBjbMMPmX7KUSLPxgbExnJxzp43tY7FvoX0Knrl2bQ3z23xxcr2vvOMsuLZG/2ra3CsD+h2l9eXSvnIRXFvC3zjf0aMkY21UGQNjADIGxgBkDO4MtsxzWhcymKG/YzIG/xk8Lva02PNih9vvl8LvC70j9Lv0e1OacRy8LnYk/2dkAG0OrTfRF+iYTPkCsHxzV54PnVmKgUR438+NRU/268owoGv1FmtYkpqH7wt0jubOz9raRakah7Te4ed+PcyJkhqZph3YhzMzQEnjwp7i+hr4TC6D3uXHPFAoLz24ex/TvHQEBjBeNOtczHVoXKCsWvCFrdVDXNhaIzGgvu/7PZ3r/bEdWjvjvXuvYXPlrwe56iE/4CoUFyQyBvH1n2Zs1VIsP/DzPn+ewDlihNq6dhxgfjAzg5H2WIzBtS1rdS06v6EPQF2pdQb4rWCpOZqzxtac3YF7WqiBcvqEU9/TMGihZkrHKnwPJ17H2tfKGa5c4/inMeibQc45OFzzQc4Xq7+F6smt2Z5xyBiMyQB9wa+jxuohXAaas+Y5+0elxoFmTqxxHik0b5V6n4ZBCzlxSc3KAPcGtLFxBAZSGYMxGYRqhxgTObFxBAZUs86JVMZgXgYWG+UyBmMyiJ27iZ0F9/1lBAa5MgbGAFR7H4GzZ0D3m6TP4tzbQg1Nst+UMuzPo+PvKbZgnHEobcdZwA3qaH/i+rAG
   </data>
  </layer>
  <layer name="FirstLayer" width="65" height="66">
@@ -47,7 +47,19 @@
    eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAAAA4G9DCAAB
   </data>
  </layer>
- <objectgroup name="outZoneLayer"/>
+ <layer name="UpmostLayer" width="65" height="66">
+  <data encoding="base64" compression="zlib">
+   eJzt1aEBADAIwDCuQ/P/NdOTYEAkF9Q1AgAAAAAAAAAAAABgLrcDDqjtAABO8UZvBODnjd4IAB0PSX4Bww==
+  </data>
+ </layer>
+ <objectgroup name="outZoneLayer">
+  <object id="58" name="OutZone" x="2012" y="1902" width="77" height="131">
+   <properties>
+    <property name="InZone" value="StartPointCommBoss"/>
+    <property name="LevelZone" value="LevelCommBoss"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup name="inZoneLayer">
   <object id="46" name="InZone" x="81.4218" y="1885.12" width="32" height="27">
    <properties>
