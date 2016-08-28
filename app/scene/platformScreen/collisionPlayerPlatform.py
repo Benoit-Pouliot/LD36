@@ -271,12 +271,12 @@ def collisionCircleRect(circle, rect):
     if (circleDistancex > (rect.width/2 + circle.r)):
         return False
     if (circleDistancey > (rect.height/2 + circle.r)):
-        return True
         return False
 
     if (circleDistancex <= (rect.width/2)):
         return True
     if (circleDistancey <= (rect.height/2)):
+        return True
 
     cornerDistance_sq = (circleDistancex - rect.width/2)**2 + (circleDistancey - rect.height/2)**2
 
