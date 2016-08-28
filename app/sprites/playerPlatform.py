@@ -6,6 +6,7 @@ from app.settings import *
 from app.sprites.bullet import Bullet
 from app.sprites.grenade import Grenade
 from app.sprites.target import Target
+from app.sprites.collisionMask import CollisionMask
 
 class PlayerPlatform(pygame.sprite.Sprite):
     def __init__(self, x, y, mapData):
@@ -31,6 +32,8 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+
+        self.collisionMask = CollisionMask(self.rect.x + 3, self.rect.y, self.rect.width-6, self.rect.height)
 
         #To dodge rounding problems with rect
         self.x = x
@@ -87,6 +90,8 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
 
+        self.updateCollisionMask()
+
         # Animation movement
         self.imageIterWait = min(self.imageIterWait+1, 2*self.imageWaitNextImage)
         if self.speedx == 0:
@@ -123,6 +128,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
         self.invincibleUpdate()
         self.updateTarget()
+
 
     def capSpeed(self):
         if self.speedx > 0 and self.speedx > self.maxSpeedx:
@@ -162,6 +168,10 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
         self.target.powerx = (diffx)/self.vectorNorm(diffx,diffy)
         self.target.powery = (diffy)/self.vectorNorm(diffx,diffy)
+
+    def updateCollisionMask(self):
+        self.collisionMask.rect.x = self.rect.x
+        self.collisionMask.rect.y = self.rect.y
 
     def vectorNorm(self,x,y):
         return math.sqrt(x**2+y**2)
@@ -262,7 +272,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
         powerValue = rawPowerValue/ratio
         if powerValue > powerCap:
             powerValue = powerCap
-        speedx = powerValue * GRENADE_SPEEDX * self.target.powerx
+        speedx = powerValue * GRENADE_SPEEDX * self.target.powerx + self.speedx
         speedy = powerValue * -GRENADE_SPEEDY * -self.target.powery
         return speedx, speedy
 

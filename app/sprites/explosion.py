@@ -4,6 +4,7 @@ import pygame
 import os
 from app.settings import *
 from app.tools.counter import Counter
+from app.sprites.collisionMask import CollisionMask
 
 class Explosion(pygame.sprite.Sprite):
     def __init__(self, x, y, friendly=True):
@@ -20,6 +21,8 @@ class Explosion(pygame.sprite.Sprite):
         self.speedx = 0
         self.speedy = 0
         pygame.draw.circle(self.image, RED, (int(self.rect.width/2),int(self.rect.height/2)), 30, 10)
+
+        self.collisionMask = CollisionMask(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
         self.animation = None
 

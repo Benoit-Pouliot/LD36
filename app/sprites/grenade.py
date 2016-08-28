@@ -7,6 +7,7 @@ from app.settings import JUMP
 from app.sprites.explosion import Explosion
 
 from app.scene.platformScreen.collisionPlayerPlatform import *
+from app.sprites.collisionMask import CollisionMask
 # from app.tool.animation import Animation
 
 
@@ -28,6 +29,7 @@ class Grenade(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = x
         self.rect.centery = y
+        self.collisionMask = CollisionMask(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
         self.animation = None
 
@@ -46,6 +48,7 @@ class Grenade(pygame.sprite.Sprite):
     def update(self):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
+        self.collisionMask.rect = self.rect
 
     def dead(self):
         self.kill()

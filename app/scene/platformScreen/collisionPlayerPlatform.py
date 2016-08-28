@@ -28,59 +28,59 @@ class CollisionPlayerPlatform:
         # mapHeight = map.tmxData.height * tileHeight
         i=0
 
-        if player.rect.right + player.speedx > 0:
+        if player.collisionMask.rect.right + player.speedx > 0:
             if player.speedx >= self.tileWidth: #Si on va plus vite qu'une tile/seconde
-                while player.rect.right+i*self.tileWidth < player.rect.right + player.speedx:
-                    if player.rect.right+i*self.tileWidth >= self.mapWidth:
+                while player.collisionMask.rect.right+i*self.tileWidth < player.collisionMask.rect.right + player.speedx:
+                    if player.collisionMask.rect.right+i*self.tileWidth >= self.mapWidth:
                         j=0
-                        while map.tmxData.get_tile_gid((self.mapWidth - 1 - j*self.tileWidth)/self.tileWidth, player.rect.top/self.tileHeight, COLLISION_LAYER) == SOLID and map.tmxData.get_tile_gid((self.mapWidth - 1- j*self.tileWidth)/self.tileWidth, (player.rect.bottom)/self.tileHeight, COLLISION_LAYER) == SOLID:
+                        while map.tmxData.get_tile_gid((self.mapWidth - 1 - j*self.tileWidth)/self.tileWidth, player.collisionMask.rect.top/self.tileHeight, COLLISION_LAYER) == SOLID and map.tmxData.get_tile_gid((self.mapWidth - 1- j*self.tileWidth)/self.tileWidth, (player.collisionMask.rect.bottom)/self.tileHeight, COLLISION_LAYER) == SOLID:
                             j += 1
-                        player.rect.right = self.mapWidth-j*self.tileWidth-1
+                        player.collisionMask.rect.right = self.mapWidth-j*self.tileWidth-1
                         player.speedx = 0
                         player.detonate()
                         return
 
-                    upRightTileGid = map.tmxData.get_tile_gid((player.rect.right + i*self.tileWidth)/self.tileWidth, player.rect.top/self.tileHeight, COLLISION_LAYER)
-                    downRightTileGid = map.tmxData.get_tile_gid((player.rect.right + i*self.tileWidth)/self.tileWidth, (player.rect.bottom-1)/self.tileHeight, COLLISION_LAYER)
+                    upRightTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.right + i*self.tileWidth)/self.tileWidth, player.collisionMask.rect.top/self.tileHeight, COLLISION_LAYER)
+                    downRightTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.right + i*self.tileWidth)/self.tileWidth, (player.collisionMask.rect.bottom-1)/self.tileHeight, COLLISION_LAYER)
 
                     if (upRightTileGid  == SOLID or downRightTileGid  == SOLID) and player.speedx > 0 and player.facingSide == RIGHT:
-                        while map.tmxData.get_tile_gid((player.rect.right + 1)/self.tileWidth, player.rect.top/self.tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.rect.right + 1)/self.tileWidth, (player.rect.bottom-1)/self.tileHeight, COLLISION_LAYER) != SOLID:
-                            player.rect.right += 1
+                        while map.tmxData.get_tile_gid((player.collisionMask.rect.right + 1)/self.tileWidth, player.collisionMask.rect.top/self.tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.collisionMask.rect.right + 1)/self.tileWidth, (player.collisionMask.rect.bottom-1)/self.tileHeight, COLLISION_LAYER) != SOLID:
+                            player.collisionMask.rect.right += 1
                         player.speedx = 0
                         player.detonate()
                     i += 1
 
             else:
-                upRightTileGid = self.map.tmxData.get_tile_gid((player.rect.right + player.speedx)/self.tileWidth, player.rect.top/self.tileHeight, COLLISION_LAYER)
-                downRightTileGid = self.map.tmxData.get_tile_gid((player.rect.right + player.speedx)/self.tileWidth, (player.rect.bottom-1)/self.tileHeight, COLLISION_LAYER)
-                lowMidRightTileGid = self.map.tmxData.get_tile_gid((player.rect.right + player.speedx)/self.tileWidth, (player.rect.centery-10-1)/self.tileHeight, COLLISION_LAYER)
-                highMidRightTileGid = self.map.tmxData.get_tile_gid((player.rect.right + player.speedx)/self.tileWidth, (player.rect.centery+10-1)/self.tileHeight, COLLISION_LAYER)
+                upRightTileGid = self.map.tmxData.get_tile_gid((player.collisionMask.rect.right + player.speedx)/self.tileWidth, player.collisionMask.rect.top/self.tileHeight, COLLISION_LAYER)
+                downRightTileGid = self.map.tmxData.get_tile_gid((player.collisionMask.rect.right + player.speedx)/self.tileWidth, (player.collisionMask.rect.bottom-1)/self.tileHeight, COLLISION_LAYER)
+                lowMidRightTileGid = self.map.tmxData.get_tile_gid((player.collisionMask.rect.right + player.speedx)/self.tileWidth, (player.collisionMask.rect.centery-10-1)/self.tileHeight, COLLISION_LAYER)
+                highMidRightTileGid = self.map.tmxData.get_tile_gid((player.collisionMask.rect.right + player.speedx)/self.tileWidth, (player.collisionMask.rect.centery+10-1)/self.tileHeight, COLLISION_LAYER)
 
                 if (upRightTileGid  == SOLID or downRightTileGid == SOLID or lowMidRightTileGid == SOLID or highMidRightTileGid == SOLID) and player.speedx > 0:
-                    # while map.tmxData.get_tile_gid((player.rect.right + 1)/self.tileWidth, player.rect.top/self.tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.rect.right + 1)/self.tileWidth, (player.rect.bottom)/self.tileHeight, COLLISION_LAYER) != SOLID:
-                    #     player.rect.right += 1
+                    # while map.tmxData.get_tile_gid((player.collisionMask.rect.right + 1)/self.tileWidth, player.collisionMask.rect.top/self.tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.collisionMask.rect.right + 1)/self.tileWidth, (player.collisionMask.rect.bottom)/self.tileHeight, COLLISION_LAYER) != SOLID:
+                    #     player.collisionMask.rect.right += 1
                     player.speedx = 0
-                    player.rect.right += self.tileWidth - (player.rect.right % self.tileWidth) - 1 #On colle le player sur le mur à droite
+                    player.collisionMask.rect.right += self.tileWidth - (player.collisionMask.rect.right % self.tileWidth) - 1 #On colle le player sur le mur à droite
                     player.detonate()
                 elif upRightTileGid  == SPIKE or downRightTileGid == SPIKE or lowMidRightTileGid == SPIKE or highMidRightTileGid == SPIKE:
                     player.dead()
                 elif (upRightTileGid  == SPRING or downRightTileGid == SPRING or lowMidRightTileGid == SPRING or highMidRightTileGid == SPRING) and player.speedx > 0:
                     player.speedx = 0
-                    player.rect.right += self.tileWidth - (player.rect.right % self.tileWidth) - 1 #On colle le player sur le mur à droite
+                    player.collisionMask.rect.right += self.tileWidth - (player.collisionMask.rect.right % self.tileWidth) - 1 #On colle le player sur le mur à droite
                     player.detonate()
 
     def getUpRightTileGid(self):
-        return self.map.tmxData.get_tile_gid((self.player.rect.right + self.player.speedx)/self.tileWidth, self.player.rect.top/self.tileHeight, COLLISION_LAYER)
+        return self.map.tmxData.get_tile_gid((self.player.collisionMask.rect.right + self.player.speedx)/self.tileWidth, self.player.collisionMask.rect.top/self.tileHeight, COLLISION_LAYER)
     def getDownRightTileGid(self):
-        return self.map.tmxData.get_tile_gid((self.player.rect.right + self.player.speedx)/self.tileWidth, (self.player.rect.bottom-1)/self.tileHeight, COLLISION_LAYER)
+        return self.map.tmxData.get_tile_gid((self.player.collisionMask.rect.right + self.player.speedx)/self.tileWidth, (self.player.collisionMask.rect.bottom-1)/self.tileHeight, COLLISION_LAYER)
     def getLowMidRightTileGid(self):
-        return self.map.tmxData.get_tile_gid((self.player.rect.right + self.player.speedx)/self.tileWidth, (self.player.rect.centery-10-1)/self.tileHeight, COLLISION_LAYER)
+        return self.map.tmxData.get_tile_gid((self.player.collisionMask.rect.right + self.player.speedx)/self.tileWidth, (self.player.collisionMask.rect.centery-10-1)/self.tileHeight, COLLISION_LAYER)
     def getHighMidRightTileGid(self):
-        return self.map.tmxData.get_tile_gid((self.player.rect.right + self.player.speedx)/self.tileWidth, (self.player.rect.centery+10-1)/self.tileHeight, COLLISION_LAYER)
+        return self.map.tmxData.get_tile_gid((self.player.collisionMask.rect.right + self.player.speedx)/self.tileWidth, (self.player.collisionMask.rect.centery+10-1)/self.tileHeight, COLLISION_LAYER)
     # def getRightTilesList(self): à terminer si besoin (décomposer le nb de pts de vérification sur le sprite selon sa taille, à place de 4 fixes)
     #     tileList = []
     #     pointNumber = self.tileHeight
-    #     tileList.append(self.map.tmxData.get_tile_gid((self.player.rect.right + self.player.speedx)/self.tileWidth, (self.player.rect.centery+10-1)/self.tileHeight, COLLISION_LAYER))
+    #     tileList.append(self.map.tmxData.get_tile_gid((self.player.collisionMask.rect.right + self.player.speedx)/self.tileWidth, (self.player.collisionMask.rect.centery+10-1)/self.tileHeight, COLLISION_LAYER))
 
     def leftCollision(self,player, map):
         tileWidth = map.tmxData.tilewidth
@@ -90,37 +90,37 @@ class CollisionPlayerPlatform:
         i = 0
 
         if -player.speedx >= tileWidth:
-            while player.rect.x-i*tileWidth > player.rect.x + player.speedx:
-                if player.rect.x-i*tileWidth <= 0:
+            while player.collisionMask.rect.x-i*tileWidth > player.collisionMask.rect.x + player.speedx:
+                if player.collisionMask.rect.x-i*tileWidth <= 0:
                     j=0
-                    while map.tmxData.get_tile_gid((0 + j*tileWidth)/tileWidth, player.rect.top/tileHeight, COLLISION_LAYER) == SOLID and map.tmxData.get_tile_gid((0 + j*tileWidth)/tileWidth, (player.rect.bottom-1)/tileHeight, COLLISION_LAYER) == SOLID:
+                    while map.tmxData.get_tile_gid((0 + j*tileWidth)/tileWidth, player.collisionMask.rect.top/tileHeight, COLLISION_LAYER) == SOLID and map.tmxData.get_tile_gid((0 + j*tileWidth)/tileWidth, (player.collisionMask.rect.bottom-1)/tileHeight, COLLISION_LAYER) == SOLID:
                         j += 1
-                    player.rect.left = j*tileWidth
+                    player.collisionMask.rect.left = j*tileWidth
                     player.speedx = 0
                     player.detonate()
                     return
 
-                upLeftTileGid = map.tmxData.get_tile_gid((player.rect.left - i*tileWidth)/tileWidth, player.rect.top/tileHeight, COLLISION_LAYER)
-                downLeftTileGid = map.tmxData.get_tile_gid((player.rect.left - i*tileWidth)/tileWidth, (player.rect.bottom-1)/tileHeight, COLLISION_LAYER)
+                upLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left - i*tileWidth)/tileWidth, player.collisionMask.rect.top/tileHeight, COLLISION_LAYER)
+                downLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left - i*tileWidth)/tileWidth, (player.collisionMask.rect.bottom-1)/tileHeight, COLLISION_LAYER)
 
                 if (upLeftTileGid  == SOLID or downLeftTileGid  == SOLID) and player.facingSide == LEFT:
-                    while map.tmxData.get_tile_gid((player.rect.left)/tileWidth, player.rect.top/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.rect.left)/tileWidth, (player.rect.bottom-1)/tileHeight, COLLISION_LAYER) != SOLID:
-                        player.rect.left -= 1
+                    while map.tmxData.get_tile_gid((player.collisionMask.rect.left)/tileWidth, player.collisionMask.rect.top/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.collisionMask.rect.left)/tileWidth, (player.collisionMask.rect.bottom-1)/tileHeight, COLLISION_LAYER) != SOLID:
+                        player.collisionMask.rect.left -= 1
                     player.speedx = 0
                     player.detonate()
                 i += 1
 
         else:
-            upLeftTileGid = map.tmxData.get_tile_gid((player.rect.left + player.speedx)/tileWidth, player.rect.top/tileHeight, COLLISION_LAYER)
-            downLeftTileGid = map.tmxData.get_tile_gid((player.rect.left + player.speedx)/tileWidth, (player.rect.bottom-1)/tileHeight, COLLISION_LAYER)
-            lowMidLeftTileGid = map.tmxData.get_tile_gid((player.rect.left + player.speedx)/tileWidth, (player.rect.centery-10)/tileHeight, COLLISION_LAYER)
-            highMidLeftTileGid = map.tmxData.get_tile_gid((player.rect.left + player.speedx)/tileWidth, (player.rect.centery+10)/tileHeight, COLLISION_LAYER)
+            upLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left + player.speedx)/tileWidth, player.collisionMask.rect.top/tileHeight, COLLISION_LAYER)
+            downLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left + player.speedx)/tileWidth, (player.collisionMask.rect.bottom-1)/tileHeight, COLLISION_LAYER)
+            lowMidLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left + player.speedx)/tileWidth, (player.collisionMask.rect.centery-10)/tileHeight, COLLISION_LAYER)
+            highMidLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left + player.speedx)/tileWidth, (player.collisionMask.rect.centery+10)/tileHeight, COLLISION_LAYER)
 
             if (upLeftTileGid  == SOLID or downLeftTileGid  == SOLID or lowMidLeftTileGid == SOLID or highMidLeftTileGid == SOLID) and player.speedx < 0:
-                #while map.tmxData.get_tile_gid((player.rect.left)/tileWidth, player.rect.top/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.rect.left)/tileWidth, (player.rect.bottom-1)/tileHeight, COLLISION_LAYER) != SOLID:
-                     #player.rect.left -= 1
+                #while map.tmxData.get_tile_gid((player.collisionMask.rect.left)/tileWidth, player.collisionMask.rect.top/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.collisionMask.rect.left)/tileWidth, (player.collisionMask.rect.bottom-1)/tileHeight, COLLISION_LAYER) != SOLID:
+                     #player.collisionMask.rect.left -= 1
                 player.speedx = 0
-                player.rect.left -= (player.rect.left % self.tileWidth) #On colle le player sur le mur de gauche
+                player.collisionMask.rect.left -= (player.collisionMask.rect.left % self.tileWidth) #On colle le player sur le mur de gauche
                 player.detonate()
             elif upLeftTileGid  == SPIKE or downLeftTileGid  == SPIKE or lowMidLeftTileGid == SPIKE or highMidLeftTileGid == SPIKE:
                 player.dead()
@@ -134,13 +134,13 @@ class CollisionPlayerPlatform:
         # mapWidth = map.tmxData.width * tileWidth
         # mapHeight = map.tmxData.height * tileHeight
 
-        downLeftTileGid = map.tmxData.get_tile_gid((player.rect.left+1)/tileWidth, (player.rect.bottom + player.speedy)/tileHeight, COLLISION_LAYER)
-        downRightTileGid = map.tmxData.get_tile_gid((player.rect.right)/tileWidth, (player.rect.bottom + player.speedy)/tileHeight, COLLISION_LAYER)
-        downMidTileGID = map.tmxData.get_tile_gid((player.rect.centerx)/tileWidth, (player.rect.bottom + player.speedy)/tileHeight, COLLISION_LAYER)
+        downLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left+1)/tileWidth, (player.collisionMask.rect.bottom + player.speedy)/tileHeight, COLLISION_LAYER)
+        downRightTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.right)/tileWidth, (player.collisionMask.rect.bottom + player.speedy)/tileHeight, COLLISION_LAYER)
+        downMidTileGID = map.tmxData.get_tile_gid((player.collisionMask.rect.centerx)/tileWidth, (player.collisionMask.rect.bottom + player.speedy)/tileHeight, COLLISION_LAYER)
 
         if downLeftTileGid == SOLID or downRightTileGid == SOLID or downMidTileGID == SOLID:
-            # while map.tmxData.get_tile_gid((player.rect.left+1)/tileWidth, (player.rect.bottom)/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.rect.right)/tileWidth, (player.rect.bottom)/tileHeight, COLLISION_LAYER) != SOLID:
-            #     player.rect.bottom += 1
+            # while map.tmxDaata.get_tile_gid((player.collisionMask.rect.left+1)/tileWidth, (player.collisionMask.rect.bottom)/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid((player.collisionMask.rect.right)/tileWidth, (player.collisionMask.rect.bottom)/tileHeight, COLLISION_LAYER) != SOLID:
+            #     player.collisionMask.rect.bottom += 1
             player.speedy = 0
             player.jumpState = GROUNDED
             player.detonate()
@@ -158,16 +158,16 @@ class CollisionPlayerPlatform:
         tileWidth = map.tmxData.tilewidth
         tileHeight = map.tmxData.tileheight
 
-        upLeftTileGid = map.tmxData.get_tile_gid((player.rect.left+1)/tileWidth, (player.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
-        upRightTileGid = map.tmxData.get_tile_gid(player.rect.right/tileWidth, (player.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
-        upMidTileGid = map.tmxData.get_tile_gid(player.rect.centerx/tileWidth, (player.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
+        upLeftTileGid = map.tmxData.get_tile_gid((player.collisionMask.rect.left+1)/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
+        upRightTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.right/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
+        upMidTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.centerx/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
 
         if upLeftTileGid == SOLID or upRightTileGid == SOLID or upMidTileGid == SOLID:
             #Coller le player sur le plafond
-            while map.tmxData.get_tile_gid((player.rect.left+1)/tileWidth, (player.rect.top)/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid(player.rect.right/tileWidth, (player.rect.top)/tileHeight, COLLISION_LAYER) != SOLID:
-                player.rect.bottom -= 1
+            while map.tmxData.get_tile_gid((player.collisionMask.rect.left+1)/tileWidth, (player.collisionMask.rect.top)/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid(player.collisionMask.rect.right/tileWidth, (player.collisionMask.rect.top)/tileHeight, COLLISION_LAYER) != SOLID:
+                player.collisionMask.rect.bottom -= 1
 
-            player.rect.bottom += 1 #Redescendre de 1 pour sortir du plafond
+            player.collisionMask.rect.bottom += 1 #Redescendre de 1 pour sortir du plafond
             player.speedy = 0
             player.detonate()
         elif upLeftTileGid == SPIKE or upRightTileGid == SPIKE:
