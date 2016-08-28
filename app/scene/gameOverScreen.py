@@ -14,14 +14,11 @@ class GameOverScreen:
         self.gameData = gameData
 
         self.screen.fill((0,0,0))
-        titleImage = pygame.image.load(os.path.join('img', 'gameOverScreen.png'))
+        titleImage = pygame.image.load(os.path.join('img', 'GameOverScreen_v2.png'))
         self.screen.blit(titleImage, (0, 0))
 
         self.type = GAME_OVER_SCREEN
         self.nextScene = None
-
-        MusicFactory(TITLE_SCREEN)
-
 
     def mainLoop(self):
         self.sceneRunning = True

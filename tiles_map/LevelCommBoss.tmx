@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="49" tilewidth="32" tileheight="32" nextobjectid="11">
- <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
+ <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
- <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100" columns="10">
+ <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100">
   <image source="img/set_comm.png" width="320" height="320"/>
   <terraintypes>
    <terrain name="Wood" tile="-1"/>
@@ -49,14 +49,14 @@
  </layer>
  <objectgroup name="outZoneLayer"/>
  <objectgroup name="inZoneLayer">
-  <object id="3" name="InZone" x="48" y="1429" width="9" height="30">
+  <object id="3" name="InZone" x="53.2119" y="1439" width="9" height="30">
    <properties>
     <property name="StartPoint" value="StartPointCommBoss"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="enemyLayer">
-  <object id="4" name="enemyCommBoss" type="enemy" x="630" y="849" width="95" height="127"/>
+  <object id="4" name="enemyCommBoss" type="enemy" x="603.091" y="476.333" width="95" height="127"/>
  </objectgroup>
  <objectgroup name="itemLayer"/>
 </map>
