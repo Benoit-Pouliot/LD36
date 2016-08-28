@@ -1,6 +1,7 @@
 import pygame
 import os
 
+from app.sprites.collisionMask import CollisionMask
 from app.settings import *
 
 
@@ -15,6 +16,9 @@ class Enemy(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+        self.collisionMask = CollisionMask(0,0,0,0)
+        self.collisionMask.rect = self.rect
+
 
         self.jumpState = JUMP
         self.specialState = None
@@ -30,7 +34,7 @@ class Enemy(pygame.sprite.Sprite):
         self.soundDead.set_volume(1)
 
     def update(self):
-        pass
+        self.collisionMask.rect = self.rect
 
     def detonate(self):
         pass

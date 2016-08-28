@@ -1,6 +1,5 @@
 __author__ = 'Bobsleigh'
 
-
 import os
 import pygame
 from app.settings import JUMP

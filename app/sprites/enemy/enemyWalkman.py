@@ -37,6 +37,8 @@ class EnemyWalkman(Enemy):
         self.isGravityApplied = True
         self.isCollisionApplied = True
 
+        self.life = 3
+
     def set_direction(self, direction):
         self.direction = direction
         if self.direction == "Left":
@@ -60,6 +62,8 @@ class EnemyWalkman(Enemy):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
 
+        self.collisionMask.rect = self.rect
+
         # print(self.speedy)
 
         self.distance = math.fabs(self.initx - self.rect.x)
@@ -70,3 +74,8 @@ class EnemyWalkman(Enemy):
 
     def spring(self):
         self.speedy = -15
+
+    def hurt(self):
+        self.life -= 1
+        if self.life <= 0:
+            self.dead()
