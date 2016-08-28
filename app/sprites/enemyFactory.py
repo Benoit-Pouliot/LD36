@@ -7,6 +7,7 @@ from app.sprites.enemy.enemyNoteInv import EnemyNoteInv
 from app.sprites.enemy.enemyPhone import EnemyPhone
 from app.sprites.enemy.enemyTelegraph import EnemyTelegraph
 from app.sprites.enemy.enemyTypewriter import EnemyTypewriter
+from app.sprites.enemy.enemyCommBoss import EnemyCommBoss
 from app.tools.functionTools import *
 
 
@@ -32,12 +33,15 @@ class EnemyFactory:
             return self.createEnemyTelegraph(enemy, theMap)
         if eName == "enemyTypewriter":
             return self.createEnemyTypewriter(enemy)
+        if eName == "enemyCommBoss":
+            return self.createEnemyCommBoss(enemy, theMap)
 
         # Not found? we send a simple enemy
         return Enemy(enemy.x, enemy.y)
 
 
-
+    def createEnemyCommBoss(self, enemy, theMap):
+        return EnemyCommBoss(enemy.x, enemy.y, theMap)
 
     def createEnemyMusicBoss(self, enemy, theMap):
         return EnemyMusicBoss(enemy.x, enemy.y, theMap)
