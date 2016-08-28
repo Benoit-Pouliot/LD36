@@ -6,13 +6,13 @@ from app.settings import *
 
 
 class Enemy(pygame.sprite.Sprite):
-    def __init__(self, x, y, image=os.path.join('img', 'Cochon.png')):
+    def __init__(self, x, y, pathImage=os.path.join('img', 'Cochon.png')):
         super().__init__()
 
         self.name = "enemy"
 
         # self.image = pygame.transform.scale(pygame.image.load(image), (TILEDIMX, TILEDIMY))
-        self.image = pygame.image.load(image)
+        self.image = pygame.image.load(pathImage)
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y

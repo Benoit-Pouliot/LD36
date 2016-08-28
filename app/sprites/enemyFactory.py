@@ -2,6 +2,7 @@ from app.sprites.enemy.enemy import Enemy
 from app.sprites.enemy.enemyWalkman import EnemyWalkman
 from app.sprites.enemy.enemyRadio import EnemyRadio
 from app.sprites.enemy.enemyMp3 import EnemyMp3
+from app.sprites.enemy.enemyMusicBoss import EnemyMusicBoss
 from app.tools.functionTools import *
 
 
@@ -17,10 +18,15 @@ class EnemyFactory:
             return self.createEnemyMp3(enemy, theMap)
         if eName == "enemyWalkman":
             return self.createEnemyWalkman(enemy)
+        if eName == "enemyMusicBoss":
+            return self.createEnemyMusicBoss(enemy, theMap)
 
         # Not found? we send a simple enemy
         return Enemy(enemy.x, enemy.y)
 
+
+    def createEnemyMusicBoss(self, enemy, theMap):
+        return EnemyMusicBoss(enemy.x, enemy.y, theMap)
 
     def createEnemyMp3(self, enemy, theMap):
 

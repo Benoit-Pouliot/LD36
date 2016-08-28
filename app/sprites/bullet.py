@@ -1,6 +1,7 @@
 import os
 import pygame
 import random
+import math
 
 from app.sprites.enemy.enemy import Enemy
 from app.scene.platformScreen.collisionPlayerPlatform import *
@@ -8,16 +9,16 @@ from app.scene.platformScreen.collisionPlayerPlatform import *
 
 
 class Bullet(Enemy):
-    def __init__(self, x, y, direction=RIGHT, friendly=True):
-        super().__init__(x, y, os.path.join('img', 'Bullet.png'))
+    def __init__(self, x, y, pathImage = os.path.join('img', 'Bullet.png'), direction=RIGHT, friendly=True):
+        super().__init__(x, y, pathImage)
 
         self.name = "bullet"
 
         self.imageBulletRight = list()
-        self.imageBulletRight.append(pygame.image.load(os.path.join('img', 'Bullet.png')))
+        self.imageBulletRight.append(pygame.image.load(pathImage))
 
         self.imageBulletLeft = list()
-        self.imageBulletLeft.append(pygame.image.load(os.path.join('img', 'Bullet.png')))
+        self.imageBulletLeft.append(pygame.image.load(pathImage))
 
         self.image = self.imageBulletRight[0]
 
@@ -40,11 +41,11 @@ class Bullet(Enemy):
 
         self.animation = None
 
-        # For debugging
         self.friendly = friendly
 
     def update(self):
         self.rect.x += self.speedx
+        self.rect.y += self.speedy
         if self.animation is not None :
            next(self.animation)
 
@@ -59,11 +60,9 @@ class Bullet(Enemy):
 
 class HeartBullet(Bullet):
     def __init__(self, x, y, direction=RIGHT, friendly=True):
-        super().__init__(x, y, os.path.join('img', 'HeartBullet.png'))
+        super().__init__(x, y, os.path.join('img', 'HeartBullet.png'), direction, friendly)
 
-        self.name = "bullet"
-
-        self.image = pygame.image.load(os.path.join('img', 'HeartBullet.png'))
+        self.name = "HeartBullet"
 
         self.direction = direction
 
@@ -78,11 +77,13 @@ class HeartBullet(Bullet):
             self.rect.x = x - self.rect.width
         self.speedy = 0
 
+        self.friendly = friendly
+
 class BeerBullet(Bullet):
     def __init__(self, x, y, direction=RIGHT, friendly=True):
-        super().__init__(x, y, os.path.join('img', 'biere32x32.png'))
+        super().__init__(x, y, os.path.join('img', 'biere32x32.png'), direction, friendly)
 
-        self.name = "bullet"
+        self.name = "BeerBullet"
 
         image1 = pygame.image.load(os.path.join('img', 'biere32x32.png'))
         image2 = pygame.image.load(os.path.join('img', 'biere32x32-2.png'))
@@ -106,16 +107,14 @@ class BeerBullet(Bullet):
             self.rect.x = x - self.rect.width
         self.speedy = 0
 
+        self.friendly = friendly
+
 class SpiritBullet(Bullet):
     def __init__(self, x, y, direction=RIGHT, friendly=True):
-        super().__init__(x, y, os.path.join('img', 'biere32x32.png'))
+        super().__init__(x, y, os.path.join('img', 'BulletBlue.png'), direction, friendly)
 
-        self.name = "bullet"
-
-        self.image = pygame.image.load(os.path.join('img', 'BulletBlue.png'))
-
+        self.name = "BulletBlue"
         self.direction = direction
-
 
         self.rect = self.image.get_rect()
         self.rect.y = y - self.rect.height / 2
@@ -128,17 +127,17 @@ class SpiritBullet(Bullet):
             self.rect.x = x - self.rect.width
         self.speedy = 0
 
+        self.friendly = friendly
+
 class NoteBullet(Bullet):
     def __init__(self, x, y, direction=RIGHT, friendly=True):
-        super().__init__(x, y, os.path.join('img', 'note_v1.png'))
+        super().__init__(x, y, os.path.join('img', 'note_v1.png'), direction, friendly)
+
+        self.name = "NoteBullet"
 
         random.seed()
-        random.randint(1, 2)
-
-        self.name = "bullet"
-
         if random.randint(1, 2) == 1:
-            self.imageLeft = pygame.image.load(os.path.join('img', 'note_v1.png'))
+            self.imageLeft = self.image
         else:
             self.imageLeft = pygame.image.load(os.path.join('img', 'note_v2.png'))
         self.imageLeft = pygame.transform.scale(self.imageLeft, (16, 16))
@@ -158,3 +157,41 @@ class NoteBullet(Bullet):
             self.rect.x = x - self.rect.width
             self.image = self.imageLeft
         self.speedy = 0
+
+        self.friendly = friendly
+
+class NoteBulletDiag(Bullet):
+    def __init__(self, x, y, direction=RIGHT, angle=0, friendly=True):
+        super().__init__(x, y, os.path.join('img', 'note_v1.png'), direction, friendly)
+
+        # The angle is -90 to 90, its determine the angle of the bullet
+        self.angle = angle
+
+        self.name = "NoteBullet"
+
+        random.seed()
+        if random.randint(1, 2) == 1:
+            self.imageLeft = self.image
+        else:
+            self.imageLeft = pygame.image.load(os.path.join('img', 'note_v2.png'))
+        self.imageLeft = pygame.transform.scale(self.imageLeft, (16, 16))
+        self.imageRight = pygame.transform.flip(self.imageLeft, True, False)
+        self.image = self.imageRight
+
+        self.direction = direction
+
+        self.rect = self.image.get_rect()
+        self.rect.y = y - self.rect.height / 2
+
+        self.speedNorm = 5
+        self.speedx = self.speedNorm*math.cos(self.angle/180.0*math.pi)
+        self.speedy = -self.speedNorm*math.sin(self.angle/180.0*math.pi)
+
+        if direction == RIGHT:
+            self.rect.x = x
+        elif direction == LEFT:
+            self.speedx = -self.speedx
+            self.rect.x = x - self.rect.width
+            self.image = self.imageLeft
+
+        self.friendly = friendly
