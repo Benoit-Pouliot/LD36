@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="19" tilewidth="32" tileheight="32" nextobjectid="6">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="32" tileheight="32" nextobjectid="6">
  <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
@@ -85,41 +85,41 @@
    </animation>
   </tile>
  </tileset>
- <layer name="Collision_Layer" width="25" height="19">
+ <layer name="Collision_Layer" width="26" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYAJiZiBmHOIYGVBbLTZ9uPTjA8S4Y6DtIAUQE570toNaYNSOoWMHExSTArDpGei0OxzsQK5LmNHUo+snRs9wwQBtVQDq
+   eJxjYKAPYARiJiBmhrJpgRloaDY2e9D9R0gPKWpx2YPLDHyAkFsGkz2kAEL24At7WttDLTBqz9C2hwmKSQHY9AyWdD1c7GHGoocZTQ+6GcTooVYdQ0z9QA97AJJ1AOo=
   </data>
  </layer>
- <layer name="Background" width="25" height="19">
+ <layer name="Background" width="26" height="20">
   <data encoding="base64" compression="zlib">
-   eJxLYmBgSBrFo3gUj+JRPIpHMc0wAGLYtdc=
+   eJxjYKAPSKIDHrVn1J5Re0btGbVn1J5Re6hjDwDOoLXX
   </data>
  </layer>
- <layer name="Terrain" width="25" height="19">
+ <layer name="Terrain" width="26" height="20">
   <data encoding="base64" compression="zlib">
-   eJzdVcsOgyAQ3H+q1pO1vQNHz/ZvPPPFDsmS4gY1NJmLk8wFdvYxoDgReYAd2INPcAD9wbprjPfKEXyBE/gGP5qrtt4a71TDRMofyDVW4c8RhT9HPo8gvHlWU4eB5FV5pxmwd52Bu3hlv/8SC/htzFfTnHnlda8FNc2ZV//8A5zqbN0jr2Klpyt41ZXIvQbZezXLz8PZ9Gn7vtLkXplvVK7LfKNS/AZQkjIW
+   eJzdVbsOwjAM9D9BYYLCHndkhr/JnC/mKtXCoi6WpToDJ50q+REnF9ch6oMCHsAjOIAn8Azyhj0az0ud+XsBr+AI3sD7sp5lj8aX3RT5DfZDdkHtVKd1qiP3M+s3UZ6OoltRtTIguumez4DopHs+A/+mm/Tblm5P8BVc08rxdGOKzyYrx9OtUvyfKrSeM16/NWNvHpjWc6Yq30Qf3R5qb2zYNIrh/85pypf5zun5lvnOyfnejN8w4A==
   </data>
  </layer>
- <layer name="Front_Layer" width="25" height="19">
+ <layer name="Front_Layer" width="26" height="20">
   <data encoding="base64" compression="zlib">
-   eJztj7EKgEAMQ+97ddVV0VVX/V6zBM7QngUdHPogFEpS0lLuLNAKdVBvzBrPwxseG7QbuQEaxcudennD44BOIzdBs3i5Uy9vPNHqr+g/UVr9Ff0nSqT/20yk/xeZJEmSP3EB05og6Q==
+   eJztj8EKgDAMQ/e9etWrole96veaS2CEWjoYiNAHj8FICinlGza4wwGOxlvzluENjwOeRneCs2T5p1ne8LjgbXQXuEqWf5rljQjeDkV3teDtUHRXC5EdPTqRHT06SZIkf+cBh10g6Q==
   </data>
  </layer>
- <layer name="Sprite_Layer" width="25" height="19">
+ <layer name="Sprite_Layer" width="26" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApGAS0BAAdsAAE=
+   eJxjYBgFo2AUjIJRMApGwShABQAIIAAB
   </data>
  </layer>
  <objectgroup name="outZoneLayer"/>
  <objectgroup name="inZoneLayer">
-  <object id="3" name="InZone" x="51" y="121" width="9" height="30">
+  <object id="3" name="InZone" x="51" y="153" width="9" height="30">
    <properties>
     <property name="StartPoint" value="StartPointMusicBoss"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="enemyLayer">
-  <object id="4" name="enemyBossMusic" x="407" y="471" width="45" height="44"/>
+  <object id="4" name="enemyBossMusic" x="407" y="503" width="45" height="44"/>
  </objectgroup>
  <objectgroup name="itemLayer"/>
 </map>

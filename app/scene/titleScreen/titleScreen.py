@@ -50,5 +50,10 @@ class TitleScreen:
         self.nextScene = PLATFORM_SCREEN
         self.sceneRunning = False
         self.gameData.typeScene = PLATFORM_SCREEN
-        self.gameData.mapData = MapData("LevelMusic", "StartPointMusic")
+
+        if TAG_MARIE == 0: #Real thing
+            self.gameData.mapData = MapData("LevelMusic", "StartPointMusic")
+
+        else: #To try any level rapidly.
+            self.gameData.mapData = MapData("LevelMusicBoss", "StartPointMusicBoss")
 

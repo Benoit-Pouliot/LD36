@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="66" tilewidth="32" tileheight="32" nextobjectid="56">
+ <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
+  <image source="img/collision_set.png" width="160" height="320"/>
+ </tileset>
+ <tileset firstgid="51" name="set_comm" tilewidth="32" tileheight="32" tilecount="100" columns="10">
+  <image source="img/set_comm.png" width="320" height="320"/>
+ </tileset>
+ <layer name="Collision_Layer" width="65" height="66">
+  <data encoding="base64" compression="zlib">
+   eJztmeEKwzAIhNut7//M64/Bwkgbz8ZozB0cDNKF+FWNbPu2ba/T79PH6Z02MSp0X+/4yEAWx6oMIksb3/F1BnkxOBoeKTL4qRcDaUxkEFPZe6Ik56wZeN+fKANkz1lkycD7/T6RZr4sNZqBxax6x0Ci7HkgUXYG2lp4TWaLPJjVZFBnoK2FWV1jIJFHT9TGptlfouwMtLVgrah5MNJoLFfx9eI3GwPke2gtZGUgUUQG/z0KVUYGaG5nqAXmARmUZxp1L0TUHQN0PsjIQCIymINB6zxkgM8HT+cJD7XONYJBlN9APRlEd22OIAMyWJlBj+fvVD7T67NUrfdcxoTshzLwFBlgDCxrwVNSBlfrZEAGqzFgP+C9QAasBfZEMiCDtftBbX21e6G2TgashVZPlOwXmQcZ+DHwcCtG7/ONsPb/JrqfP4XoDik=
+  </data>
+ </layer>
+ <layer name="Background" width="65" height="66">
+  <data encoding="base64" compression="zlib">
+   eJztw0ENAAAMA6EzX9+TsQ8krJqqqqqqqqqqqqqqqqqqqqqqPj8JtrVD
+  </data>
+ </layer>
+ <layer name="Terrain" width="65" height="66">
+  <data encoding="base64" compression="zlib">
+   eJzt2QEJAAAIA0FL2b+aKYYKd/AltioAAAAAkvpZAAAAAABJNlAAAAAAAAAu8zftGwkDEWU=
+  </data>
+ </layer>
+ <layer name="FirstLayer" width="65" height="66">
+  <data encoding="base64" compression="zlib">
+   eJzt10EKg0AQAEH/lFzz/28l/YCgIsZdUw1z0sNYLAsuiyRpb4/PPK9e4uKOGrxWZoYYfDfY+k0M7tFsd+IZZ44Bg5rN4IwYMCgGDIoBg2LAoBgwqLX//zNmtBgwqBENfn1HMWBQDBiMGgMGxYBB7TW4oxkDBsWAQTH4D4O1nRkw2PL86PsjxIBBMWBQDBgUAwbFgEExYFAMGBQDBsVgzp01b28SBW5P
+  </data>
+ </layer>
+ <layer name="Sprite_Layer" width="65" height="66">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAAAA4G9DCAAB
+  </data>
+ </layer>
+ <objectgroup name="outZoneLayer"/>
+ <objectgroup name="inZoneLayer">
+  <object id="46" name="InZone" x="74" y="1876" width="32" height="15">
+   <properties>
+    <property name="StartPoint" value="StartPointComm"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="enemyLayer">
+  <object id="3" name="enemyPhone" type="enemy" x="258" y="1406" width="62" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="6" name="enemyPhone" type="enemy" x="353" y="1408.5" width="62" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="7" name="enemyPhone" type="enemy" x="451" y="1407.5" width="62" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="8" name="enemyPhone" type="enemy" x="544" y="1405.5" width="62" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="9" name="enemyPhone" type="enemy" x="641" y="1404.5" width="62" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="10" name="enemyPhone" type="enemy" x="738" y="1405.5" width="62" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="11" name="enemyPhone" type="enemy" x="833" y="1404.5" width="62" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="12" name="enemyPhone" type="enemy" x="1508" y="769.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="13" name="enemyPhone" type="enemy" x="521" y="106.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="14" name="enemyPhone" type="enemy" x="583" y="109.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="15" name="enemyPhone" type="enemy" x="645" y="106.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="16" name="enemyPhone" type="enemy" x="809" y="50.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="17" name="enemyPhone" type="enemy" x="873" y="49.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="18" name="enemyPhone" type="enemy" x="998" y="50.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="19" name="enemyPhone" type="enemy" x="933" y="52.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="20" name="enemyPhone" type="enemy" x="1061" y="49.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="21" name="enemyPhone" type="enemy" x="1122" y="51.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="22" name="enemyPhone" type="enemy" x="1510" y="48.5" width="54" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="23" name="enemyTelegraph" type="enemy" x="1610" y="1835.5" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="24" name="enemyTelegraph" type="enemy" x="40" y="402" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="25" name="enemyTelegraph" type="enemy" x="1609" y="1606" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="26" name="enemyTelegraph" type="enemy" x="1624" y="1385" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="27" name="enemyTelegraph" type="enemy" x="40" y="502" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="28" name="enemyTelegraph" type="enemy" x="38" y="602" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="29" name="enemyTelegraph" type="enemy" x="40" y="697" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="30" name="enemyTelegraph" type="enemy" x="41" y="797" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="31" name="enemyTelegraph" type="enemy" x="42" y="887" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="32" name="enemyTelegraph" type="enemy" x="36" y="988" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="33" name="enemyTypewriter" type="enemy" x="316" y="1954" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="34" name="enemyTypewriter" type="enemy" x="562" y="1963" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="35" name="enemyTypewriter" type="enemy" x="805" y="1954" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="36" name="enemyTypewriter" type="enemy" x="1503" y="371" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="48" name="enemyTypewriter" type="enemy" x="1842" y="844" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="49" name="enemyTypewriter" type="enemy" x="1740" y="972" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="50" name="enemyTypewriter" type="enemy" x="1832" y="1096" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+   </properties>
+  </object>
+  <object id="51" name="enemyPhone" type="enemy" x="522" y="682.5" width="42" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="52" name="enemyPhone" type="enemy" x="686" y="676.5" width="42" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="53" name="enemyPhone" type="enemy" x="846" y="679.5" width="42" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="54" name="enemyPhone" type="enemy" x="1001" y="678.5" width="42" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+  <object id="55" name="enemyPhone" type="enemy" x="1165" y="681.5" width="42" height="71">
+   <properties>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="10"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="itemLayer"/>
+</map>
