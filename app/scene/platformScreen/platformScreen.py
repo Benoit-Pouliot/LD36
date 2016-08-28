@@ -29,7 +29,7 @@ class PlatformScreen:
         self.logicHandler = LogicHandlerPlatformScreen(self.screen, self.player, self.mapData)
         self.drawer = Drawer()
 
-        MusicFactory(PLATFORM_SCREEN, self.mapData.nameMap)
+        #MusicFactory(PLATFORM_SCREEN, self.mapData.nameMap)
 
 
     def mainLoop(self):

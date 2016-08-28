@@ -6,6 +6,7 @@ from app.scene.platformScreen.platformScreen import PlatformScreen
 from app.scene.gameOverScreen import GameOverScreen
 
 from app.gameData import GameData
+from app.scene.musicFactory import MusicFactory
 
 
 class SceneHandler:
@@ -15,7 +16,7 @@ class SceneHandler:
         self.runningScene = firstScene
         self.screen = screen
         self.gameData = GameData(firstScene)
-
+        self.musicHandler = MusicFactory()
 
     def mainLoop(self):
         self.handlerRunning = True
@@ -27,6 +28,10 @@ class SceneHandler:
                 self.runningScene = TitleScreen(self.screen, self.gameData)
             elif self.runningScene.nextScene == PLATFORM_SCREEN:
                 self.runningScene = PlatformScreen(self.screen, self.gameData)
+                self.musicHandler.playMusic(PLATFORM_SCREEN, self.runningScene.gameData.mapData.nameMap)
             elif self.runningScene.nextScene == GAME_OVER_SCREEN:
                 self.runningScene = GameOverScreen(self.screen, self.gameData)
+
+
+
 

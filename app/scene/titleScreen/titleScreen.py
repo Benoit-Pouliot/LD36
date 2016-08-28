@@ -40,8 +40,6 @@ class TitleScreen:
 
         self.nextScene = None
 
-        MusicFactory(TITLE_SCREEN)
-
 
     def mainLoop(self):
         self.sceneRunning = True

@@ -42,3 +42,11 @@ Song : Factory Time [Loop]
 Album : Songs From An Unmade World 2
 
 [Link](http://freemusicarchive.org/music/Visager/Songs_From_An_Unmade_World_2/)
+
+MusicLevelBoss
+
+Artist : Visager
+Song : Miniboss Fight [Loop] 
+Album : Songs From An Unmade World 2
+
+[Link](http://freemusicarchive.org/music/Visager/Songs_From_An_Unmade_World_2/)

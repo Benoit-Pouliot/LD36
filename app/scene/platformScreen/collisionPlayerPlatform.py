@@ -275,7 +275,6 @@ def printTile(tile):
 def collisionExplosionEnemy(explosion, mapData):
     circle = Circle((explosion.collisionMask.rect.centerx, explosion.collisionMask.rect.centery),explosion.collisionMask.rect.width/2)
 
-
     for enemy in mapData.enemyGroup:
         if collisionCircleRect(circle, enemy.rect):
             enemy.hurt()
