@@ -27,12 +27,12 @@
    eJzt10kKwCAMQFGn3v/KzUaQ4hBjGo0k8Hetj4IW9M65AEUoQf6SOOapRHHSIHP2OiNXg9N7huKERtwO5Syf7FBGi5PfO8X5jjn/OWXZmT1PVEfqezQ75Zij0xn5Wp2w4GAq/0fYMYfHwYw55kg4tT0u5bTuSzP3p976K+1yuNeXdm7qBdb2Bro=
   </data>
  </layer>
- <layer name="Background" width="26" height="49" visible="0">
+ <layer name="Background" width="26" height="49">
   <data encoding="base64" compression="zlib">
    eJztwwEJAAAMBKEr/72XY6Dgqqmqqqqqrx+PcpYB
   </data>
  </layer>
- <layer name="Terrain" width="26" height="49" visible="0">
+ <layer name="Terrain" width="26" height="49">
   <data encoding="base64" compression="zlib">
    eJztmEEKgzAQRedShdoW1KV21aIre/9zdAYyNAjWJMwo6P/wiJvw8rMY1J6I+o14MYMT78jzJL908MBzAs9lAWuPV+CBBx5fz5WpmBtzD2sVnh+GHovAAw88+3hy3hvmHpkxOltklfmSOltyPF7ZyyP3pvNY7w73Bs/RPTXTBNoCj/xLGAvOtfS9NEf3pUS6fCLPRL9ua+i+lMRdSlnrEZ/Jy2PRQ2n+YNFja764OW0L
   </data>
