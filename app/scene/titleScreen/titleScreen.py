@@ -24,7 +24,7 @@ class TitleScreen:
 
         # Define MainMenu
         self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, SCREEN_WIDTH / 3, SCREEN_HEIGHT * 0.25))
-        self.menu.addOption('Start', self.startGame)
+        self.menu.addOption('Level 1', self.startLvlMusic)
         self.menu.addOption('Level 2', self.startLvlComm)
 
         self.menu.addOption('Exit', sys.exit)
@@ -50,7 +50,7 @@ class TitleScreen:
             self.menu.spritesMenu.update()  # This would be in the logic
             self.drawer.draw(self.screen, None, self.menu.spritesMenu, None)  # Drawer in THIS file, below
 
-    def startGame(self):
+    def startLvlMusic(self):
         self.nextScene = PLATFORM_SCREEN
         self.sceneRunning = False
         self.gameData.typeScene = PLATFORM_SCREEN

@@ -1,5 +1,4 @@
 from app.settings import *
-from app.scene.worldMap.worldMap import WorldMap
 from app.scene.titleScreen.titleScreen import TitleScreen
 
 from app.scene.platformScreen.platformScreen import PlatformScreen
@@ -23,8 +22,6 @@ class SceneHandler:
             #When we exit the scene, this code executes
             if self.runningScene.nextScene == TITLE_SCREEN:
                 self.runningScene = TitleScreen(self.screen, self.gameData)
-            elif self.runningScene.nextScene == WORLD_MAP:
-                self.runningScene = WorldMap(self.screen, self.gameData)
             elif self.runningScene.nextScene == PLATFORM_SCREEN:
                 self.runningScene = PlatformScreen(self.screen, self.gameData)
 
