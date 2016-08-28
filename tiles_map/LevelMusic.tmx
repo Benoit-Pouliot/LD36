@@ -279,7 +279,7 @@
   <object id="45" name="enemyMp3" type="enemy" x="2610.33" y="467.167" width="30" height="39"/>
   <object id="46" name="enemyMp3" type="enemy" x="2673" y="400.5" width="30" height="39"/>
   <object id="47" name="enemyMp3" type="enemy" x="2737" y="339.167" width="30" height="39"/>
-  <object id="48" name="enemyWalkman" type="enemy" x="374" y="303.667" width="30" height="30.6667">
+  <object id="48" name="enemyWalkman" type="enemy" x="374" y="350.667" width="30" height="30.6667">
    <properties>
     <property name="direction" value="Right"/>
    </properties>

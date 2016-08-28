@@ -9,6 +9,7 @@ class EventHandlerPlatformScreen():
         self.grenadePowerCounter = Counter()
         self.ctrlPressedDown = False
         self.mousePressedDown = False
+        self.musicPaused = False
 
     def eventHandle(self):
 
@@ -38,6 +39,13 @@ class EventHandlerPlatformScreen():
                     self.player.jump()
                 elif event.key == pygame.K_LCTRL:
                     self.ctrlPressedDown = True
+                elif event.key == pygame.K_m:
+                    if self.musicPaused:
+                        pygame.mixer.music.unpause()
+                        self.musicPaused = False
+                    else:
+                        pygame.mixer.music.pause()
+                        self.musicPaused = True
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_RIGHT or event.key == pygame.K_d:

@@ -2,6 +2,14 @@
 
 [LudumDare36](http://ludumdare.com/compo/)
 
+## Command
+
+- a and w key (or left and right arrow key) to move
+- w key (or up arrow key or spacebar) to jump
+- Ctrl or left mouse click to shoot
+- aim your projectile with your mouse cursor
+- m to mute the music
+
 
 # Tools used
 
