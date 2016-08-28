@@ -233,7 +233,7 @@
 </data>
  </layer>
  <objectgroup name="enemyLayer">
-  <object id="3" name="enemyRadio" type="enemy" x="685.333" y="477.667" width="48.3333" height="40.6667">
+  <object id="3" name="enemyRadio" type="enemy" x="692.333" y="480.667" width="48.3333" height="40.6667">
    <properties>
     <property name="direction" value="Left"/>
    </properties>

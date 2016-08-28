@@ -36,6 +36,11 @@ class EnemyRadio(Enemy):
 
     def update(self):
 
+        self.rect.x += self.speedx
+        self.rect.y += self.speedy
+
+        self.collisionMask.rect = self.rect
+
         self.imageIterShoot += 1
         if self.imageIterShoot > self.imageWaitNextShoot:
 
