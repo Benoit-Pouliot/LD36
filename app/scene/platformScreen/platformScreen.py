@@ -74,7 +74,7 @@ class PlatformScreen:
             elif self.levelComplete == True:
                 self.levelCompleteCounter += 1
                 if self.levelCompleteCounter == 240:
-                    self.gameData.mapComplete["map2"] = True
+                    self.gameData.mapComplete["map1"] = True
                     self.backToMain()
 
         if self.mapData.nameMap == "LevelCommBoss":
@@ -87,7 +87,7 @@ class PlatformScreen:
             elif self.levelComplete == True:
                 self.levelCompleteCounter += 1
                 if self.levelCompleteCounter == 240:
-                    self.gameData.mapComplete["map1"] = True
+                    self.gameData.mapComplete["map2"] = True
                     self.backToMain()
 
     def win(self):

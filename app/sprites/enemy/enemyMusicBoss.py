@@ -25,7 +25,7 @@ class EnemyMusicBoss(Enemy):
         self.isGravityApplied = True
         self.isCollisionApplied = True
 
-        self.life = 2
+        self.life = 8
 
         self.soundVictory = pygame.mixer.Sound(os.path.join('music_pcm', 'levelWin.wav'))
 
