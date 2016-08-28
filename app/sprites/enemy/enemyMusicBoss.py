@@ -32,6 +32,10 @@ class EnemyMusicBoss(Enemy):
         self.imageWaitNextShoot.append(320)
         self.imageWaitNextShoot.append(340)
         self.imageWaitNextShoot.append(360)
+        self.imageWaitNextShoot.append(660)
+        self.imageWaitNextShoot.append(680)
+        self.imageWaitNextShoot.append(700)
+        self.imageWaitNextShoot.append(720)
         self.imageIterWaitNextShoot = 0
         self.imageIterWaitNextShootMax = len(self.imageWaitNextShoot)
 
@@ -54,11 +58,13 @@ class EnemyMusicBoss(Enemy):
             bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 0, False))
             bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 30, False))
             bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 55, False))
+            bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 72, False))
             bullet.append(NoteBulletDiag(self.rect.x + self.rect.width +1, self.rect.centery, RIGHT, 85, False))
             bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 0, False))
-            bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 40, False))
+            bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 42, False))
             bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 60, False))
-            bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 85, False))
+            bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 80, False))
+            bullet.append(NoteBulletDiag(self.rect.x -1, self.rect.centery, LEFT, 90, False))
 
             for k in range(0, len(bullet)):
                 self.theMap.camera.add(bullet[k])

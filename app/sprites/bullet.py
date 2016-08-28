@@ -39,13 +39,18 @@ class Bullet(Enemy):
             self.rect.x = x - self.rect.width
         self.speedy = 0
 
+        self.x = self.rect.x
+        self.y = self.rect.y
+
         self.animation = None
 
         self.friendly = friendly
 
     def update(self):
-        self.rect.x += self.speedx
-        self.rect.y += self.speedy
+        self.x += self.speedx
+        self.y += self.speedy
+        self.rect.x = self.x + self.speedx
+        self.rect.y = self.y + self.speedy
         if self.animation is not None :
            next(self.animation)
 

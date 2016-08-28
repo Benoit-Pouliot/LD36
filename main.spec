@@ -2,6 +2,7 @@
 #
 # To generate, do :
 #    Windows : pyinstaller --onefile main.spec
+#    Windows : pyinstaller --onefile --windowed main.spec
 #
 # Other options : --windowed
 #
@@ -11,6 +12,7 @@
 block_cipher = None
 
 # addedFiles = [ ('tiles_map', 'tiles_map'), ('music_pcm','music_pcm'), ('img', 'img'), ('fonts', 'fonts') ]
+addedFiles = [ ('tiles_map', 'tiles_map'), ('music_pcm','music_pcm'), ('img', 'img')]
 
 a = Analysis(['main.py'],
              pathex=['LD35'],

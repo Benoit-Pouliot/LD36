@@ -3,6 +3,7 @@ from app.sprites.enemy.enemyWalkman import EnemyWalkman
 from app.sprites.enemy.enemyRadio import EnemyRadio
 from app.sprites.enemy.enemyMp3 import EnemyMp3
 from app.sprites.enemy.enemyMusicBoss import EnemyMusicBoss
+from app.sprites.enemy.enemyNoteInv import EnemyNoteInv
 from app.tools.functionTools import *
 
 
@@ -20,6 +21,8 @@ class EnemyFactory:
             return self.createEnemyWalkman(enemy)
         if eName == "enemyMusicBoss":
             return self.createEnemyMusicBoss(enemy, theMap)
+        if eName == "enemyNoteInv":
+            return self.createEnemyNoteInv(enemy, theMap)
 
         # Not found? we send a simple enemy
         return Enemy(enemy.x, enemy.y)
@@ -27,6 +30,13 @@ class EnemyFactory:
 
     def createEnemyMusicBoss(self, enemy, theMap):
         return EnemyMusicBoss(enemy.x, enemy.y, theMap)
+
+    def createEnemyNoteInv(self, enemy, theMap):
+        iterStart = seekAtt(enemy, "iterStart")
+        if iterStart is None:
+            return EnemyNoteInv(enemy.x, enemy.y, theMap)
+        else:
+            return EnemyNoteInv(enemy.x, enemy.y, theMap, int(iterStart))
 
     def createEnemyMp3(self, enemy, theMap):
 
