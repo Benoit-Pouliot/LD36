@@ -41,6 +41,12 @@ class PlatformScreen:
             self.checkNewMap(self.logicHandler.newMapData)
             self.drawer.draw(self.screen, self.mapData.camera, self.mapData.spritesHUD, self.player)
 
+            if self.logicHandler.endState is not None:
+                print('in endState Loop')
+                self.nextScene = self.logicHandler.endState
+                self.gameData.typeScene = self.logicHandler.endState
+                self.sceneRunning = False
+
     def checkNewMap(self, newMapData):
         if newMapData is not None:
             # we got to change

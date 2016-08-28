@@ -12,19 +12,19 @@ class EventHandlerTitleScreen():
             if event.type == pygame.QUIT:
                 exit()
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RIGHT: #Does nothing for now...
+                if event.key == pygame.K_RIGHT or event.key == pygame.K_d: #Does nothing for now...
                     self.optionList[self.selector.vPos].deselect()
                     self.selector.moveRight()
                     self.optionList[self.selector.vPos].select()
-                elif event.key == pygame.K_LEFT: #Does nothing for now...
+                elif event.key == pygame.K_LEFT or event.key == pygame.K_a: #Does nothing for now...
                     self.optionList[self.selector.vPos].deselect()
                     self.selector.moveLeft()
                     self.optionList[self.selector.vPos].select()
-                elif event.key == pygame.K_UP:
+                elif event.key == pygame.K_UP or event.key == pygame.K_w:
                     self.optionList[self.selector.vPos].deselect()
                     self.selector.moveUp()
                     self.optionList[self.selector.vPos].select()
-                elif event.key == pygame.K_DOWN:
+                elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
                     self.optionList[self.selector.vPos].deselect()
                     self.selector.moveDown()
                     self.optionList[self.selector.vPos].select()

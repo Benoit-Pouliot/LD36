@@ -24,8 +24,9 @@ class LogicHandlerPlatformScreen:
         self.mapData.allSprites.update()
         self.mapData.spritesHUD.update()
         self.handleBullets(self.mapData, player)
-        self.gameOverCondition(player)
         self.handleExplosions(self.mapData, player)
+        self.gameOverCondition(player)
+
 
     def handleZoneCollision(self, player):
         for obj in self.mapData.tmxData.objects:
@@ -98,7 +99,5 @@ class LogicHandlerPlatformScreen:
 
     def gameOverCondition(self,player):
         if player.isAlive == False:
-            pygame.display.flip()
-            pygame.time.wait(2000)
-            self.newMapData = MapData('WorldMap', 'StartPointWorld')
-            self.sceneRunning = False
+            self.endState = GAME_OVER_SCREEN
+            print(self.endState)
