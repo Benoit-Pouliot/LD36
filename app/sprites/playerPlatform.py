@@ -25,6 +25,9 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.imageShapeWalkRight.append(self.imageShapeWalkRight[0])
         self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v4.png')))
 
+        self.imageTransparent = pygame.Surface((1,1))
+        self.imageTransparent.set_colorkey(BLACK)
+
         self.imageShapeWalkLeft = list()
         for k in range(0, 4):
             self.imageShapeWalkLeft.append(pygame.transform.flip(self.imageShapeWalkRight[k], True, False))
@@ -100,7 +103,9 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
 
-        self.updateAnimation()
+        if self.image != self.imageTransparent:
+            self.updateAnimation()
+
         self.updateCollisionMask()
         self.invincibleUpdate()
         self.updateTarget()
@@ -252,25 +257,29 @@ class PlayerPlatform(pygame.sprite.Sprite):
             self.imageShapeLeft = self.imageTransparent
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 5:
-            self.setShapeImage()
+            self.imageIterWait = self.imageWaitNextImage
+            self.updateAnimation()
         elif self.invincibleFrameCounter == 15:
             self.imageShapeRight = self.imageTransparent
             self.imageShapeLeft = self.imageTransparent
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 20:
-            self.setShapeImage()
+            self.imageIterWait = self.imageWaitNextImage
+            self.updateAnimation()
         elif self.invincibleFrameCounter == 30:
             self.imageShapeRight = self.imageTransparent
             self.imageShapeLeft = self.imageTransparent
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 35:
-            self.setShapeImage()
+            self.imageIterWait = self.imageWaitNextImage
+            self.updateAnimation()
         elif self.invincibleFrameCounter == 45:
             self.imageShapeRight = self.imageTransparent
             self.imageShapeLeft = self.imageTransparent
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 50:
-            self.setShapeImage()
+            self.imageIterWait = self.imageWaitNextImage
+            self.updateAnimation()
 
     def shootBullet(self):
         if self.facingSide == RIGHT:
@@ -311,6 +320,9 @@ class PlayerPlatform(pygame.sprite.Sprite):
         pass
 
     def hurt(self):
-        self.lifeBar.subtract(1)
-        if self.lifeBar.healthCurrent <= 0:
-            self.dead()
+        if not self.isInvincible:
+            self.lifeBar.subtract(1)
+            if self.lifeBar.healthCurrent <= 0:
+                self.dead()
+            self.invincibleOnHit()
+            self.visualFlash()
