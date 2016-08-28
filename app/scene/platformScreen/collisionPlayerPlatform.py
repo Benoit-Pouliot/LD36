@@ -17,12 +17,13 @@ class CollisionPlayerPlatform:
             if sprite.isPhysicsApplied == True or sprite.isCollisionApplied == True:
 
                 self.rightCollision(sprite, mapData)
-                self.downCollision(sprite, mapData)
                 self.leftCollision(sprite, mapData)
                 self.upCollision(sprite, mapData)
+                self.downCollision(sprite, mapData)
 
                 self.collisionWithEnemy(player, mapData.enemyGroup)
                 self.pickUpItem(player, mapData.itemGroup, gameData)
+
 
     def rightCollision(self,player, map):
 
@@ -163,6 +164,8 @@ class CollisionPlayerPlatform:
         upRightTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.right/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
         upMidTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.centerx/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
 
+
+
         if upLeftTileGid == SOLID or upRightTileGid == SOLID or upMidTileGid == SOLID:
             #Coller le player sur le plafond
             while map.tmxData.get_tile_gid((player.collisionMask.rect.left+1)/tileWidth, (player.collisionMask.rect.top)/tileHeight, COLLISION_LAYER) != SOLID and map.tmxData.get_tile_gid(player.collisionMask.rect.right/tileWidth, (player.collisionMask.rect.top)/tileHeight, COLLISION_LAYER) != SOLID:
@@ -173,6 +176,18 @@ class CollisionPlayerPlatform:
             player.detonate()
         elif upLeftTileGid == SPIKE or upRightTileGid == SPIKE:
             player.dead()
+        elif upLeftTileGid == LADDER or upRightTileGid == LADDER or upMidTileGid == LADDER:
+            if player.jumpState != CLIMBING and player.name == "player":
+                player.jumpState = CLIMBING
+                player.speedx = 0
+                player.speedy = 0
+        else:
+            if player.jumpState == CLIMBING:
+                player.jumpState = JUMP
+
+       # printJumpState(player.jumpState)
+       # printTopTile(upRightTileGid)
+
 
     def collisionWithEnemy(self, player, enemyGroup):
         collisionList = pygame.sprite.spritecollide(player, enemyGroup, False)
@@ -281,3 +296,22 @@ def collisionCircleRect(circle, rect):
     cornerDistance_sq = (circleDistancex - rect.width/2)**2 + (circleDistancey - rect.height/2)**2
 
     return (cornerDistance_sq <= (circle.r**2))
+
+def printTopTile(tile):
+    if tile == SOLID:
+        print("SOLID")
+    elif tile == SPIKE:
+        print("SPIKE")
+    elif tile == SPRING:
+        print("SPRING")
+    elif tile == LADDER:
+        print("LADDER")
+
+def printJumpState(state):
+    if state == GROUNDED:
+        print("GROUNDED")
+    elif state == JUMP:
+        print("JUMP")
+    elif state == CLIMBING:
+        print("CLIMBING")
+

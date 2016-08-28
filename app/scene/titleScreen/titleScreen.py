@@ -53,6 +53,7 @@ class TitleScreen:
 
         if TAG_MARIE == 0: #Real thing
             self.gameData.mapData = MapData("LevelMusic", "StartPointMusic")
+            #self.gameData.mapData = MapData("LevelComm", "StartPointComm")
 
         else: #To try any level rapidly.
             self.gameData.mapData = MapData("LevelMusicBoss", "StartPointMusicBoss")
