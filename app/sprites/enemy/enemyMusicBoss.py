@@ -45,6 +45,7 @@ class EnemyMusicBoss(Enemy):
         self.rect.y += self.speedy
 
         self.collisionMask.rect = self.rect
+        self.invincibleUpdate()
 
         self.imageIterShoot = min(self.imageIterShoot+1, 2*self.imageWaitNextShoot[self.imageIterWaitNextShootMax-1])
         if self.imageIterShoot > self.imageWaitNextShoot[self.imageIterWaitNextShoot]:

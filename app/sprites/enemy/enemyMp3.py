@@ -36,6 +36,7 @@ class EnemyMp3(Enemy):
         self.rect.y += self.speedy
 
         self.collisionMask.rect = self.rect
+        self.invincibleUpdate()
 
         self.imageIterShoot = min(self.imageIterShoot+1, 2*self.imageWaitNextShoot)
         if self.imageIterShoot > self.imageWaitNextShoot:
@@ -55,8 +56,3 @@ class EnemyMp3(Enemy):
         if self.speedy == 0 and self.imageIterShoot > self.imageWaitNextShoot*.9:
             self.rect.y += self.jumpSpeed
 
-
-    def hurt(self):
-        self.life -= 1
-        if self.life <= 0:
-            self.dead()

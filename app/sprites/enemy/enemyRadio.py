@@ -45,6 +45,7 @@ class EnemyRadio(Enemy):
         self.rect.y += self.speedy
 
         self.collisionMask.rect = self.rect
+        self.invincibleUpdate()
 
         self.imageIterShoot = min(self.imageIterShoot+1, 2*self.imageWaitNextShoot)
         if self.imageIterShoot > self.imageWaitNextShoot:
@@ -59,10 +60,5 @@ class EnemyRadio(Enemy):
             self.theMap.enemyBullet.add(bullet)
 
             self.imageIterShoot = 0
-
-    def hurt(self):
-        self.life -= 1
-        if self.life <= 0:
-            self.dead()
 
 

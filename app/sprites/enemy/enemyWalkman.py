@@ -60,13 +60,9 @@ class EnemyWalkman(Enemy):
         self.rect.y += self.speedy
 
         self.collisionMask.rect = self.rect
+        self.invincibleUpdate()
 
         self.distance = math.fabs(self.initx - self.rect.x)
 
     def spring(self):
         self.speedy = -15
-
-    def hurt(self):
-        self.life -= 1
-        if self.life <= 0:
-            self.dead()
