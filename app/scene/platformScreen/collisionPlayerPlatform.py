@@ -249,8 +249,12 @@ def collisionBulletWall(bullet, map):
 def collisionBulletEnemy(bullet, map):
     collisionList = pygame.sprite.spritecollide(bullet, map.enemyGroup, False)
     for enemy in collisionList:
-        enemy.dead()
-        bullet.kill()
+        bullet.detonate()
+
+def collisionGrenadeEnemy(grenade, map):
+    collisionList = pygame.sprite.spritecollide(grenade, map.enemyGroup, False)
+    for enemy in collisionList:
+        grenade.detonate()
 
 def collisionBulletPlayer(map, player):
     collisionList = pygame.sprite.spritecollide(player, map.enemyBullet, False)
@@ -270,14 +274,12 @@ def printTile(tile):
 
 def collisionExplosionEnemy(explosion, mapData):
     circle = Circle((explosion.collisionMask.rect.centerx, explosion.collisionMask.rect.centery),explosion.collisionMask.rect.width/2)
-    killExplosion = False
+
 
     for enemy in mapData.enemyGroup:
         if collisionCircleRect(circle, enemy.rect):
             enemy.hurt()
-            killExplosion = True
-        if killExplosion:
-            explosion.kill()
+
 
 def collisionCircleRect(circle, rect):
     circleDistancex = abs(circle.x - rect.centerx)

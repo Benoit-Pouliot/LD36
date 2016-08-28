@@ -25,6 +25,8 @@ class EnemyMusicBoss(Enemy):
         self.isGravityApplied = True
         self.isCollisionApplied = True
 
+        self.life = 10
+
         self.imageIterShoot = 280
         self.imageWaitNextShoot = list()
         # Wait 5 sec (in 60 FPS) before first wave

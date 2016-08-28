@@ -3,6 +3,7 @@ from app.sprites.bullet import *
 from app.settings import *
 from app.scene.platformScreen.collisionPlayerPlatform import CollisionPlayerPlatform
 from app.tools.functionTools import *
+from app.sprites.grenade import Grenade
 import pygame
 
 class LogicHandlerPlatformScreen:
@@ -80,9 +81,7 @@ class LogicHandlerPlatformScreen:
 
     def handleBullets(self, mapData, player):
         for bullet in mapData.friendlyBullet:
-            if type(bullet) == Bullet:
-                collisionBulletWall(bullet, mapData)
-                collisionBulletWall(bullet, mapData)
+            if type(bullet) == Grenade:
                 collisionBulletEnemy(bullet, mapData)
         for bullet in mapData.enemyBullet:
             if type(bullet) == SpiritBullet:
@@ -92,7 +91,10 @@ class LogicHandlerPlatformScreen:
 
         collisionBulletPlayer(mapData, player)
 
+
+
     def handleExplosions(self, mapData, player):
+
         for explosion in mapData.friendlyExplosion:
             collisionExplosionEnemy(explosion, mapData)
 
