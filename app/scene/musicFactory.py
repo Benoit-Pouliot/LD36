@@ -21,8 +21,8 @@ class MusicFactory:
                 self.nameMusic = 'LevelMusic'
             elif levelName == "LevelComm":
                 self.nameMusic = "LevelComm"
-
-
+        elif typeScene == GAME_OVER_SCREEN:
+            self.nameMusic = None
 
         if self.nameMusic is not None and self.previousMusic != levelName:
             pygame.mixer.music.load(os.path.join('music_pcm', self.nameMusic + '.wav'))

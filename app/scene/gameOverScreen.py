@@ -20,9 +20,6 @@ class GameOverScreen:
         self.type = GAME_OVER_SCREEN
         self.nextScene = None
 
-        MusicFactory(TITLE_SCREEN)
-
-
     def mainLoop(self):
         self.sceneRunning = True
         while self.sceneRunning:
