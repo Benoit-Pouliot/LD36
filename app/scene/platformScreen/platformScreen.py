@@ -20,6 +20,7 @@ class PlatformScreen:
         self.player = PlayerPlatform(self.mapData.spawmPointPlayerx, self.mapData.spawmPointPlayery, self.mapData)
 
         self.mapData.allSprites.add(self.player)
+        self.mapData.spritesHUD.add(self.player.lifeBar)
         self.mapData.camera.add(self.player)
         self.camera = self.mapData.camera
 

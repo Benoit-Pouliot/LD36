@@ -193,7 +193,7 @@ class CollisionPlayerPlatform:
         collisionList = pygame.sprite.spritecollide(player, enemyGroup, False)
         for enemy in collisionList:
             player.detonate()
-            player.dead()
+            player.hurt()
             # player.loseLife()
             # self.soundControl.hurt()
             pass
@@ -255,7 +255,7 @@ def collisionBulletEnemy(bullet, map):
 def collisionBulletPlayer(map, player):
     collisionList = pygame.sprite.spritecollide(player, map.enemyBullet, False)
     for bullet in collisionList:
-        player.dead()
+        player.hurt()
         bullet.kill()
 
 def printTile(tile):

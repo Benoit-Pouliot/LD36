@@ -7,6 +7,7 @@ from app.sprites.bullet import Bullet
 from app.sprites.grenade import Grenade
 from app.sprites.target import Target
 from app.sprites.collisionMask import CollisionMask
+from app.sprites.playerLifeBar import PlayerLifeBar
 
 class PlayerPlatform(pygame.sprite.Sprite):
     def __init__(self, x, y, mapData):
@@ -60,9 +61,8 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.jumpState = JUMP
         self.facingSide = RIGHT
 
-        self.life = 1
-        self.lifeMax = 1
-        self.lifeMaxCap = 5
+        self.lifeBar = PlayerLifeBar(5)
+
         self.isInvincible = False
         self.invincibleFrameCounter = 0
         self.invincibleFrameDuration = 60
@@ -307,3 +307,8 @@ class PlayerPlatform(pygame.sprite.Sprite):
 
     def detonate(self): #Méthode inutile pour que player ne crash pas lorsque utilisé avec le collisionHandler, qui doit utiliser detonate sur les grenades. A corriger.
         pass
+
+    def hurt(self):
+        self.lifeBar.subtract(1)
+        if self.lifeBar.healthCurrent <= 0:
+            self.dead()
