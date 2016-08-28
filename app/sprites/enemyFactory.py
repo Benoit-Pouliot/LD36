@@ -35,11 +35,20 @@ class EnemyFactory:
         #     return EnemyShooter(enemy.x, enemy.y, direction)
 
     def createEnemyWalkman(self, enemy):
-        None
+
+        enemyWalkman = None
 
         direction = seekAtt(enemy, "direction")
+        distance = seekAtt(enemy, "distanceMax")
+
+
 
         if direction is None:
-            return EnemyWalkman(enemy.x, enemy.y)
+            enemyWalkman = EnemyWalkman(enemy.x, enemy.y)
         else:
-            return EnemyWalkman(enemy.x, enemy.y, direction)
+            enemyWalkman = EnemyWalkman(enemy.x, enemy.y, direction)
+
+        if distance:
+            enemyWalkman.set_distance_max(int(distance))
+
+        return enemyWalkman

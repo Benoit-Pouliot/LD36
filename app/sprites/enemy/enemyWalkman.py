@@ -67,8 +67,6 @@ class EnemyWalkman(Enemy):
 
         self.collisionMask.rect = self.rect
 
-        # print(self.speedy)
-
         self.distance = math.fabs(self.initx - self.rect.x)
 
     def dead(self):
