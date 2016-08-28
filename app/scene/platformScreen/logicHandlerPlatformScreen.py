@@ -65,6 +65,18 @@ class LogicHandlerPlatformScreen:
                 elif sprite.speedx < 0:
                     sprite.speedx = 0
 
+            if sprite.name == "player" and sprite.isFrictionApplied == True and sprite.jumpState == CLIMBING:
+                if sprite.speedy > 0 and sprite.speedy - FRICTION > 0:
+                    sprite.speedy -= FRICTION
+                elif sprite.speedy > 0:
+                    sprite.speedy = 0
+
+                if sprite.speedy < 0 and sprite.speedy + FRICTION < 0:
+                    sprite.speedy += FRICTION
+                elif sprite.speedy < 0:
+                    sprite.speedy = 0
+
+
     def handleBullets(self, mapData, player):
         for bullet in mapData.friendlyBullet:
             if type(bullet) == Bullet:

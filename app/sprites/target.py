@@ -9,6 +9,7 @@ class Target(pygame.sprite.Sprite):
         super().__init__()
 
         self.image = pygame.image.load(os.path.join('img', 'biere32x32-4.png'))
+        self.name = "target"
 
         self.rect = self.image.get_rect()
         self.rect.x = x
