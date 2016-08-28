@@ -4,6 +4,7 @@ import os
 
 from app.sprites.enemy.enemy import Enemy
 from app.settings import *
+from app.sprites.collisionMask import CollisionMask
 
 
 class EnemyWalkman(Enemy):
@@ -17,6 +18,8 @@ class EnemyWalkman(Enemy):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+
+        self.collisionMask = CollisionMask(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
         self.initx = self.rect.x
         self.inity = self.rect.y

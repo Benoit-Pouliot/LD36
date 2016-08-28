@@ -24,6 +24,7 @@ class LogicHandlerPlatformScreen:
         self.mapData.allSprites.update()
         self.handleBullets(self.mapData, player)
         self.gameOverCondition(player)
+        self.handleExplosions(self.mapData, player)
 
     def handleZoneCollision(self, player):
         for obj in self.mapData.tmxData.objects:
@@ -76,6 +77,11 @@ class LogicHandlerPlatformScreen:
                 collisionBulletWall(bullet, mapData)
 
         collisionBulletPlayer(mapData, player)
+
+    def handleExplosions(self, mapData, player):
+        for explosion in mapData.friendlyExplosion:
+            collisionExplosionEnemy(explosion, mapData)
+
 
     def gameOverCondition(self,player):
         if player.isAlive == False:

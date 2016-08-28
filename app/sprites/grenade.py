@@ -62,4 +62,4 @@ class Grenade(pygame.sprite.Sprite):
 
         self.mapData.camera.add(explosion)
         self.mapData.allSprites.add(explosion)
-        self.mapData.friendlyBullet.add(explosion)
+        self.mapData.friendlyExplosion.add(explosion)

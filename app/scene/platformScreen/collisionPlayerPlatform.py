@@ -1,4 +1,5 @@
 from app.settings import *
+from app.tools.circle import Circle
 import pygame
 
 class CollisionPlayerPlatform:
@@ -251,3 +252,32 @@ def printTile(tile):
         print('SPRING')
     else:
         print(tile)
+
+def collisionExplosionEnemy(explosion, mapData):
+    circle = Circle((explosion.collisionMask.rect.centerx, explosion.collisionMask.rect.centery),explosion.collisionMask.rect.width/2)
+    killExplosion = False
+
+    for enemy in mapData.enemyGroup:
+        if collisionCircleRect(circle, enemy.rect):
+            enemy.hurt()
+            killExplosion = True
+        if killExplosion:
+            explosion.kill()
+
+def collisionCircleRect(circle, rect):
+    circleDistancex = abs(circle.x - rect.centerx)
+    circleDistancey = abs(circle.y - rect.centery)
+
+    if (circleDistancex > (rect.width/2 + circle.r)):
+        return False
+    if (circleDistancey > (rect.height/2 + circle.r)):
+        return True
+        return False
+
+    if (circleDistancex <= (rect.width/2)):
+        return True
+    if (circleDistancey <= (rect.height/2)):
+
+    cornerDistance_sq = (circleDistancex - rect.width/2)**2 + (circleDistancey - rect.height/2)**2
+
+    return (cornerDistance_sq <= (circle.r**2))
