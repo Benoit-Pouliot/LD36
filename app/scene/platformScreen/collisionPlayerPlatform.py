@@ -165,7 +165,7 @@ class CollisionPlayerPlatform:
         upRightTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.right/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
         upMidTileGid = map.tmxData.get_tile_gid(player.collisionMask.rect.centerx/tileWidth, (player.collisionMask.rect.top + player.speedy)/tileHeight, COLLISION_LAYER)
 
-        #printJumpState(player.jumpState)
+
 
         if upLeftTileGid == SOLID or upRightTileGid == SOLID or upMidTileGid == SOLID:
             #Coller le player sur le plafond
@@ -190,10 +190,6 @@ class CollisionPlayerPlatform:
             if player.jumpState == CLIMBING:
                 player.jumpState = JUMP
                 player.upPressed = False
-
-        if player.name == "player":
-            printJumpState(player.jumpState)
-       # printTopTile(upRightTileGid)
 
 
     def collisionWithEnemy(self, player, enemyGroup):
