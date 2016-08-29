@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="32" tileheight="32" nextobjectid="11">
- <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="32" tileheight="32" nextobjectid="14">
+ <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
- <tileset firstgid="51" name="set_music" tilewidth="32" tileheight="32" tilecount="100">
+ <tileset firstgid="51" name="set_music" tilewidth="32" tileheight="32" tilecount="100" columns="10">
   <image source="img/set_music.png" width="320" height="320"/>
   <tile id="1">
    <animation>
@@ -120,12 +120,22 @@
  </objectgroup>
  <objectgroup name="enemyLayer">
   <object id="4" name="enemyMusicBoss" type="enemy" x="384" y="447" width="95" height="127"/>
-  <object id="9" name="enemyNoteInv" type="enemy" x="157" y="160" width="6" height="13">
+  <object id="9" name="enemyNoteInv" type="enemy" x="160.75" y="157.5" width="6" height="13">
    <properties>
     <property name="iterStart" value="640"/>
    </properties>
   </object>
-  <object id="10" name="enemyNoteInv" type="enemy" x="696" y="162.5" width="6" height="13">
+  <object id="10" name="enemyNoteInv" type="enemy" x="696" y="161.5" width="6" height="13">
+   <properties>
+    <property name="iterStart" value="290"/>
+   </properties>
+  </object>
+  <object id="12" name="enemyNoteInv" type="enemy" x="121.75" y="156.75" width="6" height="13">
+   <properties>
+    <property name="iterStart" value="650"/>
+   </properties>
+  </object>
+  <object id="13" name="enemyNoteInv" type="enemy" x="738.5" y="162" width="6" height="13">
    <properties>
     <property name="iterStart" value="280"/>
    </properties>
