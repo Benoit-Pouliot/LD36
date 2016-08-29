@@ -33,6 +33,7 @@ class MessageBox(pygame.sprite.Sprite):
         self.image.fill(self.color1, self.button)
 
     def update(self):
+        self.updateText()
         self.image.fill(self.color2)
         self.image.fill(self.color1, self.button)
 

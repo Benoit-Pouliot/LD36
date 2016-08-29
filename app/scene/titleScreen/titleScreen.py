@@ -49,7 +49,7 @@ class TitleScreen:
     def createMenu(self):
 
         self.setMenuHeight()
-        self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT *2/3, self.menuWidth, self.menuHeight))
+        self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT *4/7, self.menuWidth, self.menuHeight))
         if not self.gameData.mapComplete['map1']:
             self.menu.addOption('Level 1', self.startLvlMusic)
 

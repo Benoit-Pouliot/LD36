@@ -12,7 +12,9 @@ class Drawer:
             camera.center(player.rect.center)
             camera.draw(screen)
 
-        spritesHUD.draw(screen)
+        if spritesHUD != None:
+            spritesHUD.draw(screen)
+
         pygame.display.flip()
 
         # if TAG_BP and self.clock.get_time() > 18:
