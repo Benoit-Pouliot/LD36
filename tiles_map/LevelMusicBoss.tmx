@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="32" tileheight="32" nextobjectid="14">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="32" tileheight="32" nextobjectid="14">
  <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
@@ -84,58 +84,94 @@
     <frame tileid="37" duration="100"/>
    </animation>
   </tile>
+  <tile id="78">
+   <animation>
+    <frame tileid="78" duration="300"/>
+    <frame tileid="55" duration="300"/>
+   </animation>
+  </tile>
+  <tile id="79">
+   <animation>
+    <frame tileid="79" duration="300"/>
+    <frame tileid="56" duration="300"/>
+   </animation>
+  </tile>
+  <tile id="88">
+   <animation>
+    <frame tileid="88" duration="300"/>
+    <frame tileid="65" duration="300"/>
+   </animation>
+  </tile>
+  <tile id="89">
+   <animation>
+    <frame tileid="89" duration="300"/>
+    <frame tileid="66" duration="300"/>
+   </animation>
+  </tile>
+  <tile id="98">
+   <animation>
+    <frame tileid="98" duration="300"/>
+    <frame tileid="75" duration="300"/>
+   </animation>
+  </tile>
+  <tile id="99">
+   <animation>
+    <frame tileid="99" duration="300"/>
+    <frame tileid="76" duration="300"/>
+   </animation>
+  </tile>
  </tileset>
- <layer name="Collision_Layer" width="26" height="20">
+ <layer name="Collision_Layer" width="30" height="24">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYKQTZgJiZjraR2uMDKitFpdeXGbgA8S6ZTDYQwogNmwHwh5qgVF7hrY9TFBMCsCmZ7Ck6+FiDzMWPchi6GYQo2c4YgCmdAEX
+   eJxjZGBgYBzFdMFMQMwMxCyDwC30wNgAKXqIUUusvbjMJFftULOXFEBOXOBST297qQVG7R21FxkwQTEpAJueoZKPRoq9zFjMQBZDN5MYPaN45GAApooB2g==
   </data>
  </layer>
- <layer name="Background" width="26" height="20">
+ <layer name="Background" width="30" height="24">
   <data encoding="base64" compression="zlib">
-   eJxLYmBgSBrFo3gUj+JRPIpH8ShGwgB2tscR
+   eJztwwENAAAMw6BqnX8Rt3ABkLBqqqrq6wHxcBOw
   </data>
  </layer>
- <layer name="Terrain" width="26" height="20">
+ <layer name="Terrain" width="30" height="24">
   <data encoding="base64" compression="zlib">
-   eJzdVbsKwzAM1D+1aae+dttj5/ZvMueLcwaLHEGtceGWHhwEyZKtiywXM8tgAZPgm20H8AhO4Ak8N39kH13vtuq/gFfwBt7BR8sX2UfXu63WpATrpsRs2/9SYml7qOup+bnvVHW5btzrCrhu3PMKeA3c8wr8m27eb590e4HvwZxRTE+3X+5WFNPTbbbxO5Va3H7vb7otwdl6yC2OwfOt2Kbbk86WAxsjBf59DM835TvH8035znktK/ODP04=
+   eJzllc0KgzAQhPNO9ufU2t43Hnu2b9Nzn7gjJLAMG+2KCbQODIZN1k0+stqFEA7wET7BZ1jgzojHQry0fu49F/gK9/ANvs/EZaP1knKm55DGg4pvOdbPNXx+nfN09hZi3tKoLvOOjeoy71bnLfWM5l9DzFn3cK5dQ8zZ6q8a4vts9VcN7Y0z3+clziP8dNawcryc85xHVo6X8yv4e1pSHu/Fw/lt7H1JMeVpWd9nzThzfqi9RyOmJcY853zD+Z//+3s77wfFBWoO
   </data>
  </layer>
- <layer name="Front_Layer" width="26" height="20">
+ <layer name="Front_Layer" width="30" height="24">
   <data encoding="base64" compression="zlib">
-   eJztj8EKgDAMQ/e9etWrole96veaS0BDLR0MQeiDMChJRkp5skAr1EG98d5587DD46t/Nmg3sgM0ipc39bLD44BOIztBs3h5Uy87Ing7FN1Vg7dD0V01RHa0yER2tMgkSZL8nQseRSft
+   eJztj8EKgDAMQ/e9enVXRa/uqt9rLgUJdWxu6CUPQqGkKQnBZ4U2aIBGZ9558lhGDfr7zd8dSk7WBEXy2o69llHDAZ1O1gwt5LUdey3jDbmeDPduIdeT4d4tlPTsccOU9OxxI4QQQvzBBTIONfU=
   </data>
  </layer>
- <layer name="Sprite_Layer" width="26" height="20">
+ <layer name="Sprite_Layer" width="30" height="24">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApGwShABQAIIAAB
+   eJztwYEAAAAAw6D5U1/hAFUBAACvAQtAAAE=
   </data>
  </layer>
  <objectgroup name="outZoneLayer"/>
  <objectgroup name="inZoneLayer">
-  <object id="3" name="InZone" x="51" y="153" width="9" height="30">
+  <object id="3" name="InZone" x="59" y="208" width="9" height="30">
    <properties>
     <property name="StartPoint" value="StartPointMusicBoss"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="enemyLayer">
-  <object id="4" name="enemyMusicBoss" type="enemy" x="384" y="447" width="95" height="127"/>
-  <object id="9" name="enemyNoteInv" type="enemy" x="160.75" y="157.5" width="6" height="13">
+  <object id="4" name="enemyMusicBoss" type="enemy" x="448" y="511" width="95" height="127"/>
+  <object id="9" name="enemyNoteInv" type="enemy" x="224.75" y="221.5" width="6" height="13">
    <properties>
     <property name="iterStart" value="640"/>
    </properties>
   </object>
-  <object id="10" name="enemyNoteInv" type="enemy" x="696" y="161.5" width="6" height="13">
+  <object id="10" name="enemyNoteInv" type="enemy" x="760" y="225.5" width="6" height="13">
    <properties>
     <property name="iterStart" value="290"/>
    </properties>
   </object>
-  <object id="12" name="enemyNoteInv" type="enemy" x="121.75" y="156.75" width="6" height="13">
+  <object id="12" name="enemyNoteInv" type="enemy" x="185.75" y="220.75" width="6" height="13">
    <properties>
     <property name="iterStart" value="650"/>
    </properties>
   </object>
-  <object id="13" name="enemyNoteInv" type="enemy" x="738.5" y="162" width="6" height="13">
+  <object id="13" name="enemyNoteInv" type="enemy" x="802.5" y="226" width="6" height="13">
    <properties>
     <property name="iterStart" value="280"/>
    </properties>

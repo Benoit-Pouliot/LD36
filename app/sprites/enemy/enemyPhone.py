@@ -30,7 +30,7 @@ class EnemyPhone(Enemy):
         self.isInvincible = True
         self.isShooter = 0
 
-        self.fallSpd = 6
+        self.fallSpd = 5
 
         self.life = 1
 
