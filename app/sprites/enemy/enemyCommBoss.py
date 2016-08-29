@@ -22,7 +22,7 @@ class EnemyCommBoss(Enemy):
         self.theMap = theMap
 
         self.speedBase = 5
-        self.distanceMax = 600
+        self.distanceMax = 450
 
         self.speedx = 0
         self.speedy = -self.speedBase
@@ -44,6 +44,9 @@ class EnemyCommBoss(Enemy):
         self.imageWaitNextShoot.append(300)
         self.imageWaitNextShoot.append(340)
         self.imageWaitNextShoot.append(360)
+        self.imageWaitNextShoot.append(400)
+        self.imageWaitNextShoot.append(490)
+
         self.imageIterWaitNextShoot = 0
         self.imageIterWaitNextShootMax = len(self.imageWaitNextShoot)
 
@@ -80,7 +83,7 @@ class EnemyCommBoss(Enemy):
 
 
             for k in range(0, len(bullet)):
-                bullet[k].speedx = -4
+                bullet[k].speedx = -5
                 self.theMap.camera.add(bullet[k])
                 self.theMap.allSprites.add(bullet[k])
                 self.theMap.enemyBullet.add(bullet[k])
