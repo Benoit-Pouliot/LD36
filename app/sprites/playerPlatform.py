@@ -25,6 +25,10 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.imageShapeWalkRight.append(self.imageShapeWalkRight[0])
         self.imageShapeWalkRight.append(pygame.image.load(os.path.join('img', 'Player_v4.png')))
 
+        self.imageShapeClimb = list()
+        self.imageShapeClimb.append(pygame.image.load(os.path.join('img', 'PlayerClimb_v1.png')))
+        self.imageShapeClimb.append(pygame.image.load(os.path.join('img', 'PlayerClimb_v2.png')))
+
         self.imageTransparent = pygame.Surface((1,1))
         self.imageTransparent.set_colorkey(BLACK)
 
@@ -98,6 +102,10 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.imageWaitNextImage = 4
         self.imageIterWait = 0
 
+        self.imageIterStateClimb = 0
+        self.imageClimbWaitNextImage = 16
+        self.imageClimbIterWait = 0
+
     def update(self):
         self.capSpeed()
         self.rect.x += self.speedx
@@ -114,7 +122,16 @@ class PlayerPlatform(pygame.sprite.Sprite):
     def updateAnimation(self):
         # Animation movement
         self.imageIterWait = min(self.imageIterWait+1, 2*self.imageWaitNextImage)
-        if self.speedx == 0:
+
+        # Hack, we add the iterator for climbing only in movement
+        if self.speedx != 0 or self.speedy != 0:
+            self.imageClimbIterWait = min(self.imageClimbIterWait+1, 2*self.imageClimbWaitNextImage)
+        if self.jumpState == CLIMBING:
+            if self.imageClimbIterWait >= self.imageClimbWaitNextImage:
+                self.imageIterStateClimb = (self.imageIterStateClimb+1) % len(self.imageShapeClimb)
+                self.image = self.imageShapeClimb[self.imageIterStateClimb]
+                self.imageClimbIterWait = 0
+        elif self.speedx == 0:
             self.imageIterStateRight = 0
             self.imageIterStateLeft = 0
             if self.facingSide == RIGHT:
@@ -261,6 +278,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 5:
             self.imageIterWait = self.imageWaitNextImage
+            self.imageClimbIterWait = self.imageClimbWaitNextImage
             self.updateAnimation()
         elif self.invincibleFrameCounter == 15:
             self.imageShapeRight = self.imageTransparent
@@ -268,6 +286,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 20:
             self.imageIterWait = self.imageWaitNextImage
+            self.imageClimbIterWait = self.imageClimbWaitNextImage
             self.updateAnimation()
         elif self.invincibleFrameCounter == 30:
             self.imageShapeRight = self.imageTransparent
@@ -275,6 +294,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 35:
             self.imageIterWait = self.imageWaitNextImage
+            self.imageClimbIterWait = self.imageClimbWaitNextImage
             self.updateAnimation()
         elif self.invincibleFrameCounter == 45:
             self.imageShapeRight = self.imageTransparent
@@ -282,6 +302,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
             self.image = self.imageTransparent
         elif self.invincibleFrameCounter == 50:
             self.imageIterWait = self.imageWaitNextImage
+            self.imageClimbIterWait = self.imageClimbWaitNextImage
             self.updateAnimation()
 
     def shootBullet(self):

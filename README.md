@@ -8,7 +8,7 @@
 - w key (or up arrow key or spacebar) to jump
 - Ctrl or left mouse click to shoot
 - aim your projectile with your mouse cursor
-- m to mute the music
+- m to mute the music (not the sound effets)
 
 
 # Tools used

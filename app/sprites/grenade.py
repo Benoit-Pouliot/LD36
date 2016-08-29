@@ -24,6 +24,9 @@ class Grenade(pygame.sprite.Sprite):
             self.frames.append(pygame.transform.rotate(self.frames[0], -k*10))
         self.image = self.frames[0]
 
+        self.soundExplosion = pygame.mixer.Sound(os.path.join('music_pcm', 'Explosion.wav'))
+        self.soundExplosion.set_volume(1)
+
         self.rect = self.image.get_rect()
         self.rect.centerx = x
         self.rect.centery = y
@@ -61,6 +64,7 @@ class Grenade(pygame.sprite.Sprite):
 
     def detonate(self):
 
+        self.soundExplosion.play()
         explosion = Explosion(self.rect.midbottom[0], self.rect.midbottom[1])
 
         self.mapData.camera.add(explosion)
