@@ -86,7 +86,7 @@ class PlatformScreen:
                 self.levelCompleteCounter += 1
                 if self.levelCompleteCounter == 240:
                     self.gameData.mapComplete["map1"] = True
-                    self.backToMain()
+                    self.checkWinGame()
 
         if self.mapData.nameMap == "LevelCommBoss":
             stillAlive = False
@@ -99,7 +99,18 @@ class PlatformScreen:
                 self.levelCompleteCounter += 1
                 if self.levelCompleteCounter == 240:
                     self.gameData.mapComplete["map2"] = True
-                    self.backToMain()
+                    self.checkWinGame()
+
+
+    def checkWinGame(self):
+        numberLevelComplete = sum(self.gameData.mapComplete.values())
+        if numberLevelComplete == len(self.gameData.mapComplete):
+            self.nextScene = WIN_SCREEN
+            self.gameData.typeScene = WIN_SCREEN
+            print('here')
+            self.close()
+        else:
+            self.backToMain()
 
     def win(self):
         self.mapData.spritesHUD.add(self.levelCompleteSprite)
@@ -113,7 +124,3 @@ class PlatformScreen:
         self.gameData.typeScene = TITLE_SCREEN
 
         self.close()
-
-    def backToWorldMap(self):
-        newMapData = MapData('WorldMap', 'StartPointWorld')
-        self.checkNewMap(newMapData)

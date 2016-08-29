@@ -23,36 +23,11 @@ class TitleScreen:
         self.screen.blit(titleImage, (0, 0))
 
         # Define MainMenu
-        menuWidth = SCREEN_WIDTH / 3
-        menuHeight = SCREEN_HEIGHT * 0.33
+        self.menuWidth = SCREEN_WIDTH / 3
+        self.menuTotalHeight = SCREEN_HEIGHT * 0.33
+        self.menuHeight = self.menuTotalHeight
 
-        if not gameData.mapComplete['map1']:
-            if not gameData.mapComplete['map2']:
-                self.menu = Menu(
-                    pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight))
-
-                self.menu.addOption('Level 1', self.startLvlMusic)
-                self.menu.addOption('Level 2', self.startLvlComm)
-            else:
-                self.menu = Menu(
-                        pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight*3/4))
-
-                self.menu.addOption('Level 1', self.startLvlMusic)
-
-        else:
-            if not gameData.mapComplete['map2']:
-                self.menu = Menu(
-                    pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight * 3 / 4))
-
-                self.menu.addOption('Level 2', self.startLvlComm)
-            else:
-                self.menu = Menu(
-                        pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, menuWidth, menuHeight*1/2))
-
-
-        self.menu.addOption('Credit', self.startCredit)
-        self.menu.addOption('Exit', sys.exit)
-
+        self.createMenu()
 
         self.eventHandler = EventHandlerTitleScreen()
         self.drawer = Drawer()
@@ -71,6 +46,24 @@ class TitleScreen:
             self.menu.spritesMenu.update()  # This would be in the logic
             self.drawer.draw(self.screen, None, self.menu.spritesMenu, None)  # Drawer in THIS file, below
 
+    def createMenu(self):
+
+        self.setMenuHeight()
+        self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 12 / 16, self.menuWidth, self.menuHeight))
+        if not self.gameData.mapComplete['map1']:
+            self.menu.addOption('Level 1', self.startLvlMusic)
+
+        if not self.gameData.mapComplete['map2']:
+            self.menu.addOption('Level 2', self.startLvlComm)
+
+        self.menu.addOption('Credit', self.startCredit)
+        self.menu.addOption('Exit', sys.exit)
+
+    def setMenuHeight(self):
+        numLevelComplete = sum(self.gameData.mapComplete.values())
+        totalOptionNum = len(self.gameData.mapComplete)+2
+        self.menuHeight = self.menuTotalHeight*(totalOptionNum-numLevelComplete)/totalOptionNum
+
     def startLvlMusic(self):
         self.nextScene = PLATFORM_SCREEN
         self.sceneRunning = False
@@ -81,7 +74,7 @@ class TitleScreen:
             #self.gameData.mapData = MapData("LevelComm", "StartPointComm")
 
         if TAG_BP == 1 or  TAG_MARIE == 1: #To try any level rapidly.
-            self.gameData.mapData = MapData("LevelCommBoss", "StartPointCommBoss")
+            self.gameData.mapData = MapData("LevelMusicBoss", "StartPointMusicBoss")
 
 
     def startLvlComm(self):

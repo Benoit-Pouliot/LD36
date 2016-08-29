@@ -4,6 +4,8 @@ from app.scene.titleScreen.titleScreen import TitleScreen
 from app.scene.platformScreen.platformScreen import PlatformScreen
 
 from app.scene.gameOverScreen import GameOverScreen
+from app.scene.winScreen import WinScreen
+
 from app.scene.creditScreen import CreditScreen
 
 from app.gameData import GameData
@@ -37,6 +39,9 @@ class SceneHandler:
                 self.runningScene = PlatformScreen(self.screen, self.gameData)
             elif self.runningScene.nextScene == GAME_OVER_SCREEN:
                 self.runningScene = GameOverScreen(self.screen, self.gameData)
+            elif self.runningScene.nextScene == WIN_SCREEN:
+                print('we are here')
+                self.runningScene = WinScreen(self.screen, self.gameData)
             elif self.runningScene.nextScene == CREDIT_SCREEN:
                 self.runningScene = CreditScreen(self.screen, self.gameData)
 

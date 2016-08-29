@@ -27,6 +27,10 @@ class EnemyMusicBoss(Enemy):
 
         self.life = 8
 
+        #Kill boss fast
+        if TAG_MARIE == 1:
+            self.life = 1
+
         self.soundVictory = pygame.mixer.Sound(os.path.join('music_pcm', 'levelWin.wav'))
 
         self.imageIterShoot = 280
