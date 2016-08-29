@@ -425,22 +425,22 @@
   <object id="30" name="enemyTelegraph" type="enemy" x="41" y="797" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="firstShoot" value="240"/>
-    <property name="interval" value="360"/>
+    <property name="firstShoot" value="45"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="31" name="enemyTelegraph" type="enemy" x="42" y="887" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
     <property name="firstShoot" value="120"/>
-    <property name="interval" value="360"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="32" name="enemyTelegraph" type="enemy" x="36" y="988" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
     <property name="firstShoot" value="0"/>
-    <property name="interval" value="360"/>
+    <property name="interval" value="180"/>
    </properties>
   </object>
   <object id="33" name="enemyTypewriter" type="enemy" x="316" y="1954" width="46" height="28">

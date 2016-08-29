@@ -69,7 +69,7 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.jumpState = JUMP
         self.facingSide = RIGHT
 
-        self.lifeBar = PlayerLifeBar(8)
+        self.lifeBar = PlayerLifeBar(7)
         self.powerBar = PowerBar(RATIO * POWER_CAP)
 
         self.isInvincible = False
