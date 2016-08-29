@@ -175,6 +175,10 @@ class CollisionPlayerPlatform:
             player.collisionMask.rect.bottom += 1 #Redescendre de 1 pour sortir du plafond
             player.speedy = 0
             player.detonate()
+
+            if player.jumpState == CLIMBING:
+                player.jumpState = JUMP
+                player.upPressed = False
         elif upLeftTileGid == SPIKE or upRightTileGid == SPIKE:
             player.dead()
         elif upLeftTileGid == LADDER or upRightTileGid == LADDER or upMidTileGid == LADDER:
@@ -187,7 +191,8 @@ class CollisionPlayerPlatform:
                 player.jumpState = JUMP
                 player.upPressed = False
 
-       # printJumpState(player.jumpState)
+        if player.name == "player":
+            printJumpState(player.jumpState)
        # printTopTile(upRightTileGid)
 
 
