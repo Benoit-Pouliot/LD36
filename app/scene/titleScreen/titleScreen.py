@@ -23,7 +23,7 @@ class TitleScreen:
         self.screen.blit(titleImage, (0, 0))
 
         # Define MainMenu
-        self.menuWidth = SCREEN_WIDTH / 3
+        self.menuWidth = 3*SCREEN_WIDTH / 8
         self.menuTotalHeight = SCREEN_HEIGHT * 0.40
         self.menuHeight = self.menuTotalHeight
 
@@ -49,12 +49,12 @@ class TitleScreen:
     def createMenu(self):
 
         self.setMenuHeight()
-        self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT *4/7, self.menuWidth, self.menuHeight))
+        self.menu = Menu(pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT *4/7, self.menuWidth, self.menuHeight),20)
         if not self.gameData.mapComplete['map1']:
-            self.menu.addOption('Level 1', self.startLvlMusic)
+            self.menu.addOption('Level: the Exploding Gramophone', self.startLvlMusic)
 
         if not self.gameData.mapComplete['map2']:
-            self.menu.addOption('Level 2', self.startLvlComm)
+            self.menu.addOption('Level: the Crazy Computer', self.startLvlComm)
 
         self.menu.addOption('How To Play', self.startInstruction)
 

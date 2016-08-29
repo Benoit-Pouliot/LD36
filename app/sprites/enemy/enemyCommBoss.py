@@ -36,21 +36,32 @@ class EnemyCommBoss(Enemy):
 
         self.life = 10
 
+        # For animation purpose, sete multiple image
+        image1 = self.image
+        image2 = pygame.image.load(os.path.join('img', 'enemyCommBossShoot.png'))
+        image3 = pygame.image.load(os.path.join('img', 'enemyCommBossAnim.png'))
+
+        #It's hardcoded to fit with the shooting.
+        self.animation.setAnimation([image2,image1,image3,image1,image1,image3,image1,image3,image1,image3,
+                                     image2,image1,image2,image1,image3,image2,image1,image2,image3,image1,
+                                     image2,image1,image3,image1], 20)
+
         self.imageIterShoot = 0
         self.imageWaitNextShoot = list()
         # Wait 5 sec (in 60 FPS) before first wave
         self.imageWaitNextShoot.append(200)
-        self.imageWaitNextShoot.append(250)
+        self.imageWaitNextShoot.append(240)
         self.imageWaitNextShoot.append(300)
         self.imageWaitNextShoot.append(340)
         self.imageWaitNextShoot.append(360)
         self.imageWaitNextShoot.append(400)
-        self.imageWaitNextShoot.append(490)
+        self.imageWaitNextShoot.append(480)
 
         self.imageIterWaitNextShoot = 0
         self.imageIterWaitNextShootMax = len(self.imageWaitNextShoot)
 
     def update(self):
+        self.animation.update(self)
 
         if self.speedy == 0 or self.distance >= self.distanceMax:
             if self.direction == "Up":
