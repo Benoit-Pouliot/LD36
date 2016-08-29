@@ -15,6 +15,8 @@ class LogicHandlerPlatformScreen:
         self.newMapData = None
         self.mapData = mapData
 
+        self.trapNumber = -1
+
         self.screen = screen
 
     def handle(self, player, gameData):
@@ -38,6 +40,12 @@ class LogicHandlerPlatformScreen:
 
                     # Initializing new map
                     self.newMapData = MapData(nameNewZone, nameInZone)
+                if obj.name == "trapPhone":
+                    trapNumber = seekAtt(obj, "phoneNumber")
+
+                    if trapNumber:
+                        self.trapNumber = int(trapNumber)
+
 
     def isPlayerIsInZone(self, player, zone):
 

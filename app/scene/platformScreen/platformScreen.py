@@ -45,6 +45,7 @@ class PlatformScreen:
         while self.sceneRunning:
             self.eventHandler.eventHandle()
             self.logicHandler.handle(self.player, self.gameData)
+            self.checkTrap(self.logicHandler.trapNumber)
             self.checkNewMap(self.logicHandler.newMapData)
             self.drawer.draw(self.screen, self.mapData.camera, self.mapData.spritesHUD, self.player)
             self.checkWinCondition()
@@ -62,6 +63,16 @@ class PlatformScreen:
             self.nextScene = PLATFORM_SCREEN
             self.gameData.typeScene = PLATFORM_SCREEN
             self.gameData.mapData = newMapData
+
+    def checkTrap(self, trapNumber):
+        if trapNumber >=0:
+            # we got to change
+            for enemy in self.mapData.enemyGroup.sprites():
+                if enemy.name == 'EnemyPhone' :
+                    if enemy.imagePhoneNumber == trapNumber :
+                        enemy.fallDown()
+
+
 
     def checkWinCondition(self):
         if self.mapData.nameMap == "LevelMusicBoss":

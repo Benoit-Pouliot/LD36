@@ -261,9 +261,12 @@ class PlayerPlatform(pygame.sprite.Sprite):
         self.visualFlash()
 
     def dead(self):
-        #pass
         self.isAlive = False
         self.soundGetHit.play()
+
+        # Be invincible for debugging purpose
+        if TAG_MARIE == 1 :
+            self.isAlive = True
 
     def pickedPowerUpMaxHealth(self):
         self.gainLifeMax()

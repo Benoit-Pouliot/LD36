@@ -56,6 +56,9 @@ class EnemyFactory:
     def createEnemyPhone(self, enemy, theMap):
         imageIterShoot = seekAtt(enemy, "firstShoot")
         imageWaitNextShoot = seekAtt(enemy, "interval")
+        imagePhoneNumber = seekAtt(enemy, "phoneNumber")
+        imageIsShooter = seekAtt(enemy, "isShooter")
+        imageFallSpd = seekAtt(enemy, "fallSpd")
 
         enemyPhone = EnemyPhone(enemy.x, enemy.y, theMap)
 
@@ -63,6 +66,12 @@ class EnemyFactory:
             enemyPhone.imageIterShoot = int(imageIterShoot)
         if imageWaitNextShoot:
             enemyPhone.imageWaitNextShoot = int(imageWaitNextShoot)
+        if imagePhoneNumber:
+            enemyPhone.imagePhoneNumber = int(imagePhoneNumber)
+        if imageIsShooter:
+            enemyPhone.isShooter = int(imageIsShooter)
+        if imageFallSpd:
+            enemyPhone.fallSpd = int(imageFallSpd)
 
         return enemyPhone
 
