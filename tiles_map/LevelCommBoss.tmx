@@ -8,6 +8,18 @@
   <terraintypes>
    <terrain name="Wood" tile="-1"/>
   </terraintypes>
+  <tile id="6">
+   <animation>
+    <frame tileid="6" duration="200"/>
+    <frame tileid="35" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="8">
+   <animation>
+    <frame tileid="8" duration="400"/>
+    <frame tileid="36" duration="200"/>
+   </animation>
+  </tile>
   <tile id="12" terrain=",,,0"/>
   <tile id="13" terrain=",,0,0"/>
   <tile id="14" terrain=",,0,"/>
@@ -22,9 +34,10 @@
   <tile id="40" terrain="0,,0,0"/>
   <tile id="41" terrain=",0,0,0"/>
  </tileset>
+ <tileset firstgid="151" source="img/set_comm_letter_anim.tsx"/>
  <layer name="Collision_Layer" width="26" height="49">
   <data encoding="base64" compression="zlib">
-   eJzt190KwCAIBeD+9v6vvG6CGEqaYjM8cO42PwatKKeUSm/tbb35kmrkAbrjtEXDOetg3ogHB3pG4hSk2g7nX/bgcOLN+b4fjo6D5U/O3OFwz91dx+p7PDtzwvHprHyvThE4lM77ETXh6DiUhBOOhQOtcSsHuy9R7k+U+ZKecrTnWzs39QVYGAbX
+   eJzt19EOwBAMBVDM/v+X1xeJLBqqVSq9yX3bnExiiCGEBH2gGRovqUTeRmec3Kk7ex3MKzndwZ7hOKnRFQ62dq06lFhz/u+7I+NgOcmpWxzqvjvraH2PZaeOOzadnm/VSQxnpPX/aDQz5wPrzop5G4k77mg42NrScFr3pd4dijI+p7sc6fG1nZv6AS0QBtM=
   </data>
  </layer>
  <layer name="Background" width="26" height="49">
@@ -34,12 +47,12 @@
  </layer>
  <layer name="Terrain" width="26" height="49">
   <data encoding="base64" compression="zlib">
-   eJztmMEOREAQRPunJMtugiNOhBP//x26ExMTiR3aNAdVyTvKm5pDBTUR1TfRMr0RnedpyC4VPPC8wJPsENtjFXjggcfW82FSJmO+zM/IEyPwwAPPM54z7w1bj2yMbIvbGNkbzc6EPFZ5yiP3Jnd2dZ9DHqvAA4/GkzPFQqnwyL+EQXGuve+lLe65I5Euk+cZae0Wwj13JH4XLaEe/pmsPDF6OIo/xOhxNzPZRWxd
+   eJztmMEKgzAQRPenCrUWqsfak9Ke6v9/h7vQ0FCC0W1GD87AO8rL5DConYh0G9ErTxBD5HkILnd66DmA55QA4UGFHnrowXrOSqVclFq5gjwlQg899OzjWfPu8OuxjbFtCRtje+PZmZwHlb08dm92Z//uc86DCj30eDw3pfnQOjz2L+HlOFfqeylFeG5JrMsYed7y7ZYjPLckcRcvuR7xmVCeEj0CzQwlemzNBJcsbCg=
   </data>
  </layer>
  <layer name="Front_Layer" width="26" height="49">
   <data encoding="base64" compression="zlib">
-   eJztl70OgkAQhHknfAJBbVQsxVIt1RJ8fKbZZEP24s/thEB2ki+Xa/jYQCZ3RRFhZ/eB8EzrSflYYXjOoAUXsucKbuDu5FmDCtRgo/YP8AQvJ88eHMARNGrfgR68nTy/ZG6eEqzC4+7xCtOj+4Xp0f3C9Oh+YXp0vyzhPwgPz+PtX5pHx+qjbcbz5PwxXq0+OmV45PwxXq0+ypknFauPcub5Jsx5LE/M859n7vOw31/C/h7SPexI97Aidzl25C4XSWcAKa07/A==
+   eJztl1sOgjAQRWdPugeX6KNo4qPoftRP9VP9VDfgbdKJhVSEMBPF9CYnfDGHpnBTiFK0M/hA8nzX886nFWnPGExABoyiZwlWIAdWyDMFMyqugfx1CEZCnjXYUHEN5K9zsBDyNEnXPD3QTx5xj1Q0Pa5X+FvV9Lhe4W9V08N9Y5Q93DdW2RMmebrpkfb/mycMnw2ywGMq76iO8bMc3A0ufDbIA4+NDagZ62c5uBuIXme3sI+y2ICW4bNb2Ed55R3tI7E/TTxt9qeJR2N/Yp60P/Wi/fwc7feLe0g73EMuW7ADe8H55f83lwM4gpOgp/z/5nIGF3CleK9L5Qbu4EHxXv+VPAF3G2EK
   </data>
  </layer>
  <layer name="Sprite_Layer" width="26" height="49">
