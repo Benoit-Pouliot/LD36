@@ -107,7 +107,6 @@ class PlatformScreen:
         if numberLevelComplete == len(self.gameData.mapComplete):
             self.nextScene = WIN_SCREEN
             self.gameData.typeScene = WIN_SCREEN
-            print('here')
             self.close()
         else:
             self.backToMain()
