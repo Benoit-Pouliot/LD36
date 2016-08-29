@@ -34,7 +34,13 @@ class EnemyPhone(Enemy):
 
         self.life = 1
 
+        image1 = self.image
+        image2 = pygame.image.load(os.path.join('img', 'enemyPhoneAnim.png'))
+
+        self.animation.setAnimation([image1, image2], 30)
+
     def update(self):
+        self.animation.update(self)
 
         if self.isShooter == 1:
              self.imageIterShoot += 1
