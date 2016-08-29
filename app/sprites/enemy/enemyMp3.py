@@ -30,7 +30,16 @@ class EnemyMp3(Enemy):
 
         self.life = 2
 
+        # For animation purpose, sete multiple image
+        image1 = self.image
+        image2 = pygame.image.load(os.path.join('img', 'enemyMp3Anim.png'))
+        image3 = pygame.image.load(os.path.join('img', 'enemyMp3Anim2.png'))
+        image4 = pygame.image.load(os.path.join('img', 'enemyMp3Anim3.png'))
+
+        self.animation.setAnimation([image1, image2, image3, image4], 30)
+
     def update(self):
+        self.animation.update(self)
 
         self.rect.x += self.speedx
         self.rect.y += self.speedy

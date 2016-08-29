@@ -3,8 +3,8 @@ import pygame
 import os
 
 from app.sprites.enemy.enemy import Enemy
-from app.settings import *
 from app.sprites.collisionMask import CollisionMask
+from app.tools.animation import Animation
 
 
 class EnemyWalkman(Enemy):
@@ -36,6 +36,15 @@ class EnemyWalkman(Enemy):
 
         self.life = 3
 
+        # For animation purpose, sete multiple image
+        image1 = self.image
+        image2 = pygame.image.load(os.path.join('img', 'enemyWalkmanAnim.png'))
+        image3 = pygame.image.load(os.path.join('img', 'enemyWalkmanAnim2.png'))
+
+        self.animation.setAnimation([image1,image1,image2,image1,image3],30)
+
+
+
     def set_direction(self, direction):
         self.direction = direction
         if self.direction == "Left":
@@ -47,6 +56,8 @@ class EnemyWalkman(Enemy):
         self.distanceMax = distance
 
     def update(self):
+        self.animation.update(self)
+
 
         if self.speedx == 0 or self.distance >= self.distanceMax:
             if self.direction == "Right":

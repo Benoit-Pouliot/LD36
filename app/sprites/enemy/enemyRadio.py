@@ -32,6 +32,12 @@ class EnemyRadio(Enemy):
 
         self.life = 1
 
+        # For animation purpose, sete multiple image
+        image1 = self.image
+        image2 = pygame.image.load(os.path.join('img', 'enemyRadioAnim.png'))
+
+        self.animation.setAnimation([image1,image2,image1],27)
+
     def setDirection(self, direction):
         self.direction = direction
         if self.direction == "Right":
@@ -40,6 +46,7 @@ class EnemyRadio(Enemy):
             self.image = self.imageEnemyLeft
 
     def update(self):
+        self.animation.update(self)
 
         self.rect.x += self.speedx
         self.rect.y += self.speedy

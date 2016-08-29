@@ -3,6 +3,7 @@ import os
 
 from app.sprites.collisionMask import CollisionMask
 from app.settings import *
+from app.tools.animation import Animation
 
 
 class Enemy(pygame.sprite.Sprite):
@@ -14,6 +15,10 @@ class Enemy(pygame.sprite.Sprite):
         # self.image = pygame.transform.scale(pygame.image.load(image), (TILEDIMX, TILEDIMY))
         self.imageEnemy = pygame.image.load(pathImage)
         self.image = self.imageEnemy
+
+        self.frames = [self.image]
+        self.animation = Animation(self,self.frames,-1)
+
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -41,6 +46,7 @@ class Enemy(pygame.sprite.Sprite):
         self.soundDead.set_volume(1)
 
     def update(self):
+
         self.collisionMask.rect = self.rect
         self.invincibleUpdate()
 

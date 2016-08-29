@@ -27,6 +27,13 @@ class EnemyMusicBoss(Enemy):
 
         self.life = 8
 
+        image1 = self.image
+        image2 = pygame.image.load(os.path.join('img', 'enemyMusicBossAnim.png'))
+        image3 = pygame.image.load(os.path.join('img', 'enemyMusicBossAnim2.png'))
+        image4 = pygame.image.load(os.path.join('img', 'enemyMusicBossAnim3.png'))
+
+        self.animation.setAnimation([image1, image2, image3, image4], 30)
+
         #Kill boss fast
         if TAG_MARIE == 1:
             self.life = 1
@@ -48,6 +55,7 @@ class EnemyMusicBoss(Enemy):
         self.imageIterWaitNextShootMax = len(self.imageWaitNextShoot)
 
     def update(self):
+        self.animation.update(self)
 
         self.rect.x += self.speedx
         self.rect.y += self.speedy
