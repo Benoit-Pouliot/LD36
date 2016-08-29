@@ -15,7 +15,10 @@ class EnemyTelegraph(Enemy):
         self.collisionMask = CollisionMask(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
         self.imageEnemyLeft = self.image
+        self.imageEnemyLeftAnim = pygame.image.load(os.path.join('img', 'enemyTelegraphAnim.png'))
+
         self.imageEnemyRight = pygame.transform.flip(self.imageEnemyLeft, True, False)
+        self.imageEnemyRightAnim = pygame.transform.flip(self.imageEnemyLeftAnim, True, False)
 
         self.speedx = 0
         self.speedy = 0
@@ -33,13 +36,22 @@ class EnemyTelegraph(Enemy):
         self.life = 1
 
     def setDirection(self, direction):
+
         self.direction = direction
         if self.direction == "Right":
             self.image = self.imageEnemyRight
+            image2 = self.imageEnemyRightAnim
         if self.direction == "Left":
             self.image = self.imageEnemyLeft
+            image2 = self.imageEnemyRightAnim
+        image1 = self.image
+
+        self.animation.setAnimation([image1, image2, image1, image2, image1, image2, image1, image2, image1, image1,
+                                     image2, image1, image1, image2, image1, image2, image2, image1, image2, image1,
+                                     image2, image1, image1], 5)
 
     def update(self):
+        self.animation.update(self)
 
         self.rect.x += self.speedx
         self.rect.y += self.speedy
