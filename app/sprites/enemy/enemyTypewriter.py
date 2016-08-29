@@ -39,7 +39,7 @@ class EnemyTypewriter(Enemy):
         self.isGravityApplied = True
         self.isCollisionApplied = True
 
-        self.life = 3
+        self.life = 2
 
     def set_direction(self, direction):
         self.direction = direction

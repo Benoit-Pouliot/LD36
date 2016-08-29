@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="66" tilewidth="32" tileheight="32" nextobjectid="84">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="66" tilewidth="32" tileheight="32" nextobjectid="91">
  <tileset firstgid="1" name="collision_set" tilewidth="32" tileheight="32" tilecount="50" columns="5">
   <image source="img/collision_set.png" width="160" height="320"/>
  </tileset>
@@ -24,7 +24,7 @@
  </tileset>
  <layer name="Collision_Layer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmdsOgyAQRLX1/7+59sG0IeBeAFmGOckkTbzgnrJKdN+27XXmfeY4szPm3KHdTzpWGnsGBx7oAMdBVFDrOzIpgeIgV7PWwUWtgxbXoEUzFh34xrU6SM8fyYGXWgcI0IH9/k8HPwezPDtzeNaX/9Q6iLAuuXOgAX0eaEB34O2F12TpMQ9mDR3kHXh7oTczzIPeeGvznF8DugOUXqg5vwbve4xe7z9ytZTqa+VvNgeW46y9gOpAAx3M4cA6t9kLmPPACh30WXOMosX6ANGB5biVHKR9NoMD6XqumuhgLQfpdaUOpFj3/ybKO9CRDqInt5agAzpY2UGv/UdEQ6kmDXSA70ATZAel7S0cbJ1/R3KgGbPl7xpGOIhGzdxGd6CBDvAdrN4Lpe10QAerOUC+H0j/8wrPBTqQvz2u2gvS9rvaLPfQKNDBWAdPR2L09T0R7/cmpl0+WZIN/g==
+   eJztme0OgyAMRXHz/Z957ofZYkDaAtJe7kluYuYHcEaV6JZSeh15H9mPbIwqNTTH3p1baz+CAwt0gOPAK6hj3DMpgeIgN2apg5MWB5L2JX2QIm2PDvTtIjmwonXQe1weoAP9/Z8Ofg6iPDtzWNaX/7Q68LAuuXMgAX0eSEB3YK2FV7CMmAdRQwd5B9ZaGE2EeTAa69gs15eA7gClFlquL8H6HmPU+4/cWEq/9/IX0YH0PG0toDqQQAcxHGhrnrWAOQ+00MGYNccscv3Vrq8QHWjOW8nBtc4iOKj15xwTHazl4Nqvq4NatMd/4+Ud6EwH3pNbS9ABHazsYNTxMyKhNCYJdIDvQBJkB6X9PRykwdueHEja7LndwgwH3miZ2+gOJNABvoPVa6G0nw7oYDUHyPeD2v+8wnOBDurfHlethdr+u7Fp7qFeoIO5Dp5Ojdn9eyLW701Mv3wA+58N/A==
   </data>
  </layer>
  <layer name="Background" width="65" height="66">
@@ -34,12 +34,12 @@
  </layer>
  <layer name="Terrain" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmsFuwyAMhnmpSds6aetx7Wnretre/zkWa7XqIUxsIC0Y/5KlVkpC+GKwMRxCCIdC+1jsK2Ofwuty90raXrt2SzuGvE6XdzyvXJfSu6LttWvvyaBGzuDqQ5ydFde2GG+S9xhRGl+zKmfgDEDOwBmAnMGVARcDR497EiGDGb43J2fwn8HjYk+LPS+2u/x+adxeqo3U79bt5jSjH7wutif/Z2QAfU6tN3EsUJ/MjQVg+Rb+eD4MZjkGGuF93xcWI9lPaMOgdK2+xfq+tuYRjwU6R996fuakqQ9Ja5bnxPN7nhM1DEr6gT49MwOUNi7cUtK5B+aNWgajK455oFReugvXb0zzUgsMwF9K1rmY69C4QFn1MBa21ghxYWtZYkDHfjzu6Vwf+3Zq7Yz39pIjSRWvB6UaIT+QKhUXNHIG/PqvxLfuJS4/iPO+eJ7AOcJCbb3UDzA/mJmBpT0WZ2CbAY5XsNwcDX1Zq+3R+/G5UFtbY9BDDVTyTegam6u/lZxf6qFmSr8TvI8kXnP96+UMV61JxqczGJtBzTk4XPNBzsfV31L15N7slnHIGdhkgGMhrqNy9RApg5Kz5jV7aK38gOZV1FJ77mt93fI8UmreatVeSVzoISduqVkZ4N5AaWy0wEArZ2CTQap2iDFREhstMKAqiY3WGMwaF6hmZeCxUS9nYJMBd+6GOwsejxcLDGrlDJwB6N77CJI9Ay73kzxLcm8PNTTNflPO8Hvug3w/rQeT+KG2H0cFN6ij/QKpWqHd
+   eJztmttuwyAMhnmpSTtJWy/XXu3Qq+39n2NBq1UP2WATkoLxL1lqJRLCx8HYcAwhHCvsfbGvgn0oynLPSuovld3KTqGsz8s3ngVlU70p6i+VvSWDNXIG1zHE2VlRtsV8K33DqNKMNatyBs4gyhk4gyhncGXA+UALvq8kYDBDf3NyBv8Z3C/2sNjjYk+X38+N66PqoH63rjenGcfBy2IH9H9GBrHNVLwJcwGPydxciCxfwx/Pu8Esx0AjeO77wmIk+wltGNTG6lvE92vzHulcwGv03uszJ01+SJqzPBPv73lN1DCoaQeM6ZkZgLR+YU9J1564bqxlMLpSnwei1jnoY7wvtcAgjpeaOBf2OtgvYFY9zIWtNYJf2FqWGOCYNJ33uTiYip3h2V72SFKl8aBUI+wPpOL8glTOgI//asbWrUQxoPZ96ToB/s9Cbr12HMD+YGYGls5YnIFtBjBfo+XW6NiWUm4PPw/vjbm1EoMecqCSPsExNpd/q7m/1EPOFPdT/B6Jv+ba18MdrhYmmZ/OYGwGkrwwlyeBmC/u+bj8G5VP7s329EPOwCYDmAvp+T6XD5EyqLlrvuYMrdU4wPsqbNSZe6mtW95HotatVvXV+IUe9sQtNSsDOBuo9Y0WGGjlDGwyoHKH4BMlvtECA6wa32iNwax+AWtWBu4b9XIGNhlQ98Fzd8HT+WKBwVo5A2cQdetzBMmZAbf3k7xL8mwPOTTNeVPOoD8PQX6e1oNJxqG2HScFt5hH+wWoNqBC
   </data>
  </layer>
  <layer name="FirstLayer" width="65" height="66">
   <data encoding="base64" compression="zlib">
-   eJztmstuAyEMRfNP7Rf0kW7Sx7LtMu0y7bLt59cskCxkIIzBENtHshQpM8DcYa4HM7ud44zlBuJWoN1R/fTgAPEo0O6ofjSz8rzh8EBEDmrevEK8QbwPGd0YqGs+VwOKI8QHxOfEMXD74vZ/gviC+IbYdxxXL0Zee+QH4hfiD+Ilc8wVxHXjuHoh1U+NVAOLuAauQSBqcIl5NHIHcc84P2qwJY+uwhPEM+P8qAHOo9aIGuA8ag33RNcg4BroyI1cNORGLhpzY2s9SWNubK1Dbq1jSNQ/pHAN1tZAqk68sgZS+wsrayCFa6BTg1Yf0aiB71M6KVbWgqX1/6prwVgHztWDW2sapePxWpBbf+5JrAPn6sE9NcBrQW79eSTp/empwaWQ3h+LGgSwf1vVAPu3VQ2wf1vVAPu3VQ0oPzj3+yEtGlB+kPt+KEWLBu4Hc/wA1xl6/eYw4/0A1xl6/ebg7wfuBwHKD6zlRsoPrOVG9wP3g4CvF7x+ELDmB9SYKT/QnBupMVN+oDk31sZs9Vmo/V/alym1V9vPmcUWDUr7MqX2avs5s5CcB5pY9X5KsupzLcmWefAPJ0G/Gg==
+   eJztmktOxTAMRbMnWAHfCb8hMASGwBBYPs4gklW5SVM7bp7tI1mq9F6T9Da9bpymFARjuYC4VGh3VD8S3EHcK7Q7qh/LzDxvONwSsQY1b54hXiBeh4xuDNQ1b9WA4g3iHeJDsP/eMUj0x+n/E+IL4hviRnBMUoy89sIPxC/EH8ST4Jik0OqnxRnEuWJ/MxIahAaZosEp5tHCFcQ14/yiQW8enYkHiEfG+UUDnEe9UTTAedQb4YmhQSY0sJEbuVjIjVws5sbeepLF3Nhbh9xbx9Cof2gRGsytgVadeGYNtPYXZtZAi9DApga9PmJRg9inDJZ4WQvW1v+zrgVLHXitHtxb06j9H68FufVnSUodeK0eLKkBXgty688jWd4fSQ1OheX98ahBBvu3Vw2wf3vVAPu3Vw2wf3vVgPKDLd8PpWRHA8oPtnw/lJIdDcIPjvEDXGeQOuZwxPsBrjNIHXOI94PwgwzlB95yI+UH3nJj+EH4QSbWC1E/yHjzA2rMlB9Yzo3UmCk/sJwbW2P2+iy0fq/ty9Taa+3nHMUeDWr7MrX2Wvs5R6E5Dywx6/3UZNbnWpM98+Afxqi/iA==
   </data>
  </layer>
  <layer name="Sprite_Layer" width="65" height="66">
@@ -110,7 +110,7 @@
     <property name="isShooter" value="1"/>
    </properties>
   </object>
-  <object id="14" name="enemyPhone" type="enemy" x="534" y="56.1667" width="54" height="71">
+  <object id="14" name="enemyPhone" type="enemy" x="489.333" y="55.1667" width="54" height="71">
    <properties>
     <property name="fallSpd" value="3"/>
     <property name="firstShoot" value="0"/>
@@ -118,7 +118,7 @@
     <property name="phoneNumber" value="13"/>
    </properties>
   </object>
-  <object id="15" name="enemyPhone" type="enemy" x="659" y="52.1663" width="54" height="71">
+  <object id="15" name="enemyPhone" type="enemy" x="612.333" y="58.1663" width="54" height="71">
    <properties>
     <property name="fallSpd" value="3"/>
     <property name="firstShoot" value="0"/>
@@ -173,7 +173,7 @@
    <properties>
     <property name="direction" value="Right"/>
     <property name="firstShoot" value="0"/>
-    <property name="interval" value="180"/>
+    <property name="interval" value="75"/>
    </properties>
   </object>
   <object id="25" name="enemyTelegraph" type="enemy" x="1609" y="1606" width="46" height="28">
@@ -193,22 +193,22 @@
   <object id="27" name="enemyTelegraph" type="enemy" x="40" y="502" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="firstShoot" value="120"/>
-    <property name="interval" value="180"/>
+    <property name="firstShoot" value="15"/>
+    <property name="interval" value="75"/>
    </properties>
   </object>
   <object id="28" name="enemyTelegraph" type="enemy" x="38" y="602" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="firstShoot" value="60"/>
-    <property name="interval" value="180"/>
+    <property name="firstShoot" value="30"/>
+    <property name="interval" value="75"/>
    </properties>
   </object>
   <object id="29" name="enemyTelegraph" type="enemy" x="40" y="697" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="firstShoot" value="0"/>
-    <property name="interval" value="180"/>
+    <property name="firstShoot" value="45"/>
+    <property name="interval" value="75"/>
    </properties>
   </object>
   <object id="30" name="enemyTelegraph" type="enemy" x="41" y="797" width="46" height="28">
@@ -238,7 +238,7 @@
     <property name="speed" value="3"/>
    </properties>
   </object>
-  <object id="34" name="enemyTypewriter" type="enemy" x="565" y="1953" width="46" height="28">
+  <object id="34" name="enemyTypewriter" type="enemy" x="580" y="1954" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
     <property name="speed" value="4"/>
@@ -250,24 +250,24 @@
     <property name="speed" value="2"/>
    </properties>
   </object>
-  <object id="36" name="enemyTypewriter" type="enemy" x="1066.67" y="345.667" width="46" height="28">
+  <object id="36" name="enemyTypewriter" type="enemy" x="991.337" y="340.334" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="distanceMax" value="60"/>
-    <property name="speed" value="2"/>
+    <property name="distanceMax" value="128"/>
+    <property name="speed" value="4"/>
    </properties>
   </object>
   <object id="48" name="enemyTypewriter" type="enemy" x="1747" y="836" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="distanceMax" value="71"/>
+    <property name="distanceMax" value="50"/>
     <property name="speed" value="7"/>
    </properties>
   </object>
   <object id="49" name="enemyTypewriter" type="enemy" x="1866.33" y="962" width="46" height="28">
    <properties>
     <property name="direction" value="Right"/>
-    <property name="distanceMax" value="90"/>
+    <property name="distanceMax" value="70"/>
     <property name="speed" value="5"/>
    </properties>
   </object>
@@ -332,16 +332,6 @@
     <property name="phoneNumber" value="1"/>
    </properties>
   </object>
-  <object id="73" name="trapPhone" type="trap" x="535.833" y="24.8333" width="52.3333" height="559">
-   <properties>
-    <property name="phoneNumber" value="13"/>
-   </properties>
-  </object>
-  <object id="74" name="trapPhone" type="trap" x="661.5" y="26.5" width="52.3333" height="559">
-   <properties>
-    <property name="phoneNumber" value="14"/>
-   </properties>
-  </object>
   <object id="75" name="trapPhone" type="trap" x="844.167" y="25.5" width="50.3333" height="559">
    <properties>
     <property name="phoneNumber" value="15"/>
@@ -360,6 +350,21 @@
   <object id="78" name="trapPhone" type="trap" x="1158.5" y="20.5" width="38.3333" height="559">
    <properties>
     <property name="phoneNumber" value="18"/>
+   </properties>
+  </object>
+  <object id="86" name="enemyPhone" type="enemy" x="551.667" y="57.1667" width="54" height="71">
+   <properties>
+    <property name="fallSpd" value="3"/>
+    <property name="firstShoot" value="0"/>
+    <property name="interval" value="120"/>
+    <property name="phoneNumber" value="131"/>
+   </properties>
+  </object>
+  <object id="90" name="enemyTypewriter" type="enemy" x="381" y="1955" width="46" height="28">
+   <properties>
+    <property name="direction" value="Right"/>
+    <property name="distanceMax" value="640"/>
+    <property name="speed" value="5"/>
    </properties>
   </object>
  </objectgroup>
@@ -423,6 +428,21 @@
   <object id="83" name="trapPhone" type="trap" x="514.5" y="647.5" width="55" height="581">
    <properties>
     <property name="phoneNumber" value="12"/>
+   </properties>
+  </object>
+  <object id="84" name="trapPhone" type="trap" x="491.167" y="19.5" width="52.3333" height="559">
+   <properties>
+    <property name="phoneNumber" value="13"/>
+   </properties>
+  </object>
+  <object id="85" name="trapPhone" type="trap" x="613.167" y="23.8333" width="52.3333" height="559">
+   <properties>
+    <property name="phoneNumber" value="14"/>
+   </properties>
+  </object>
+  <object id="88" name="trapPhone" type="trap" x="553.167" y="20.5" width="52.3333" height="559">
+   <properties>
+    <property name="phoneNumber" value="131"/>
    </properties>
   </object>
  </objectgroup>
