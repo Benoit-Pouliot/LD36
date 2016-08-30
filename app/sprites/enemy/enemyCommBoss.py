@@ -21,7 +21,7 @@ class EnemyCommBoss(Enemy):
 
         self.theMap = theMap
 
-        self.speedBase = 7
+        self.speedBase = 5
         self.distanceMax = 450
 
         self.speedx = 0
@@ -34,7 +34,7 @@ class EnemyCommBoss(Enemy):
 
         self.soundVictory = pygame.mixer.Sound(os.path.join('music_pcm', 'levelWin.wav'))
 
-        self.life = 9
+        self.life = 10
 
         # For animation purpose, sete multiple image
         image1 = self.image

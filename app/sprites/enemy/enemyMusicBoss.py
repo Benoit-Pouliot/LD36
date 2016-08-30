@@ -25,7 +25,7 @@ class EnemyMusicBoss(Enemy):
         self.isGravityApplied = True
         self.isCollisionApplied = True
 
-        self.life = 6
+        self.life = 8
 
         image1 = self.image
         image2 = pygame.image.load(os.path.join('img', 'enemyMusicBossAnim.png'))
